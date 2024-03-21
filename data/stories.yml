@@ -2,29 +2,293 @@ version: "3.1"
 
 stories:
 
-- story: happy path
+- story: saluto e richiesta del benessere
   steps:
-  - intent: greet
-  - action: utter_greet
+  - intent: greeting
+  - action: utter_greeting
   - intent: mood_great
   - action: utter_happy
 
-- story: sad path 1
+- story: consulenza su salute mentale e apprendimento
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+  - intent: learn-mental-health
+  - action: utter_learn-mental-health
+  - intent: mental-health-fact
+  - action: utter_mental-health-fact
 
-- story: sad path 2
+- story: gestione dello stress con consigli
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
+  - intent: stressed
+  - action: utter_stressed
+  - intent: ask
+  - action: utter_ask
+  - intent: learn-more
+  - action: utter_learn-more
+
+- story: affrontare la solitudine
+  steps:
+  - intent: sad
+  - action: utter_sad
+  - intent: friends
+  - action: utter_friends
+
+- story: chiusura della conversazione
+  steps:
+  - intent: goodbye
   - action: utter_goodbye
+
+- story: reazione alla frustrazione dell'utente
+  steps:
+  - intent: hate-you
+  - action: utter_hate-you
+  - intent: understand
+  - action: utter_understand
+
+- story: incoraggiamento alla meditazione
+  steps:
+  - intent: anxious
+  - action: utter_anxious
+  - intent: meditation
+  - action: utter_meditation
+
+- story: affrontare la depressione
+  steps:
+  - intent: depressed
+  - action: utter_depressed
+  - intent: help
+  - action: utter_help
+
+- story: rispondere a richieste casuali
+  steps:
+  - intent: casual
+  - action: utter_casual
+
+- story: conversazione notturna e desiderio di buonanotte
+  steps:
+  - intent: night
+  - action: utter_night
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: richiesta di informazioni personali sul bot
+  steps:
+  - intent: about
+  - action: utter_about
+  - intent: creation
+  - action: utter_creation
+
+- story: gestione della reazione quando non si parla
+  steps:
+  - intent: not-talking
+  - action: utter_not-talking
+
+- story: richiesta di aiuto specifico
+  steps:
+  - intent: problem
+  - action: utter_problem
+  - intent: no-approach
+  - action: utter_no-approach
+  - intent: learn-more
+  - action: utter_learn-more
+  - intent: user-agree
+  - action: utter_user-agree
+  - intent: user-meditation
+  - action: utter_user-meditation
+
+- story: espressione di gratitudine da parte dell'utente
+  steps:
+  - intent: thanks
+  - action: utter_thanks
+
+- story: conversazione sull'essere felici
+  steps:
+  - intent: happy
+  - action: utter_happy
+  - intent: why_happy
+  - action: utter_explain_happiness
+  - intent: thanks
+  - action: utter_thanks
+
+- story: affrontare sentimenti di inutilità
+  steps:
+  - intent: worthless
+  - action: utter_worthless
+  - intent: ask
+  - action: utter_ask
+  - intent: help
+  - action: utter_help
+
+- story: conversazione sulla paura e il supporto
+  steps:
+  - intent: scared
+  - action: utter_scared
+  - intent: support
+  - action: utter_offer_support
+
+- story: discussione sulla morte e il lutto
+  steps:
+  - intent: death
+  - action: utter_death
+  - intent: support
+  - action: utter_offer_support
+
+- story: superare il desiderio di suicidio
+  steps:
+  - intent: suicide
+  - action: utter_suicide
+  - intent: support
+  - action: utter_offer_support
+
+- story: risposta a sentimenti di odio verso il chatbot
+  steps:
+  - intent: hate-you
+  - action: utter_hate-you
+  - intent: explain
+  - action: utter_explain
+  - intent: apology
+  - action: utter_apology
+
+- story: supporto per migliorare le relazioni sociali
+  steps:
+  - intent: friends
+  - action: utter_friends
+  - intent: advice_social_skills
+  - action: utter_advice_social_skills
+
+- story: reazione a sentimenti di ansia
+  steps:
+  - intent: anxious
+  - action: utter_anxious
+  - intent: advice_on_anxiety
+  - action: utter_advice_on_anxiety
+
+- story: supporto per problemi di sonno
+  steps:
+  - intent: sleep
+  - action: utter_sleep
+  - intent: advice_on_sleep
+  - action: utter_advice_on_sleep
+
+- story: incoraggiare la ricerca di aiuto professionale
+  steps:
+  - intent: help
+  - action: utter_ask_about_help
+  - intent: professional_help
+  - action: utter_professional_help
+
+- story: confronto con la mancata comprensione
+  steps:
+  - intent: understand
+  - action: utter_understand
+  - intent: explain
+  - action: utter_explain
+
+- story: esplorazione dell'identità del chatbot
+  steps:
+  - intent: about
+  - action: utter_about
+  - intent: creation
+  - action: utter_creation
+  - intent: skill
+  - action: utter_skill
+
+- story: gestione di momenti casuali o commenti off-topic
+  steps:
+  - intent: casual
+  - action: utter_casual_response
+  - intent: jokes
+  - action: utter_jokes
+
+- story: gestione della rabbia
+  steps:
+  - intent: angry
+  - action: utter_calm_down
+  - intent: explain_anger
+  - action: utter_explain_anger_management
+  - intent: seek_advice
+  - action: utter_offer_advice_on_anger
+
+- story: promuovere l'autocura
+  steps:
+  - intent: self_care_query
+  - action: utter_self_care_tips
+  - intent: positive_affirmation
+  - action: utter_positive_affirmations
+
+- story: discutere di obiettivi e motivazione
+  steps:
+  - intent: discuss_goals
+  - action: utter_discuss_goals
+  - intent: motivation
+  - action: utter_motivation_tips
+
+- story: affrontare la procrastinazione
+  steps:
+  - intent: procrastination
+  - action: utter_address_procrastination
+  - intent: advice_for_productivity
+  - action: utter_productivity_tips
+
+- story: discutere di cambiamenti nella vita
+  steps:
+  - intent: life_changes
+  - action: utter_life_changes_support
+  - intent: seeking_guidance
+  - action: utter_guidance_on_changes
+
+- story: navigare nelle relazioni interpersonali
+  steps:
+  - intent: relationship_advice
+  - action: utter_relationship_advice
+  - intent: discuss_feelings
+  - action: utter_discuss_relationship_feelings
+
+- story: affrontare l'incertezza
+  steps:
+  - intent: feeling_uncertain
+  - action: utter_deal_with_uncertainty
+  - intent: seek_reassurance
+  - action: utter_reassurance
+
+- story: esprimere gratitudine e apprezzamento
+  steps:
+  - intent: express_gratitude
+  - action: utter_express_gratitude
+  - intent: compliment
+  - action: utter_compliment_response
+
+- story: interesse per l'attività fisica e il benessere
+  steps:
+  - intent: physical_activity
+  - action: utter_physical_activity_benefits
+  - intent: wellbeing_tips
+  - action: utter_wellbeing_tips
+
+- story: richieste di aiuto specifico
+  steps:
+  - intent: specific_help_request
+  - action: utter_specific_help
+  - intent: follow_up_question
+  - action: utter_follow_up_help
+
+- story: gestione dello stress lavorativo
+  steps:
+  - intent: work_stress
+  - action: utter_address_work_stress
+  - intent: seek_coping_mechanisms
+  - action: utter_coping_mechanisms_for_stress
+
+- story: affrontare la perdita e il lutto
+  steps:
+  - intent: discuss_loss
+  - action: utter_discuss_loss
+  - intent: seeking_support
+  - action: utter_offer_support_for_loss
+
+- story: incoraggiare l'uso responsabile del chatbot
+  steps:
+  - intent: misuse_warning
+  - action: utter_responsible_use
+  - intent: apology
+  - action: utter_accept_apology_and_guide
+

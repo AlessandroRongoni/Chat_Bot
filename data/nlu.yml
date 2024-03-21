@@ -1,91 +1,826 @@
 version: "3.1"
 
 nlu:
-- intent: greet
+- intent: greeting
   examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+    - Hi
+    - Hey
+    - Is anyone there?
+    - Hi there
+    - Hello
+    - Hey there
+    - Howdy
+    - Hola
+    - Bonjour
+    - Konnichiwa
+    - Guten tag
+    - Ola
+    
+- intent: morning
+  examples: |
+    - Good morning!
+    - Morning!
+    - Hi, good morning.
+    - Hello, good morning to you.
+    - Hope you're having a great morning.
+
+- intent: afternoon
+  examples: |
+    - Good afternoon.
+    - Afternoon!
+    - Hello, good afternoon.
+    - Hope you're having a nice afternoon.
+    - Good day to you.
+
+- intent: evening
+  examples: |
+    - Good evening.
+    - Evening!
+    - Hi, good evening.
+    - Hope you're enjoying your evening.
+    - What a lovely evening.
+
+- intent: night
+  examples: |
+    - Good night.
+    - Night!
+    - Goodnight, sleep well.
+    - Have a good night.
+    - Wishing you a restful night.
+    - Sweet dreams!
+    - Night, see you tomorrow.
+    - Sleep tight!
 
 - intent: goodbye
   examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
-
-- intent: affirm
+    - Bye
+    - See you later
+    - Goodbye
+    - Au revoir
+    - Sayonara
+    - ok bye
+    - Bye then
+    - Fare thee well
+- intent: thanks
   examples: |
+    - Thanks
+    - Thank you
+    - That's helpful
+    - Thanks for the help
+    - Than you very much
+- intent: neutral-response
+  examples: |
+    - nothing much
+    - just chilling
+    - not a lot
+    - everything's normal
+    - as usual
+    - nothing special
+    - just the same old
+    - all good here
+    - nothing to report
+    - it's all okay
+    - can't complain
+    - I'm alright
+    - doing fine
+    - just hanging out
+    - same as always
+    - nothing exciting
+    - it's a regular day
+    - just taking it easy
+- intent: about
+  examples: |
+    - Who are you?
+    - What are you?
+    - Who you are?
+    - Tell me more about yourself.
+    - What is your name?
+    - What should I call you?
+    - What's your name?
+    - Tell me about yourself
+- intent: skill
+  examples: |
+    - What can you do?
+    - Tell me about your capabilities.
+    - What functions do you have?
+    - Can you help me with something?
+    - What services do you offer?
+    - How can you assist me?
+    - What are your features?
+    - What tasks can you perform?
+    - Show me what you can do.
+    - Describe your functionalities.
+    - What help can you provide?
+    - What are you capable of?
+    - How can you be of use to me?
+    - What's in your skill set?
+    - What kind of help can you give?
+    - Can you list your capabilities?
+    - What support do you offer?
+    - How can you assist users?
+    - What are the things you can do?
+
+- intent: creation
+  examples: |
+    - Who created you?
+    - How were you made?
+    - How were you created?
+    - What's your origin story?
+    - Who is your creator?
+    - When were you developed?
+    - What technology was used to create you?
+    - Who's behind your development?
+    - Can you tell me about your development process?
+    - What programming languages were used in your creation?
+    - Were you developed by a team or an individual?
+    - What inspired your creation?
+    - How long did it take to create you?
+    - Are you based on an existing technology or completely new?
+    - What was the motivation behind your creation?
+    - Can you explain your development journey?
+    - Who holds the copyright to your software?
+    - What version are you?
+    - Have you been updated since your initial creation?
+    - Who maintains and updates you?
+
+- intent: name
+  examples: |
+    - My name is John.
+    - I am called Emma.
+    - I go by Alex.
+    - Call me Mike.
+    - You can call me Sarah.
+    - Just call me Chris.
+    - My friends call me Lily.
+    - People know me as Jason.
+    - I prefer to be called Anna.
+    - Please address me as David.
+    - Everyone calls me Nicole.
+    - My name's Ethan.
+    - I identify as Sophia.
+    - Known as Olivia to my friends.
+    - My given name is Lucas, but call me Luke.
+    - In professional settings, I'm known as Dr. Brown.
+    - At home, they call me Daddy.
+    - Among my friends, I'm the Joker.
+    - You might have heard of me as the Artist.
+    - Online, I go by the handle TechWizard.
+ 
+- intent: help
+  examples: |
+    - Could you help me?
+    - give me a hand please
+    - Can you help?
+    - What can you do for me?
+    - I need support
+    - I need help
+    - Support me please
+    - Can you assist me with an issue?
+    - I'm looking for some guidance, can you provide that?
+    - Is there any way you could support me on this?
+    - I'm stuck, can you help me out?
+    - I require some assistance, are you able to help?
+    - I'm facing a problem, can you offer a solution?
+    - Can you provide help with a task I'm working on?
+    - I need your expertise on something, can you help?
+    - Could you provide some help here?
+    - I'm having trouble with this, can you assist?
+    - How can you be of assistance in this situation?
+    - I could use some help, do you have any advice?
+    - I'm in need of assistance, can you support me?
+    - Are you available to help me right now?
+    - I could use a hand with something, are you able to help?
+    - I'm looking for help, can you provide any guidance?
+    - Can you help me navigate through this problem?
+    - I need some help figuring this out, can you assist?
+    - Could you lend me a hand with this issue?
+    - I'm seeking help, can you assist me in solving this?
+
+- intent: sad
+  examples: |
+    - I am feeling lonely
+    - I am so lonely
+    - I feel down
+    - I feel sad
+    - I am sad
+    - I feel so lonely
+    - I feel empty
+    - I don't have anyone
+    - Just feeling really low today.
+    - It's been a tough day, feeling down.
+    - I've got the blues.
+    - Nothing seems to make me happy anymore.
+    - Today is just not my day, feeling really sad.
+    - I've been feeling quite depressed lately.
+    - It's like a dark cloud is over me.
+    - I'm not okay, I feel really sad.
+    - My heart feels heavy.
+    - Feeling blue and it's hard to shake off.
+    - Everything just feels overwhelming.
+    - I miss feeling happy.
+    - This sadness seems to be never-ending.
+    - I feel like I'm in a dark place.
+    - It's hard to find joy in anything.
+    - I'm struggling to cope with these sad feelings.
+    - It feels like I'm carrying a heavy weight.
+    - I just feel so low and can't get out of this slump.
+    - My mood has been really down lately.
+    - I don't know why I feel so sad all the time.
+
+- intent: stressed
+  examples: |
+    - I am so stressed out
+    - I am so stressed
+    - I feel stuck
+    - I still feel stressed
+    - I am so burned out
+    - Everything just feels too much for me.
+    - I'm overwhelmed with everything I have to do.
+    - My mind won't stop racing with all these worries.
+    - I can't relax, I'm too wound up.
+    - I've got too much on my plate and it's stressing me out.
+    - I feel like I'm on the verge of a breakdown.
+    - The pressure is really getting to me.
+    - I'm feeling the weight of my responsibilities.
+    - It feels like I can't catch a break from all this stress.
+    - I'm finding it hard to cope with the stress levels.
+    - My anxiety levels are through the roof.
+    - I can't stop worrying about everything.
+    - I feel like I'm juggling too many things at once.
+    - I'm so tense all the time because of the stress.
+    - I'm struggling to keep my stress under control.
+    - Every little thing seems to stress me out more.
+    - I feel like I'm constantly under pressure.
+    - It's hard to focus with all this stress.
+    - I'm dealing with a lot of stress at work/home/school.
+    - I need help managing this overwhelming stress.
+
+- intent: worthless
+  examples: |
+    - I feel so worthless.
+    - No one likes me.
+    - I can't do anything.
+    - I am so useless
+    - Nothing makes sense anymore
+
+- intent: depressed
+  examples: |
+    - I can't take it anymore
+    - I am so depressed
+    - I think i'm depressed.
+    - I have depression
+
+- intent: happy
+  examples: |
+    - I feel great today.
+    - I am happy.
+    - I feel happy.
+    - I'm good.
+    - cheerful
+    - I'm fine
+    - I feel ok
+
+- intent: casual
+  examples: |
+    - Oh I see.
+    - ok
+    - okay
+    - nice
+    - Whatever
+    - K
+    - Fine
+    - yeah
     - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
-
-- intent: deny
-  examples: |
     - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
     - not really
+    
+- intent: anxious
+  examples: |
+    - I feel so anxious.
+    - I'm so anxious because of 
+    - My anxiety is getting the better of me.
+    - I can't stop feeling anxious all the time.
+    - Everything makes me feel anxious these days.
+    - I have this constant feeling of dread.
+    - I'm worried about everything, even the small things.
+    - I feel like my heart is racing because I'm so anxious.
+    - My mind is always on edge, filled with anxiety.
+    - I get anxious over things I know shouldn't worry me.
+    - I'm finding it hard to breathe because of my anxiety.
+    - Anxiety seems to control my life.
+    - I'm always on high alert, waiting for something bad to happen.
+    - It feels like I'm trapped in a cycle of anxiety.
+    - I'm anxious about my future and what lies ahead.
+    - Social situations make me extremely anxious.
+    - I feel anxious even thinking about going out.
+    - I'm losing sleep due to my anxiety.
+    - I get panic attacks because of how anxious I feel.
+    - My hands won't stop shaking from all this anxiety.
+    - I wish I could find a way to ease my anxiety.
+    - I'm anxious about making decisions, even small ones.
+    - I'm always second-guessing myself because of my anxiety.
+
+- intent: not-talking
+  examples: |
+    - I don't want to talk about it.
+    - No just stay away.
+    - I can't bring myself to open up.
+    - Just shut up
+    - Let's not go there.
+    - I'm not ready to discuss this.
+    - Can we change the subject?
+    - I'd rather not say.
+    - This is too much for me right now.
+    - I'm not open to discussing that.
+    - That's private.
+    - I don't feel comfortable sharing that.
+    - Let's talk about something else.
+    - I'm not in the mood to discuss this.
+    - I prefer to keep that to myself.
+    - I don't think this is the right time for me to talk about it.
+    - I'm not going to get into that.
+    - I'd rather keep that part of my life private.
+    - It's complicated, and I don't want to talk about it.
+    - I'm keeping that to myself.
+    - I'm not sure I can talk about that.
+    - That topic is off-limits for me.
+    - I'm not comfortable talking about it.
+    - Can we skip this topic?
+
+- intent: sleep
+  examples: |
+    - I have insominia
+    - I am suffering from insomnia
+    - I can't sleep.
+    - I haven't slept for the last days.
+    - I can't seem to go to sleep.
+    - I haven't had proper sleep for the past few days.
+- intent: scared
+  examples: |
+    - I'm scared
+    - That sounds awful. What do i do?
+    - No i don't want to feel this way
+    - I am scared for myself
+- intent: death
+  examples: |
+    - My mom died
+    - My brother died
+    - My dad passed away
+    - My sister passed away
+    - Someone in my family died
+    - My friend passed away
+- intent: understand
+  examples: |
+    - You don't understand me.
+    - You're just some robot. How would you know?
+    - You can't possibly know what i'm going through
+    - You're useless
+    - You can't help me
+    - Nobody understands me.
+- intent: done
+  examples: |
+    - That's all.
+    - I don't have anything more to say
+    - Nothing else
+    - That's all i have to say
+    - no, that would be all
+- intent: suicide
+  examples: |
+    - I want to kill myself
+    - I've thought about killing myself.
+    - I want to die
+    - I am going to kill myself
+    - I am going to commit suicide
+- intent: hate-you
+  examples: |
+    - I hate you
+    - I don't like you
+    - I don't trust you
+- intent: hate-me
+  examples: |
+    - You hate me
+    - I know you hate me
+    - You don't like me
+- intent: default
+  examples: |
+    - exams
+    - friends
+    - relationship
+    - boyfriend
+    - girlfriend
+    - family
+    - money
+    - financial problems
+- intent: jokes
+  examples: |
+    - Tell me a joke
+    - Tell me another joke
+- intent: repeat
+  examples: |
+    - You already told me that
+    - You mentioned that already
+    - Why are you repeating yourself?
+- intent: wrong
+  examples: |
+    - What are you saying?
+    - That doesn't make sense
+    - Wrong response
+    - Wrong answer
+- intent: stupid
+  examples: |
+    - Are you stupid?
+    - You're crazy
+    - You are dumb
+    - Are you dumb?
+- intent: location
+  examples: |
+    - Where are you?
+    - Where do you live?
+    - What is your location?
+- intent: something-else
+  examples: |
+    - I want to talk about something else
+    - Let's talk about something else.
+    - Can we not talk about this?
+    - I don't want to talk about this.
+- intent: friends
+  examples: |
+    - I don't have any friends
+- intent: ask
+  examples: |
+    - Can I ask you something?
+- intent: problem
+  examples: |
+    - Probably because my exams are approaching. I feel stressed out because I don't think I've prepared well enough.
+    - probably because of my exams
+- intent: no-approach
+  examples: |
+    - I guess not. All I can think about are my exams.
+    - not really
+    - i guess not
+- intent: learn-more
+  examples: |
+    - ok sure. i would like to learn more about it.
+    - yes, i would like to learn more about it.
+    - i would like to learn more about it.
+- intent: user-agree
+  examples: |
+    - yeah you're right. i deserve a break.
+    - Yeah you're absolutely right about that
+- intent: meditation
+  examples: |
+    - hmmm that sounds like it could be useful to me.
+    - That sounds useful.
+- intent: user-meditation
+  examples: |
+    - i did what you said and i feel alot better. thank you very much.
+    - I feel better now
+- intent: pandora-useful
+  examples: |
+    - thank you very much again. i'll continue practicing meditation and focus on what i can control.
+- intent: user-advice
+  examples: |
+    - I want some advice.
+    - I need some advice.
+    - I need advice on something
+- intent: learn-mental-health
+  examples: |
+    - I want to learn about mental health.
+    - I want to learn more about mental health.
+    - I'm interested in learning about mental health.
+- intent: mental-health-fact
+  examples: |
+    - Tell me a fact about mental health
+    - Tell me another fact about mental health
+    - What is mental health?
+    - Define Mental Health
+    - Why is mental health important?
+    - What is the importance of mental health?
+    - What is Depression?
+    - Define Depression
+    - How do i know if i have Depression?
+    - Am i depressed?
+    - Am i suffering from depression?
+    - Am i mentally ill?
+    - What is a therapist?
+    - What does a therapist do?
+    - What is therapy?
+    - Do i need therapy?
+    - Who is therapy for?
+    - What does it mean to have a mental illness?
+    - Who does mental illness affect?
+    - What causes mental illness?
+    - What are some of the warning signs of mental illness?
+    - Can people with mental illness recover?
+    - What should I do if I know someone who appears to have the symptoms of a mental disorder?
+    - How can I find a mental health professional for myself or my child?
+    - What treatment options are available?
+    - If I become involved in treatment, what do I need to know?
+    - What is the difference between mental health professionals?
+    - How can I find a mental health professional right for my child or myself?
+    - Where else can I get help?
+    - What should I know before starting a new medication?
+    - Where can I go to find therapy?
+    - Where can I learn about types of mental health treatment?
+    - What are the different types of mental health professionals?
+    - Where can I go to find a support group?
+    - Can you prevent mental health problems?
+    - Are there cures for mental health problems?
+    - is there any cure for mental health problems?
+    - What causes mental health problems?
+    - What do I do if I'm worried about my mental health?
+    - How do I know if I'm unwell?
+    - How can I maintain social connections? What if I feel lonely?
+    - What's the difference between anxiety and stress?
+    - What's the difference between sadness and depression?
+    - difference between sadness and depression
+- intent: support
+  examples: |
+    - Can you help me with something?
+    - I need some assistance.
+    - Could you provide some support?
+    - I'm looking for some help here.
+    - Can you support me on this?
+
+- intent: express_gratitude
+  examples: |
+    - Thank you so much.
+    - I really appreciate it.
+    - Thanks a bunch!
+    - I'm grateful for your help.
+    - That means a lot to me, thank you.
+
+- intent: compliment
+  examples: |
+    - You're doing a great job.
+    - I like how you handled that.
+    - You're very helpful, thank you.
+    - That was really well done.
+    - Great work on this!
+
+- intent: self_care_query
+  examples: |
+    - Any tips for self-care?
+    - How can I take better care of myself?
+    - What are some self-care strategies?
+    - Can you suggest some self-care activities?
+    - What should I do for self-care?
+
+- intent: positive_affirmation
+  examples: |
+    - Tell me something positive.
+    - Can I get a positive affirmation?
+    - I need some positive vibes.
+    - Give me a positive thought.
+    - Say something uplifting.
+
+- intent: advice_on_anxiety
+  examples: |
+    - How can I deal with anxiety?
+    - Any advice for anxiety?
+    - What helps with anxiety?
+    - Can you suggest something for anxiety?
+    - How to cope with anxiety?
+
+- intent: relationship_advice
+  examples: |
+    - I need advice on my relationship.
+    - Can you give relationship tips?
+    - How to improve my relationship?
+    - Suggestions for a better relationship?
+    - Relationship advice?
+
+- intent: discuss_feelings
+  examples: |
+    - I want to talk about my feelings.
+    - Can we discuss my emotions?
+    - I need to share how I feel.
+    - Let's talk about what I'm feeling.
+    - I'd like to express my feelings.
+
+- intent: angry
+  examples: |
+    - I'm feeling really angry.
+    - Why am I so mad?
+    - I can't control my anger.
+    - I'm so frustrated and angry.
+    - Anger is getting the best of me.
+
+- intent: explain_anger
+  examples: |
+    - Why do I feel this angry?
+    - Can you explain why I'm angry?
+    - What's making me so mad?
+    - Help me understand my anger.
+    - Why am I angry all the time?
+
+- intent: seek_advice
+  examples: |
+    - I need some advice.
+    - Can you give me some guidance?
+    - I'm looking for advice.
+    - What would you suggest?
+    - Any advice for me?
 
 - intent: mood_great
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+    - I'm in a great mood today.
+    - Feeling fantastic!
+    - My mood is so good right now.
+    - I'm feeling really happy today.
+    - What a great day I'm having!
 
-- intent: mood_unhappy
+- intent: why_happy
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - Why am I feeling so happy?
+    - Can you tell me why I'm in a good mood?
+    - What's making me so happy?
+    - I wonder why I feel so joyful.
+    - Any idea why I'm feeling great?
 
-- intent: bot_challenge
+- intent: advice_social_skills
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - How can I improve my social skills?
+    - Any tips on being more social?
+    - I need advice on social interactions.
+    - How to be better at socializing?
+    - Tips for improving social skills?
+
+- intent: explain
+  examples: |
+    - Can you explain more?
+    - I need some explanation here.
+    - Could you clarify that for me?
+    - Can you elaborate on that?
+    - I don't understand, can you explain?
+
+- intent: apology
+  examples: |
+    - I'm sorry for what I did.
+    - Please accept my apology.
+    - I apologize for my actions.
+    - I didn't mean to hurt anyone, sorry.
+    - My apologies for the mistake.
+
+- intent: advice_on_sleep
+  examples: |
+    - How can I sleep better?
+    - Tips for a good night's sleep?
+    - I need advice on sleeping well.
+    - How to improve my sleep?
+    - Strategies for better sleep?
+
+- intent: professional_help
+  examples: |
+    - Should I seek professional help?
+    - When to get professional advice?
+    - Is it time for professional help?
+    - How do I know if I need professional help?
+    - Professional support options?
+
+- intent: specific_help_request
+  examples: |
+    - I need help with a specific issue.
+    - Can you help me with something specific?
+    - I have a particular problem.
+    - Specific advice needed.
+    - Need assistance with a specific matter.
+
+- intent: follow_up_question
+  examples: |
+    - Can you tell me more?
+    - I have another question.
+    - What about this aspect?
+    - Can we delve deeper into that?
+    - Further clarification needed.
+
+- intent: discuss_loss
+  examples: |
+    - I want to talk about a loss I've experienced.
+    - Can we discuss coping with loss?
+    - I've suffered a loss and need to talk.
+    - How to deal with the feeling of loss?
+    - Talking about loss and grief.
+
+- intent: seeking_support
+  examples: |
+    - I'm looking for some support.
+    - Need support during a tough time.
+    - Can you offer me some support?
+    - I need someone to support me.
+    - Seeking support for my issues.
+
+- intent: self_improvement
+  examples: |
+    - How can I improve myself?
+    - Tips for self-improvement?
+    - I want to work on self-improvement.
+    - Any ideas for bettering myself?
+    - Ways to improve my personal development?
+
+- intent: seeking_tips
+  examples: |
+    - I'm looking for some tips.
+    - Can you give me some helpful tips?
+    - Need some tips on this.
+    - Tips for handling this situation?
+    - Seeking tips and advice.
+
+- intent: misuse_warning
+  examples: |
+    - Please use this service responsibly.
+    - Remember, misuse is not allowed.
+    - A warning about misuse.
+    - Using this incorrectly could be harmful.
+    - Be careful not to misuse this tool.
+
+- intent: life_changes
+  examples: |
+    - How to cope with big life changes?
+    - Advice for going through life changes?
+    - Navigating significant life changes.
+    - Tips for adapting to life changes.
+    - Handling major changes in life?
+
+- intent: seeking_guidance
+  examples: |
+    - I'm seeking some guidance, can you help?
+    - Could you provide me with some guidance on this issue?
+    - I need guidance on how to proceed.
+    - Looking for guidance, any advice?
+    - Can you guide me through this problem?
+    - I'm in need of some guidance, any suggestions?
+    - Who can provide me with the right guidance here?
+    - I'm at a crossroads and need guidance on which path to take.
+    - Could use some guidance on making a tough decision.
+    - Seeking guidance on the best steps forward.
+
+- intent: discuss_goals
+  examples: |
+    - "I want to talk about my career objectives."
+    - "Can we discuss my fitness goals?"
+    - "I'm looking to set some personal development goals."
+    - "I'd like to discuss my goals for learning new skills."
+
+- intent: motivation
+  examples: |
+    - "How can I stay motivated to work out every day?"
+    - "What tips do you have for staying motivated at work?"
+    - "I need some inspiration to keep pursuing my goals."
+    - "Can you help me find my motivation for learning a new language?"
+
+- intent: procrastination
+  examples: |
+    - "I always put off my tasks until the last minute."
+    - "I have trouble starting projects and keep procrastinating."
+    - "Any advice for someone who procrastinates a lot?"
+    - "How do I stop procrastinating and start studying?"
+
+- intent: advice_for_productivity
+  examples: |
+    - "What are your best productivity tips?"
+    - "How can I be more productive while working from home?"
+    - "I need advice on managing my time better."
+    - "Can you suggest ways to improve my daily productivity?"
+
+- intent: feeling_uncertain
+  examples: |
+    - "I'm feeling unsure about my future career path."
+    - "Lately, I've been uncertain about my decisions."
+    - "What should I do when I feel uncertain about a relationship?"
+    - "I'm having doubts about moving to a new city."
+
+- intent: seek_reassurance
+  examples: |
+    - "I need some reassurance that I'm making the right choice."
+    - "Can you reassure me about starting a new job?"
+    - "Sometimes, I just need to hear that everything will be okay."
+    - "I'm looking for some comforting words during a tough time."
+
+- intent: physical_activity
+  examples: |
+    - "What are some good physical activities for beginners?"
+    - "Can you recommend a workout routine for me?"
+    - "I'm interested in starting yoga. Any tips?"
+    - "What's the best way to get more active?"
+
+- intent: wellbeing_tips
+  examples: |
+    - "Do you have any tips for improving mental wellbeing?"
+    - "I'm looking for ways to boost my overall wellbeing."
+    - "Can you suggest daily habits for better health?"
+    - "What are the best practices for maintaining emotional wellbeing?"
+
+- intent: work_stress
+  examples: |
+    - "How do I deal with stress at work?"
+    - "My job is really stressing me out. What should I do?"
+    - "Can you give me some advice on managing work-related stress?"
+    - "I'm struggling with a high workload and stress. Any tips?"
+
+- intent: seek_coping_mechanisms
+  examples: |
+    - "I need coping mechanisms for dealing with anxiety."
+    - "How can I cope with the stress of losing my job?"
+    - "Can you suggest healthy ways to cope with stress?"
+    - "I'm looking for strategies to handle emotional stress."
