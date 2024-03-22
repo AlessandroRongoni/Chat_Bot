@@ -86,6 +86,135 @@ intents:
 - wellbeing_tips
 - work_stress
 - seek_coping_mechanisms
+- no-response
+- learn_more
+
+entities:
+  - symptom
+  - duration
+  - intensity
+  - coping_mechanism
+  - emotion
+  - reason
+  - physical_symptoms
+  - support_network
+  - therapy_history
+  - lifestyle_factors
+  - goals
+  - resource_needs
+
+
+slots:
+  user_mood:
+    type: text
+    influence_conversation: true
+  last_coping_strategy:
+    type: text
+    influence_conversation: false
+  symptom_severity:
+    type: text
+    influence_conversation: true
+  goal:
+    type: text
+    influence_conversation: true
+  age:
+    type: float  # Utilizza float o text a seconda della precisione desiderata
+    influence_conversation: false
+  gender:
+    type: categorical
+    values:
+      - male
+      - female
+      - other
+    influence_conversation: false
+  previous_therapy_experience:
+    type: bool
+    influence_conversation: false
+  current_activity:
+    type: text
+    influence_conversation: false
+  feeling_duration:
+    type: text
+    influence_conversation: false
+  physical_health:
+    type: text
+    influence_conversation: false
+  support_system:
+    type: bool
+    influence_conversation: false
+  personal_values:
+    type: text
+    influence_conversation: false
+  life_changes:
+    type: text
+    influence_conversation: true
+  communication_preference:
+    type: text
+    influence_conversation: false
+  feedback_on_bot:
+    type: text
+    influence_conversation: false
+  data_privacy_concerns:
+    type: bool
+    influence_conversation: false
+  crisis_detection:
+    type: bool
+    influence_conversation: true
+
+
+forms:
+  wellbeing_assessment_form:
+    symptom:
+    - type: from_entity
+      entity: symptom
+    duration:
+    - type: from_entity
+      entity: duration
+    intensity:
+    - type: from_entity
+      entity: intensity
+  user_registration_form:
+    age:
+      - type: from_entity
+        entity: age
+    gender:
+      - type: from_entity
+        entity: gender
+    previous_therapy_experience:
+      - type: from_intent
+        intent: affirm
+        value: true
+      - type: from_intent
+        intent: deny
+        value: false
+  social_support_assessment_form:
+    support_network:
+      - type: from_entity
+        entity: support_network
+    support_system:
+      - type: from_intent
+        intent: affirm
+        value: true
+      - type: from_intent
+        intent: deny
+        value: false
+  stress_management_form:
+    reason:
+      - type: from_entity
+        entity: reason
+    coping_mechanism:
+      - type: from_entity
+        entity: coping_mechanism
+    last_coping_strategy:
+      - type: from_text
+  life_change_assessment_form:
+    life_changes:
+      - type: from_entity
+        entity: life_changes
+  communication_preference_form:
+    communication_preference:
+      - type: from_text
+
 
 
 
@@ -97,31 +226,64 @@ responses:
     - text: "Hi there. How are you feeling today?"
     - text: "Great to see you. How do you feel currently?"
     - text: "Hello there. Glad to see you're back. What's going on in your world right now?"
+    - text: "Hello there. How are you feeling today?"
+    - text: "Hi there. How are you feeling today?"
+
+  utter_learn_more:
+    - text: "I'm here to help you. What would you like to know more about?"
+    - text: "There's so much we can explore together. What topic interests you?"
+    - text: "I have information on a variety of topics. Which one do you want to dive into?"
+    - text: "Learning is a journey, and I'm here to guide you. What's the next topic on your mind?"
+    - text: "Let's expand our horizons. What subject are you curious about today?"
+    
+
   utter_morning:
     - text: "Good morning. I hope you had a good night's sleep. How are you feeling today? "
+    - text: "Good morning. How are you feeling today?"
+    - text: "Good morning. How has your day been so far?"
+
   utter_afternoon:
     - text: "Good afternoon. How is your day going?"
+    - text: "Good afternoon. How are you feeling today?"
+    - text: "Good afternoon. How has your day been?"
+
   utter_evening:
     - text: "Good evening. How has your day been?"
+    - text: "Good evening. How are you feeling today?"
+    - text: "Good evening. How has your day been so far?"
+
   utter_night:
     - text: "Good night. Get some proper sleep"
     - text: "Good night. Sweet dreams."
+    - text: "Good night. Sleep well."
+    - text: "Good night. Have a good rest."
+
   utter_goodbye:
     - text: "See you later."
     - text: "Have a nice day."
     - text: "Bye! Come back again."
     - text: "I'll see you soon."
+    - text: "Goodbye! Have a great day."
+    - text: "Goodbye! Take care."
+    - text: "Goodbye! See you later."
+
   utter_thanks:
     - text: "Happy to help!"
     - text: "Any time!"
     - text: "My pleasure"
     - text: "You're most welcome!"
+    - text: "You're welcome!"
+    - text: "No problem!"
+
   utter_no-response:
     - text: "Sorry, I didn't understand you."
     - text: "Please go on."
     - text: "Not sure I understand that."
     - text: "Please don't hesitate to talk to me."
     - text: "Oh I see. Do you want to talk about something?"
+    - text: "I'm not sure what you mean. Can you elaborate on that?"
+    - text: "I'm not sure I understand. Can you explain further?"
+
   utter_about:
     - text: "I'm Pandora, your Personal Therapeutic AI Assistant. How are you feeling today"
     - text: "I'm Pandora, a Therapeutic AI Assitant designed to assist you. Tell me about yourself."
@@ -129,20 +291,35 @@ responses:
     - text: "You can call me Pandora."
     - text: "I'm Pandora!"
     - text: "Call me Pandora"
+  
   utter_skill:
     - text: "I can provide general advice regarding anxiety and depression, answer questions related to mental health and make daily conversations. Do not consider me as a subsitute for an actual mental healthcare worker. Please seek help if you don't feel satisfied with me."
+    - text: "Besides offering support on topics like anxiety and depression, I can also help with stress management techniques, provide information on wellbeing, and chat about your day. However, for specific medical advice, it's best to see a healthcare professional."
+    - text: "I'm equipped to discuss mental health topics, share tips on dealing with stress, and provide a listening ear for when you need to talk. My aim is to assist, but for situations requiring medical intervention, please consult a healthcare provider."
+    - text: "My capabilities include discussing ways to manage anxiety and depression, providing insights on improving mental health, and having general chats. But please remember, I'm not a substitute for professional therapy or medical advice."
+    - text: "I can offer advice on common mental health questions, support through conversation, and information on coping strategies. While I'm here to help to the best of my ability, professional help should be sought for diagnoses or treatment plans."
+  
   utter_creation:
     - text: "I was created by dataset and brains."
     - text: "I was trained on a text dataset using Rasa & Natural Language Processing techniques"
     - text: "The real question is: Who created you?"
+    - text: "I was created by a team of developers using Rasa."
+    - text: "I was created by a team of developers using Rasa and Python."
+
   utter_name:
     - text: "Oh nice to meet you. Tell me how was your week?"
     - text: "Nice to meet you. So tell me. How do you feel today?"
     - text: "That's a great name. Tell me more about yourself."
+    - text: "Nice to meet you. How are you feeling today?"
+    - text: "Nice to meet you. How are you doing today?"
+
   utter_help:
     - text: "Sure. Tell me how can i assist you"
     - text: "Tell me your problem so that i can assist you"
     - text: "Yes, sure. How can I help you?"
+    - text: "I'm here to help. What do you need assistance with?"
+    - text: "I'm here to help. What can I do for you?"
+
   utter_sad:
     - text: "I'm sorry to hear that. I'm here for you. Talking about it might help. So, tell me why do you think you're feeling this way?"
     - text: "I'm here for you. Could you tell me why you're feeling this way?"
@@ -229,34 +406,98 @@ responses:
     - text: "Duh I live in your computer"
     - text: "Everywhere"
     - text: "Somewhere in the universe"
+  
+  
   utter_something-else:
     - text: "Okay sure. What do you want to talk about?"
     - text: "Alright no problem. Is there something you want to talk about?"
     - text: "Is there something else that you want to talk about?"
+  
+  
   utter_friends:
+    - text: "Friendship is valuable, and it's understandable to feel this way. What qualities do you look for in a friend?"
+    - text: "Sometimes, making friends can be challenging, but I believe there's someone out there for everyone. Have you tried joining any clubs or groups?"
+    - text: "Feeling lonely can be tough, but remember, I'm here to listen. Do you want to talk about your interests? Maybe we can find a way to connect with others who share them."
+    - text: "It's okay to feel this way. Sometimes, taking the first step to reach out can be the hardest part. Have you considered volunteering as a way to meet new people?"
     - text: "I'm sorry to hear that. Just know that I'm here for you. Talking about it might help. Why do you think you don't have any friends?"
+  
+  
   utter_ask:
     - text: "Sure. I'll try my best to answer you"
     - text: "Of course. Feel free to ask me anything. I'll do my best to answer you"
+    - text: "I'm all ears! Feel free to share your thoughts or questions with me."
+    - text: "Don't hesitate to ask, no matter how big or small your query might be."
+    - text: "Asking questions is how we learn and grow. What's on your mind today?"
+  
+  
   utter_problem:
     - text: "I see. Have you taken any approaches to not feel this way?"
+    - text: "Understanding the problem is the first step towards solving it. Let's explore this together."
+    - text: "Problems can often lead us to grow. Would you like to share more about what's bothering you?"
+    - text: "I'm here to help you work through this. What's been on your mind?"
+    - text: "I'm here to listen. What's been troubling you?"
+
+  
+  
   utter_no-approach:
     - text: "That's no problem. I can see why you'd be stressed out about that. I can suggest you some tips to alleviate this issue. Would you like to learn more about that?"
+    - text: "Finding the right approach can be tricky, but we can brainstorm some ideas together. What have you tried so far?"
+    - text: "It's okay to feel stuck sometimes. Let's think about potential steps you could take to address this."
+    - text: "It's okay to feel overwhelmed. Let's break this down together. What's been on your mind?"
+    - text: "I understand how you feel. Let's work together to find a solution. What's been troubling you?"
+
+  
   utter_learn-more:
     - text: "So first I would suggest you to give yourself a break. Thinking more and more about the problem definitely does not help in solving it. You'll just end up overwhelming yourself."
+    - text: "Learning is a journey, and I'm here to guide you. What topic are you interested in exploring further?"
+    - text: "There's always more to learn and discover. Let me know how I can assist with your quest for knowledge."
+    - text: "I'm here to help you learn more. What would you like to know about?"
+    
+  
   utter_user-agree:
     - text: "Next, I would suggest you to practice meditation. Meditation can produce a deep state of relaxation and a tranquil mind."
+    - text: "Agreement is a great place to start making a change. Let's see how we can apply this together."
+    - text: "I'm glad we're on the same page. Taking action is the next step. Ready when you are!"
+    - text: "I'm glad you're open to trying new things. Let's explore how we can apply this together."
+
+  
   utter_meditation:
     - text: "Focus all your attention on your breathing. Concentrate on feeling and listening as you inhale and exhale through your nostrils. Breathe deeply and slowly. When your attention wanders, gently return your focus to your breathing."
+    - text: "Meditation is a powerful tool for finding peace. Try setting aside a few minutes each day just to be present."
+    - text: "Finding your inner calm through meditation can transform your day. Remember, it's about progress, not perfection."
+    - text: "Meditation can help you find your center. It's a practice that can be done anywhere, anytime."
+
+  
   utter_user-meditation:
     - text: "Your welcome. Remember: Always focus on what's within your control. When you find yourself worrying, take a minute to examine the things you have control over. You can't prevent a storm from coming but you can prepare for it. You can't control how someone else behaves, but you can control how you react. Recognize that sometimes, all you can control is your effort and your attitude. When you put your energy into the things you can control, you'll be much more effective."
+    - text: "Hearing that you feel better is wonderful. Remember, regular practice can deepen the benefits over time."
+    - text: "That's fantastic news! Meditation is a skill that improves with practice. Keep it up!"
+    - text: "I'm glad to hear that. Remember, meditation is a practice that can help you find peace and clarity."
+
+  
   utter_pandora-useful:
     - text: "I'm glad you found this useful. Is there something else I can help you with?"
+    - text: "Your feedback is encouraging. Let's continue our conversation and see what else we can discover together."
+    - text: "Knowing I could help makes me happy. There's much more we can explore, so feel free to ask anything."
+    - text: "I'm glad to hear that. Let's keep the momentum going. What's next on your mind?"
+
+  
   utter_user-advice:
     - text: "Sure. What can I do to help?"
     - text: "Okay what do you need advice on?"
+    - text: "Advice is most useful when it's tailored to your needs. Could you share a bit more about what's on your mind?"
+    - text: "Let's dive into your concerns and find some actionable advice. What specific area are you seeking guidance on?"
+    - text: "I'm here to help. What advice are you looking for?"
+
+  
   utter_learn-mental-health:
     - text: "Oh that's really great. I'd be willing to answer anything that I know about it."
+    - text: "Mental health is a vast and important topic. Are there specific aspects you're interested in?"
+    - text: "Learning about mental health is a great way to support yourself and others. What information are you looking for?"
+    - text: "Mental health is a complex and important subject. What would you like to know more about?"
+    - text: "I'm here to help you learn more about mental health. What would you like to know?"
+
+
   utter_mental-health-fact:
     - text: "According to a UNICEF report, One in seven Indians between 15-24 years of age feels depressed"
     - text: "1 in 5 young people (age 13-18) has or will develop a mental illness in their lifetime."
@@ -534,3 +775,27 @@ responses:
     - text: "Finding effective coping techniques can help, like meditation, yoga, or simply dedicating time to your favorite hobbies."
     - text: "Talking about your problems with trusted friends or a professional can be incredibly therapeutic and help manage stress."
     - text: "Try to view challenges as opportunities to learn and grow. Changing your perspective can reduce the impact of stress on your life."
+
+  utter_self_improvement:
+    - text: "Improving yourself is a journey that takes dedication and effort. What's one small step you can take today towards your goals?"
+    - text: "Self-improvement is all about setting realistic goals and working towards them one step at a time. What area of your life would you like to improve?"
+    - text: "Remember, growth happens outside of your comfort zone. What's something new you've been wanting to try?"
+    - text: "Every day is a new opportunity to learn something new or to improve an existing skill. What's something you're passionate about learning?"
+    - text: "Reflecting on your experiences and learning from them is a key part of self-improvement. What's a recent experience you've learned from?"
+    - text: "Self-improvement often starts with self-awareness. Take some time to reflect on your strengths and areas where you'd like to grow. What are some strengths you're proud of?"
+    - text: "Setting aside time for personal development can lead to greater satisfaction and achievements. How do you plan to invest in yourself this week?"
+    - text: "Growth and change can be challenging, but also incredibly rewarding. Remember to celebrate your progress, no matter how small."
+    - text: "Finding a mentor or role model can be a powerful way to accelerate your growth. Is there someone whose qualities or achievements inspire you?"
+    - text: "Maintaining a positive mindset and being open to new experiences are crucial for self-improvement. What's one positive change you've noticed in yourself recently?"
+
+  utter_seeking_tips:
+    - text: "Looking for tips? Whether it's about productivity, wellness, or learning, I'm here to help. What area are you interested in?"
+    - text: "I'm glad you're seeking tips to improve. Let's tackle this together. What specific advice are you looking for?"
+    - text: "Everyone can use a few good tips now and then. What's on your mind that you could use some guidance with?"
+    - text: "I have a range of tips and tricks up my sleeve. Could you tell me a bit more about what you're hoping to learn or improve?"
+    - text: "Seeking tips is a great way to grow. Whether it's mental health, lifestyle, or hobbies, let me know what you're curious about!"
+    - text: "I can offer advice on a variety of topics. What aspect of your life are you looking to enhance with some tips?"
+    - text: "It sounds like you're on a path to self-improvement. I'm here to support you with tips on any topic. What's your focus right now?"
+    - text: "There's always something new to learn. Share with me what you're seeking tips for, and I'll do my best to provide helpful advice."
+    - text: "Ready to take on new challenges or habits? Tell me what tips you need, and let's explore how you can achieve your goals."
+    - text: "Gathering tips is a proactive step towards making positive changes. What area of interest would you like tips on today?"
