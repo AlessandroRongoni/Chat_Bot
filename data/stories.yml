@@ -2,29 +2,448 @@ version: "3.1"
 
 stories:
 
-- story: happy path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+  - story: ricerca_per_attore
+    steps:
+    - intent: saluto
+    - action: utter_saluto
+    - intent: ricerca_per_attore
+      entities:
+      - attore: "Tom Hanks"
+    - action: action_ricerca_per_attore
+    - intent: addio
+    - action: utter_addio
 
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+  - story: ricerca_per_regista
+    steps:
+    - intent: saluto
+    - action: utter_saluto
+    - intent: ricerca_per_regista
+    - action: utter_ricerca_per_regista
+    - intent: addio
+    - action: utter_addio
 
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+  - story: ricerca_per_genere
+    steps:
+    - intent: saluto
+    - action: utter_saluto
+    - intent: ricerca_per_genere
+    - action: utter_ricerca_per_genere
+    - intent: addio
+    - action: utter_addio
+
+  - story: ricerca_per_anno
+    steps:
+    - intent: saluto
+    - action: utter_saluto
+    - intent: ricerca_per_anno
+    - action: utter_ricerca_per_anno
+    - intent: addio
+    - action: utter_addio
+
+  - story: ricerca_per_categoria
+    steps:
+    - intent: saluto
+    - action: utter_saluto
+    - intent: ricerca_per_categoria
+    - action: utter_ricerca_per_categoria
+    - intent: addio
+    - action: utter_addio
+
+  - story: ricerca_per_titolo
+    steps:
+    - intent: saluto
+    - action: utter_saluto
+    - intent: ricerca_per_titolo
+    - action: utter_ricerca_per_titolo
+    - intent: addio
+    - action: utter_addio
+
+  - story: ricerca_per_durata
+    steps:
+    - intent: saluto
+    - action: utter_saluto
+    - intent: ricerca_per_durata
+    - action: utter_ricerca_per_durata
+    - intent: addio
+    - action: utter_addio
+
+  - story: ricerca_per_tipo
+    steps:
+    - intent: saluto
+    - action: utter_saluto
+    - intent: ricerca_per_tipo
+    - action: utter_ricerca_per_tipo
+    - intent: addio
+    - action: utter_addio
+
+  - story: ricerca_film_per_genere
+    steps:
+    - intent: saluto
+    - action: utter_saluto
+    - intent: ricerca_per_tipo
+    - action: utter_ricerca_per_tipo
+    - intent: ricerca_per_genere
+    - action: utter_ricerca_per_genere
+    - intent: addio
+    - action: utter_addio
+
+  - story: ricerca_serie_per_genere
+    steps:
+    - intent: saluto
+    - action: utter_saluto
+    - intent: ricerca_per_tipo
+    - action: utter_ricerca_per_tipo
+    - intent: ricerca_per_genere
+    - action: utter_ricerca_per_genere
+    - intent: addio
+    - action: utter_addio
+
+  - story: ricerca_film_serie_per_attore
+    steps:
+    - intent: saluto
+    - action: utter_saluto
+    - intent: ricerca_per_tipo
+    - action: utter_ricerca_per_tipo
+    - intent: ricerca_per_attore
+    - action: utter_ricerca_per_attore
+    - intent: addio
+    - action: utter_addio
+
+
+  - story: ricerca_film_serie_per_regista
+    steps:
+    - intent: saluto
+    - action: utter_saluto
+    - intent: ricerca_per_tipo
+    - action: utter_ricerca_per_tipo
+    - intent: ricerca_per_regista
+    - action: utter_ricerca_per_regista
+    - intent: addio
+    - action: utter_addio
+
+  - story: ricerca_film_serie_per_anno
+    steps:
+    - intent: saluto
+    - action: utter_saluto
+    - intent: ricerca_per_tipo
+    - action: utter_ricerca_per_tipo
+    - intent: ricerca_per_anno
+    - action: utter_ricerca_per_anno
+    - intent: addio
+    - action: utter_addio
+
+
+  - story: ricerca_film_serie_per_categoria
+    steps:
+    - intent: saluto
+    - action: utter_saluto
+    - intent: ricerca_per_tipo
+      entities:
+      - tipo: "film"
+    - action: utter_ricerca_per_tipo
+    - intent: ricerca_per_categoria
+      entities: 
+      - categoria: "adolescenti"
+    - action: utter_ricerca_per_categoria
+    - intent: addio
+    - action: utter_addio
+
+  - story: ricerca_film_serie_per_durata
+    steps:
+    - intent: saluto
+    - action: utter_saluto
+    - intent: ricerca_per_tipo
+    - action: utter_ricerca_per_tipo
+    - intent: ricerca_per_durata
+    - action: utter_ricerca_per_durata
+    - intent: addio
+    - action: utter_addio
+
+
+  - story: ricerca_attore_per_film_serie_per_genere
+    steps:
+    - intent: ricerca_per_attore
+    - action: utter_ricerca_per_attore
+    - intent: ricerca_per_tipo
+    - action: utter_ricerca_per_tipo
+    - intent: ricerca_per_genere
+    - action: utter_ricerca_per_genere
+    - intent: addio
+    - action: utter_addio
+
+  - story: ricerca_regista_per_film_serie_per_genere
+    steps:
+    - intent: saluto
+    - action: utter_saluto
+    - intent: ricerca_per_regista
+    - action: utter_ricerca_per_regista
+    - intent: ricerca_per_tipo
+    - action: utter_ricerca_per_tipo
+    - intent: ricerca_per_genere
+    - action: utter_ricerca_per_genere
+    - intent: addio
+    - action: utter_addio
+
+  - story: ricerca_attore_per_film_serie_per_anno
+    steps:
+    - intent: saluto
+    - action: utter_saluto
+    - intent: ricerca_per_attore
+    - action: utter_ricerca_per_attore
+    - intent: ricerca_per_tipo
+    - action: utter_ricerca_per_tipo
+    - intent: ricerca_per_anno
+    - action: utter_ricerca_per_anno
+    - intent: addio
+    - action: utter_addio
+
+  - story: ricerca_regista_per_film_serie_per_anno
+    steps:
+    - intent: saluto
+    - action: utter_saluto
+    - intent: ricerca_per_regista
+    - action: utter_ricerca_per_regista
+    - intent: ricerca_per_tipo
+    - action: utter_ricerca_per_tipo
+    - intent: ricerca_per_anno
+    - action: utter_ricerca_per_anno
+    - intent: addio
+    - action: utter_addio
+
+  - story: ricerca_attore_per_film_serie_per_categoria
+    steps:
+    - intent: saluto
+    - action: utter_saluto
+    - intent: ricerca_per_attore
+    - action: utter_ricerca_per_attore
+    - intent: ricerca_per_tipo
+    - action: utter_ricerca_per_tipo
+    - intent: ricerca_per_categoria
+    - action: utter_ricerca_per_categoria
+    - intent: addio
+    - action: utter_addio
+
+  - story: ricerca_regista_per_film_serie_per_categoria
+    steps:
+    - intent: saluto
+    - action: utter_saluto
+    - intent: ricerca_per_regista
+    - action: utter_ricerca_per_regista
+    - intent: ricerca_per_tipo
+    - action: utter_ricerca_per_tipo
+    - intent: ricerca_per_categoria
+    - action: utter_ricerca_per_categoria
+    - intent: addio
+    - action: utter_addio
+
+  - story: ricerca_attore_per_film_serie_per_durata
+    steps:
+    - intent: saluto
+    - action: utter_saluto
+    - intent: ricerca_per_attore
+    - action: utter_ricerca_per_attore
+    - intent: ricerca_per_tipo
+    - action: utter_ricerca_per_tipo
+    - intent: ricerca_per_durata
+    - action: utter_ricerca_per_durata
+    - intent: addio
+    - action: utter_addio
+
+  - story: ricerca_regista_per_film_serie_per_durata
+    steps:
+    - intent: saluto
+    - action: utter_saluto
+    - intent: ricerca_per_regista
+    - action: utter_ricerca_per_regista
+    - intent: ricerca_per_tipo
+    - action: utter_ricerca_per_tipo
+    - intent: ricerca_per_durata
+    - action: utter_ricerca_per_durata
+    - intent: addio
+    - action: utter_addio
+
+  - story: ricerca_per_categoria_per_genere
+    steps:
+    - intent: saluto
+    - action: utter_saluto
+    - intent: ricerca_per_categoria
+    - action: utter_ricerca_per_categoria
+    - intent: ricerca_per_genere
+    - action: utter_ricerca_per_genere
+    - intent: addio
+    - action: utter_addio
+
+  - story: ricerca_per_categoria_per_anno
+    steps:
+    - intent: saluto
+    - action: utter_saluto
+    - intent: ricerca_per_categoria
+    - action: utter_ricerca_per_categoria
+    - intent: ricerca_per_anno
+    - action: utter_ricerca_per_anno
+    - intent: addio
+    - action: utter_addio
+
+  - story: ricerca_per_categoria_per_durata
+    steps:
+    - intent: saluto
+    - action: utter_saluto
+    - intent: ricerca_per_categoria
+    - action: utter_ricerca_per_categoria
+    - intent: ricerca_per_durata
+    - action: utter_ricerca_per_durata
+    - intent: addio
+    - action: utter_addio
+
+  - story: ricerca_per_categoria_per_tipo
+    steps:
+    - intent: saluto
+    - action: utter_saluto
+    - intent: ricerca_per_categoria
+    - action: utter_ricerca_per_categoria
+    - intent: ricerca_per_tipo
+    - action: utter_ricerca_per_tipo
+    - intent: addio
+    - action: utter_addio
+
+
+  - story: playlist_film_serie_per_genere
+    steps:
+    - intent: saluto
+    - action: utter_saluto
+    - intent: playlist
+    - action: utter_playlist
+    - intent: ricerca_per_tipo
+    - action: utter_ricerca_per_tipo
+    - intent: ricerca_per_genere
+    - action: action_genera_playlist
+    - intent: addio
+    - action: utter_addio
+
+  - story: playlist_film_serie_per_attore
+    steps:
+    - intent: saluto
+    - action: utter_saluto
+    - intent: playlist
+    - action: utter_playlist
+    - intent: ricerca_per_tipo
+    - action: utter_ricerca_per_tipo
+    - intent: ricerca_per_attore
+    - action: action_genera_playlist
+    - intent: addio
+    - action: utter_addio
+
+
+  - story: Ricerca film per genere e poi per anno
+    steps:
+    - intent: saluto
+    - action: utter_saluto
+    - intent: ricerca_per_genere
+      entities:
+      - tipo: "film"
+      - genere: "commedia"
+    - action: action_ricerca_per_genere
+    - intent: ricerca_per_anno
+      entities:
+      - anno: "2019"
+    - action: action_ricerca_per_anno
+    - intent: addio
+    - action: utter_addio
+
+  - story: Informazioni specifiche su un titolo e poi addio
+    steps:
+    - intent: saluto
+    - action: utter_saluto
+    - intent: ricerca_per_titolo
+      entities:
+      - titolo: "The Crown"
+    - action: action_ricerca_per_titolo
+    - intent: addio
+    - action: utter_addio
+
+  - story: Ricerca serie TV per regista e poi domanda specifica
+    steps:
+    - intent: saluto
+    - action: utter_saluto
+    - intent: ricerca_per_regista
+      entities:
+      - tipo: "serie tv"
+      - regista: "David Fincher"
+    - action: action_ricerca_per_regista
+    - intent: ricerca_per_titolo
+      entities:
+      - titolo: "Mindhunter"
+    - action: action_ricerca_per_titolo
+    - intent: addio
+    - action: utter_addio
+
+  - story: Ricerca per attore seguita da una ricerca per durata
+    steps:
+    - intent: ricerca_per_attore
+      entities:
+      - attore: "Tom Hanks"
+    - action: action_ricerca_per_attore
+    - intent: ricerca_per_durata
+      entities:
+      - tipo: "film"
+      - minuti: "120"
+    - action: action_ricerca_per_durata
+    - intent: addio
+    - action: utter_addio
+
+
+  - story: ricerca_combinata_film
+    steps:
+    - intent: saluto
+    - action: utter_saluto
+    - intent: ricerca_per_genere
+      entities:
+        - genere: "azione"
+    - action: action_ricerca_per_genere
+    - intent: ricerca_per_anno
+      entities:
+        - anno: "2020"
+    - action: action_ricerca_per_anno
+    - intent: ricerca_per_durata
+      entities:
+        - durata: "120 min"
+    - action: action_ricerca_per_durata
+    - intent: addio
+    - action: utter_addio
+
+  - story: suggerimenti di visione basati sui generi preferiti
+    steps:
+    - intent: saluto
+    - action: utter_saluto
+    - intent: specifica_preferenze
+      entities:
+      - genere: "azione"
+    - action: action_specifica_preferenze
+    - intent: consigli_di_visione
+    - action: action_consigli_di_visione
+    - intent: addio
+    - action: utter_addio
+
+  - story: suggerimenti di visione basati su un titolo preferito
+    steps:
+    - intent: saluto
+    - action: utter_saluto
+    - intent: specifica_preferenze
+      entities:
+      - titolo: "The Matrix"
+    - action: action_specifica_preferenze
+    - intent: consigli_di_visione
+    - action: action_consigli_di_visione
+    - intent: addio
+    - action: utter_addio
+
+  - story: ricerca_per_paese
+    steps:
+    - intent: saluto
+    - action: utter_saluto
+    - intent: ricerca_per_paese
+      entities:
+      - paese: "Italia"
+    - action: action_ricerca_per_paese
+    - intent: addio
+    - action: utter_addio

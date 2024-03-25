@@ -1,34 +1,135 @@
 version: "3.1"
 
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+  - saluto
+  - addio
+  - ricerca_per_attore
+  - ricerca_per_regista
+  - ricerca_per_genere
+  - ricerca_per_anno
+  - ricerca_per_categoria
+  - ricerca_per_titolo
+  - ricerca_per_durata
+  - ricerca_per_tipo
+  - playlist
+  - specifica_preferenze
+  - consigli_di_visione
+  - ricerca_per_paese
+
+entities:
+  - tipo
+  - genere
+  - attore
+  - regista
+  - anno
+  - categoria
+  - titolo
+  - durata
+  - paese
+
+slots:
+  tipo:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: tipo
+  genere:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: genere
+  attore:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: attore
+  regista:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: regista
+  anno:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: anno
+  categoria:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: categoria
+  titolo:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: titolo
+  durata:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: durata
+  paese:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: paese
+
 
 responses:
-  utter_greet:
-  - text: "Hey! How are you?"
+  utter_saluto:
+    - text: "Ciao! Come posso aiutarti?"
+  utter_addio:
+    - text: "Arrivederci e a presto!"
+  utter_ricerca_per_attore:
+    - text: "Ecco i film o serie TV con {attore}."
+  utter_ricerca_per_regista:
+    - text: "Ecco le opere dirette da {regista}."
+  utter_ricerca_per_genere:
+    - text: "Ecco alcuni titoli di genere {genere}."
+  utter_ricerca_per_anno:
+    - text: "Ecco i titoli usciti nel {anno}."
+  utter_ricerca_per_categoria:
+    - text: "Ecco i titoli nella categoria {categoria}."
+  utter_ricerca_per_titolo:
+    - text: "Ecco le informazioni su {titolo}."
+  utter_ricerca_per_durata:
+    - text: "Ecco i titoli che corrispondono alla tua richiesta di durata."
+  utter_ricerca_per_tipo:
+    - text: "Ecco i {tipo} che potrebbero interessarti."
+  utter_playlist:
+    - text: "Sto creando una playlist basata sulle tue preferenze."
+  utter_consigli_di_visione:
+    - text: "Basandomi sulle tue preferenze, ti consiglio di guardare {titolo}."
+    - text: "Per te potrebbe essere interessante {titolo}."
+  utter_specifica_preferenze:
+    - text: "Grazie per condividere le tue preferenze! Lavorerò per trovarti qualcosa di adatto."
+    - text: "Interessante, tengo presente che ti piace {genere/titolo}. Vediamo cosa posso trovare per te."
+  utter_ricerca_per_paese:
+    - text: "Ecco i titoli provenienti da {paese}."
+    - text: "Ti mostro i titoli provenienti da {paese}."
+  utter_default:
+    - text: "Scusa, non ho capito. Puoi provare a esprimerti in modo diverso?"
+    - text: "Mi dispiace, non sono sicuro di come aiutarti con questo. Puoi chiedermi qualcosa d'altro?"
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
-  utter_goodbye:
-  - text: "Bye"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+actions:
+  - action_ricerca_per_attore
+  - action_ricerca_per_regista
+  - action_ricerca_per_genere
+  - action_ricerca_per_anno
+  - action_ricerca_per_categoria
+  - action_ricerca_per_titolo
+  - action_ricerca_per_durata
+  - action_ricerca_per_tipo
+  - action_genera_playlist
+  - action_consigli_di_visione
+  - action_specifica_preferenze
+  - action_ricerca_per_paese

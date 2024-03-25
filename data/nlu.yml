@@ -1,91 +1,486 @@
-version: "3.1"
+version: '3.1'
 
 nlu:
-- intent: greet
+- intent: saluto
   examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+    - Ciao!
+    - Ehi là
+    - Salve a tutti
+    - Buongiorno
+    - Buonasera
+    - Hey
+    - Buon pomeriggio
+    - Ciao
+    - Saluti
+    - Un saluto
+    - Hello
+    - Buona giornata
+    - Come va?
+    - Che piacere vederti
+    - Felice di vederti
+    - Ciao, come stai?
+    - Ola
+    - Bongiorno
+    - Salve a te
+    - Ciao bella
+    - Bello
+    - Salve
+    - Hi
+    - Pronto
+    - Pronti
+    - Eccoci
+    - Daje
+    - Ciao a tutti
+    - Ciao a te
+    - Ciao a voi
+    - Ciao a voi tutti
+    - Ciao a tutti quanti
+    - Ciao a tutti quanti voi
+    - Ciao a tutti quanti voi lì
 
-- intent: goodbye
-  examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
 
-- intent: affirm
+- intent: addio
   examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+    - Arrivederci
+    - Ciao ciao
+    - A presto
+    - Addio
+    - Alla prossima
+    - Ci vediamo
+    - Bye Bye
+    - Bye
+    - A mai più
+    - Addios
+    - Addio a tutti
+    - Addio a te
+    - Addio caro
+    - Addio cari
+    - Addio carissimi
+    - Addio carissimo
+    - Addio caro amico
+    - Addio caro amica
+    - Addio caro amici
+    - Addio caro amiche
+    - Addio caro fratello
+    - Addio caro fratelli
+    - Basta
+    - Me ne vado
+    - Stop
+    - Fine
+    - Arrivederla
+    - Arrivederci a tutti
+    - Arrivederci a te
+    - Arrivederci caro
+    - Arrivederci cari
+    - Arrivederci carissimi
+    - Arrivederci carissimo
+    - Arrivederci caro amico
+    - Arrivederci caro amica
+    - Arrivederci caro amici
+    - Arrivederci caro amiche
 
-- intent: deny
-  examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
 
-- intent: mood_great
+- intent: ricerca_per_genere
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+    - Mostrami i [titoli](tipo) di [azione](genere)
+    - Quali [film](tipo) di [commedia](genere) sono disponibili?
+    - Cerca [serie TV](tipo) di [dramma](genere)
+    - Voglio vedere qualcosa di [horror](genere)
+    - Dammi una lista di [fantascienza](genere)
+    - Trova i migliori [film](tipo) [indie](genere)
+    - Quali sono le ultime uscite in [[documentari](genere)](genere)?
+    - Ho voglia di guardare un bel [film](tipo) [romantico](genere)
+    - Quali [anime](genere) mi consigli?
+    - Sto cercando [film](tipo) [per bambini e famiglia](genere)
+    - Esplora i [titoli](tipo) [thriller](genere)
+    - Dimmi qualche [serie](tipo) [crime](genere) da guardare
+    - Mi piacerebbe vedere un [musical](genere)
+    - C'è qualche novità in [commedie TV](genere)?
+    - Che [film](tipo) di [culto](genere) posso guardare stasera?
+    - Consigliami qualche [docuserie](genere) interessante
+    - Vorrei qualcosa sul [reality](genere)
+    - Quali [serie TV](tipo) [internazionali](genere) hai?
+    - Dammi opzioni di [film](tipo) [sportivi](genere)
+    - Mostrami i migliori [film](tipo) [indipendenti](genere)
+    - Mi interessano i [film](tipo) [di fantascienza e fantasy](genere)
+    - Quali [reality TV](genere) posso guardare?
+    - Cerca dei [film](tipo) [thriller psicologici](genere)
+    - Quali [serie](tipo) drammatiche](genere) mi consigli?
+    - Vorrei guardare qualche [commedia leggera](genere)
+    - Consigliami dei [[documentari](genere) scientifici](genere)
+    - Sono in cerca di [serie per adolescenti](genere)
+    - Quali sono le ultime [serie animate](genere) aggiunte?
+    - Dimmi alcuni titoli di [[film](tipo) d'azione americani](genere)
+    - Stasera voglio vedere un [[film](tipo) romantico](genere) classico
+    - Mostrami [serie investigative](genere) avvincenti
+    - Che [[film](tipo) d'avventura](genere) posso guardare con i bambini?
+    - Sto cercando [[film](tipo) biografici](genere) ispiratori
+    - Vorrei qualcosa di [storico](genere)
+    - Consigli su [serie TV](tipo) di [fantasia](genere)
+    - Ho bisogno di ridere, dammi [commedie brillanti](genere)
+    - Esiste qualcosa di buono in [film](tipo) [sull'arte e artisti](genere)?
+    - Voglio esplorare [serie TV](tipo) [misteriose](genere) con enigmi
+    - Cosa hai di nuovo nel genere [horror](genere)?
+    - Dammi un'occhiata ai [[film](tipo) musicali](genere) disponibili
+    - Sto cercando qualcosa in [[film](tipo) di guerra](genere)
+    - Hai qualche [serie](tipo) di [azione](genere) da consigliarmi?
+    - Quali [serie TV](tipo) di [cucina](genere) posso guardare?
+    - Dimmi i migliori [film](tipo) sulla [natura](genere)
+    - Cerco [film](tipo) [ispirati a libri](genere)
+    - Quali [[film](tipo) di fantascienza](genere) hai che valgono la pena?
+    - Mostrami le [serie](tipo) di commedie nere](genere)
+    - Vorrei vedere un bel [documentari ambientali](genere)
+    - C'è qualche [film](tipo)sul [viaggio nel tempo](genere)?
+    - Che [serie con detective](genere) mi consigli?
 
-- intent: mood_unhappy
+- intent: ricerca_per_anno
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - Quali [[film](tipo)](tipo) sono usciti nel [2020](anno)?
+    - Mostrami le [serie TV](tipo) del [2018](anno)
+    - Cerca i titoli rilasciati nel [2019](anno)
+    - Che cosa c'era di nuovo nel [2021](anno)?
+    - Quali sono le ultime uscite del [2022](anno)?
+    - Dammi un elenco di novità dal [2017](anno)
+    - Quali [serie tv](tipo) sono state introdotte nel [2016](anno)?
+    - Voglio vedere i migliori [film](tipo) del [2015](anno)
+    - Quali [documentari](genere) interessanti sono stati pubblicati nel [2014](anno)?
+    - Stasera mi va di guardare qualcosa dal [2013](anno)
+    - Quali erano le [serie tv](tipo) popolari nel [2012](anno)?
+    - Ho bisogno di consigli sui [film](tipo) del [2011](anno)
+    - Dimmi qualche titolo interessante del [2010](anno)
+    - Quali [film](tipo) d'azione sono usciti nel [2009](anno)?
+    - Cerca [film](tipo) romantici rilasciati nel [2008](anno)
+    - Quali commedie posso guardare del [2007](anno)?
+    - Mi interessano i thriller psicologici del [2006](anno)
+    - Esplora i [film](tipo) indipendenti del [2005](anno)
+    - C'è qualche [serie tv](tipo) fantasy degna di nota del [2004](anno)?
+    - Mostrami cosa c'era di buono nel [2003](anno) nel genere horror
+    - Quali anime sono stati rilasciati nel [2002](anno)?
+    - Voglio sapere di più sui [film](tipo) storici del [2001](anno)
+    - Quali [film](tipo) di fantascienza posso trovare del [2000](anno)?
+    - Dammi un'idea dei [documentari](genere) ambientali del [1999](anno)
+    - Che tipo di [serie tv](tipo) animate erano disponibili nel [1998](anno)?
+    - Sto cercando qualcosa di cult del [1997](anno)
+    - Mostrami titoli iconici del [1996](anno)
+    - Quali capolavori sono stati rilasciati nel [1995](anno)?
+    - Quali [film](tipo) di guerra posso guardare del [1994](anno)?
+    - Cerca [film](tipo) biografici rilasciati nel [1993](anno)
+    - Quali [film](tipo) di avventura sono usciti nel [1992](anno)?
+    - Quali [film](tipo) drammatici posso guardare del [1991](anno)?
+    - Quali [film](tipo) di azione sono stati rilasciati nel [1990](anno)
+    - Quali [film](tipo) di commedia posso guardare del [1989](anno)?
+    - Quali [film](tipo) horror sono usciti nel [1988](anno)?
+    - Quali [film](tipo) di fantascienza posso trovare del [1987](anno)?
+    - Quali [film](tipo) di animazione sono stati rilasciati nel [1986](anno)?
+    - Quali [film](tipo) [romantici](genere) posso guardare del [1985](anno)?
+    - Quali [film](tipo) di culto sono usciti nel [1984](anno)?
 
-- intent: bot_challenge
+
+
+- intent: ricerca_per_titolo
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - Dimmi di più su [Stranger Things](titolo)
+    - Ho bisogno di informazioni su [Breaking Bad](titolo)
+    - Cosa puoi dirmi di [The Crown](titolo)?
+    - Informazioni su [Black Mirror](titolo)
+    - Raccontami qualcosa su [Game of Thrones](titolo)
+    - Che tipo di [serie tv](tipo) è [Money Heist](titolo)?
+    - Voglio saperne di più su [The Witcher](titolo)
+    - Parlami di [BoJack Horseman](titolo)
+    - Dettagli su [Friends](titolo), per favore
+    - Puoi dirmi di [The Office](titolo)?
+    - Descrivimi [Sherlock](titolo)
+    - Che show è [Narcos](titolo)?
+    - C'è qualche informazione su [Peaky Blinders](titolo)?
+    - Mi dai dettagli su [Rick and Morty](titolo)?
+    - Cosa mi dici di [The Mandalorian](titolo)?
+    - Vorrei conoscere [Avatar: The Last Airbender](titolo)
+    - Parlami di più su [The Umbrella Academy](titolo)
+    - Mi interessa [Ozark](titolo)
+    - Cerco informazioni su [The Queen's Gambit](titolo)
+    - Quali sono i dettagli di [Cobra Kai](titolo)?
+    - Descrivimi [Vikings](titolo)
+    - Vorrei dettagli su [Stranger Things](titolo) stagione 3
+    - Che genere di [serie tv](tipo) è [Lucifer](titolo)?
+    - Puoi dirmi qualcosa su [Better Call Saul](titolo)?
+    - Sto cercando informazioni su [Arrested Development](titolo)
+    - Cosa mi dici di [The Haunting of Hill House](titolo)?
+    - Vorrei sapere di più su [The Good Place](titolo)
+
+
+- intent: ricerca_per_attore
+  examples: |
+    - Mostrami i titoli con [Leonardo DiCaprio](attore)
+    - Quali [film](tipo) hanno [Meryl Streep](attore)?
+    - Cerca [serie tv](tipo) con [Bryan Cranston](attore)
+    - In quali produzioni posso trovare [Emma Stone](attore)?
+    - Dammi un elenco di [film](tipo) con [Tom Hanks](attore)
+    - Quali sono le migliori serie con [Jennifer Aniston](attore)?
+    - Film che presentano [Brad Pitt](attore)
+    - Cerco contenuti con [Scarlett Johansson](attore)
+    - Voglio sapere di più sui lavori con [Denzel Washington](attore)
+    - Quali serie includono [Nicole Kidman](attore)?
+    - Film e serie con [Margot Robbie](attore)
+    - Ricerca titoli con [Idris Elba](attore)
+    - Mostrami tutto con [Sandra Bullock](attore)
+    - Che cosa ha fatto [Keanu Reeves](attore) su Netflix?
+    - Posso vedere qualcosa con [Natalie Portman](attore)?
+    - Elenco di produzioni con [Christian Bale](attore)
+    - Titoli recenti con [Charlize Theron](attore)
+    - Cerca per [Johnny Depp](attore)
+    - Quali [film](tipo) di [Julia Roberts](attore) posso guardare?
+    - Dammi le serie con [Anthony Hopkins](attore)
+    - Trova opere con [Cate Blanchett](attore)
+    - Mostra [film](tipo) che hanno [Matt Damon](attore)
+    - Sto cercando titoli con [Morgan Freeman](attore)
+    - Film con [Anne Hathaway](attore) disponibili
+    - Serie che vedono la partecipazione di [Hugh Jackman](attore)
+
+
+- intent: ricerca_per_regista
+  examples: |
+    - Dammi i [film](tipo) diretti da [Martin Scorsese](regista)
+    - Quali titoli sono stati diretti da [Christopher Nolan](regista)?
+    - Mostrami le opere di [Quentin Tarantino](regista)
+    - Cerca i titoli diretti da [Sofia Coppola](regista)
+    - Dammi i [film](tipo) di [Stanley Kubrick](regista)
+    - Quali sono i [film](tipo) diretti da [Steven Spielberg](regista)?
+    - Elenco dei [film](tipo) di [Alfred Hitchcock](regista)
+    - Cosa ha diretto [David Fincher](regista)?
+    - Film di [Francis Ford Coppola](regista)
+    - Quali sono le opere di [Tim Burton](regista)?
+    - Elenco dei [film](tipo) diretti da [David Lynch](regista)
+    - Mostrami i titoli diretti da [Hayao Miyazaki](regista)
+    - Cerca i [film](tipo) di [Woody Allen](regista)
+    - Dammi i [film](tipo) di [James Cameron](regista)
+    - Quali sono i [film](tipo) diretti da [Clint Eastwood](regista)?
+    - Elenco dei [film](tipo) di [Ridley Scott](regista)
+    - Cosa ha diretto [Roman Polanski](regista)?
+    - Film di [Pedro Almodóvar](regista)
+    - Quali sono le opere di [Wes Anderson](regista)?
+    - Elenco dei [film](tipo) diretti da [Darren Aronofsky](regista
+    - Mostrami i titoli diretti da [Michael Bay](regista)
+    - Cerca i [film](tipo) di [Peter Jackson](regista)
+    - Dammi i [film](tipo) di [Oliver Stone](regista)
+    - Quali sono i [film](tipo) diretti da [Joel Coen](regista)?
+    - Elenco dei [film](tipo) di [Ethan Coen](regista)
+    - Cosa ha diretto [Guillermo del Toro](regista)
+    - Film di [Denis Villeneuve](regista)
+    - Quali sono le opere di [Paul Thomas Anderson](regista)
+    - Elenco dei [film](tipo) diretti da [Sam Mendes](regista)
+    - Mostrami i titoli diretti da [Danny Boyle](regista)
+    - Cerca i [film](tipo) di [David O. Russell](regista)
+    - Dammi i [film](tipo) di [Quentin Tarantino](regista)
+
+
+
+- intent: ricerca_per_tipo
+  examples: |
+    - Voglio vedere un [film](tipo)
+    - Mostrami le [serie TV](tipo) disponibili
+    - Cerca solo [film](tipo) per stasera
+    - Quali [serie TV](tipo) mi consigli?
+    - Cerca solo [film](tipo) d'[azione](genere)
+    - Mostrami un [film](tipo)[documentari](genere) interessante
+    - Vorrei guardare una [miniserie](tipo)
+    - Cerca solo [film](tipo) [indipendenti](genere)
+    - Quali [serie TV](tipo) sono popolari?
+    - Cerca solo [film](tipo) [d'animazione](genere)
+    - Mostrami un [film](tipo) [biografico](genere)
+    - Voglio vedere una [serie TV](tipo) [drammatica](genere)
+    - Cerca solo [film](tipo) [comici](genere)
+    - Quali [serie TV](tipo) [fantasy](genere) mi consigli?
+    - Cerca solo [film](tipo) [storici](genere)
+    - Mostrami un [film](tipo) [horror](genere)
+    - Vorrei guardare una [serie TV](tipo) [investigativa](genere)
+    - Cerca solo [film](tipo) [musicali](genere)
+    - Quali [serie TV](tipo) [misteriose](genere) hai?
+    - Cerca solo [film](tipo) [romantici](genere)
+    - Mostrami un [film](tipo) [di guerra](genere)
+    - Voglio vedere una [serie TV](tipo) [sci-fi](genere)
+    - Cerca solo [film](tipo) [thriller](genere)
+    - Quali [serie TV](tipo) [western](genere) mi consigli?
+    - Cerca solo [film](tipo) [d'azione](genere)
+    - Mostrami un [film](tipo) [avventura](genere)
+    - Vorrei guardare una [serie TV](tipo) [commedia](genere)
+    - Cerca solo [film](tipo) [criminali](genere)
+    - Quali [serie TV](tipo) [fantascientifiche](genere) hai?
+    - Cerca solo [film](tipo) [fantasy](genere)
+    - Mostrami un [film](tipo) [drammatico](genere)
+    - Voglio vedere una [serie TV](tipo) [horror](genere)
+
+
+- intent: ricerca_per_durata
+  examples: |
+    - Trova [film](tipo) che durano meno di [90 minuti](durata)
+    - Quali [film](tipo) durano più di [120 minuti](durata)?
+    - Mostrami [serie tv](tipo) con meno di [2 stagioni](durata)
+    - Cerca [serie tv](tipo) con più di [4 stagioni](durata)
+    - Ho bisogno di un [film](tipo) breve, sotto i [100 minuti](durata)
+    - Sto cercando [serie tv](tipo) brevi, massimo [3 stagioni](durata)
+    - Voglio qualcosa di veloce, forse [80 minuti](durata) o meno
+    - Mi piacerebbero [serie tv](tipo) più lunghe, oltre [5 stagioni](durata)
+    - Quali [film](tipo) durano tra [100 minuti](durata) e [120 minuti](durata)?
+    - Cerca [serie tv](tipo) con [3 stagioni](durata)
+    - Mostrami [film](tipo) che durano più di [100 minuti](durata)
+    - Quali [serie tv](tipo) durano meno di [1 stagione](durata)?
+    - Cerca [serie tv](tipo) con [2 stagioni](durata)
+    - Voglio vedere [film](tipo) che durano meno di [200 minuti](durata)
+    - Dammi una lista di [serie tv](tipo) con [4 stagioni](durata)
+    - Quali [film](tipo) durano più di [200 minuti](durata)?
+    - Cerca [serie tv](tipo) con meno di [3 stagioni](durata)
+    - Mostrami [film](tipo) che durano più di [90 minuti](durata)
+    - Quali [serie tv](tipo) durano meno di [5 stagioni](durata)?
+    - Cerca [serie tv](tipo) con [5 stagioni](durata)
+    - Voglio vedere [film](tipo) che durano meno di [120 minuti](durata)
+    - Quali [serie tv](tipo) durano più di [2 stagioni](durata)?
+    - Cerca [serie tv](tipo) con meno di [4 stagioni](durata)
+    - Mostrami [film](tipo) che durano più di [100 minuti](durata)
+    - Quali [serie tv](tipo) durano meno di [3 stagioni](durata)?
+    - Cerca [serie tv](tipo) con [3 stagioni](durata)
+    - Voglio vedere [film](tipo) che durano meno di [200 minuti](durata)
+    - Dammi una lista di [serie tv](tipo) con [4 stagioni](durata)
+    - Quali [film](tipo) durano più di [200 minuti](durata)?
+    - Cerca [serie tv](tipo) con meno di [3 stagioni](durata)
+
+
+
+
+- intent: ricerca_per_categoria
+  examples: |
+    - Mostrami i [film](tipo) per [adulti](categoria)
+    - Quali [serie TV](tipo) per [bambini](categoria) hai?
+    - Cerca [film](tipo) per [famiglie](categoria)
+    - Voglio vedere [serie TV](tipo) per [ragazzi](categoria)
+    - Dammi una lista di [film](tipo) per [adolescenti](categoria)
+    - Trova i migliori [film](tipo) per [tutti](categoria)
+    - Quali sono le ultime uscite in [film](tipo) per [bambini](categoria)?
+    - Ho voglia di guardare un bel [film](tipo) per [ragazzi](categoria)
+    - Quali [serie TV](tipo) per [bambini e famiglie](categoria) mi consigli?
+    - Sto cercando [film](tipo) per [bambini e famiglie](categoria)
+    - Esplora i [titoli](tipo) per [bambini e famiglie](categoria)
+    - Dimmi qualche [serie](tipo) per [bambini e famiglie](categoria) da guardare
+    - Mi piacerebbe vedere un [film](tipo) per [bambini e famiglie](categoria)
+    - C'è qualche novità in [film](tipo) per [bambini e famiglie](categoria)?
+    - Che [film](tipo) per [adolescenti](categoria) posso guardare stasera?
+    - Consigliami qualche [film](tipo) per [adolescenti](categoria) interessante
+    - Vorrei qualcosa sul [film](tipo) per [adolescenti](categoria)
+    - Quali [serie TV](tipo) per [adolescenti](categoria) hai?
+    - Dammi opzioni di [film](tipo) per [adolescenti](categoria)
+    - Mostrami i migliori [film](tipo) per [adolescenti](categoria)
+    - Mi interessano i [film](tipo) per [adulti](categoria)
+    - Quali [film](tipo) per [adulti](categoria) hai che valgono la pena?
+    - Quali [serie](tipo) per [adulti](categoria) mi consigli?
+    - Vorrei guardare qualche [film](tipo) per [adulti](categoria)
+    - Consigli su [serie TV](tipo) per [adulti](categoria)
+    - Ho bisogno di ridere, dammi [commedie](genere) per [adulti](categoria)
+    - Esiste qualcosa di buono in [film](tipo) per [adulti](categoria)?
+    - Voglio esplorare [serie TV](tipo) per [tutti](categoria) con enigmi
+    - Cosa hai di nuovo nel genere [film](tipo) per [tutti](categoria)?
+    - Dammi un'occhiata ai [film](tipo) per [tutti](categoria) disponibili
+    - Sto cercando qualcosa in [film](tipo) per [tutti](categoria)
+    - Hai qualche [serie](tipo) per [tutti](categoria) da consigliarmi?
+    - Quali [serie TV](tipo) per [tutti](categoria) posso guardare?
+    - Dimmi i migliori [film](tipo) per [tutti](categoria)
+    - Cerco [film](tipo) per [tutti](categoria) ispiratori
+    - Quali [film](tipo) per [tutti](categoria) hai che valgono la pena?
+    - Fammi vedere [film](tipo) per [tutti](categoria) di [fantascienza e fantasy](genere)
+    - Quali [film](tipo) per [tutti](categoria) posso guardare?
+    - Cerca dei [film](tipo) per [tutti](categoria) [thriller psicologici](genere)
+    - Quali [serie](tipo) per [tutti](categoria) [drammatiche](genere) mi consigli?
+    - Vorrei guardare qualche [commedia leggera](genere) per [tutti](categoria)
+    - Consigliami dei [[documentari](genere) scientifici](genere) per [tutti](categoria)
+    - Sono in cerca di [serie per adolescenti](genere) per [tutti](categoria)
+    - Quali sono le ultime [serie animate](genere) per [tutti](categoria) aggiunte?
+    - Dimmi alcuni titoli di [[film](tipo) d'azione americani](genere) per [tutti](categoria)
+    - Stasera voglio vedere un [[film](tipo) romantico](genere) classico per [tutti](categoria)
+    - Mostrami [serie investigative](genere) per [adulti](categoria) avvincenti
+    - Che [[film](tipo) d'avventura](genere) per [bambini](categoria) posso guardare con i [bambini](categoria)?
+    - Sto cercando [[film](tipo) biografici](genere) per [tutti](categoria) ispiratori
+    - Vorrei qualcosa di [storico](genere) per [tutti](categoria)
+    - Consigli su [serie TV](tipo) di [fantasia](genere) per [tutti](categoria)
+    - Ho bisogno di ridere, dammi [commedie brillanti](genere) per [tutti](categoria)
+    - Esiste qualcosa di buono in [film](tipo) [sull'arte e artisti](genere) per [tutti](categoria)?
+    - Voglio esplorare [serie TV](tipo) [misteriose](genere) per [tutti](categoria) con enigmi
+
+
+- intent: ricerca_per_paese
+  examples: |
+    - Mostrami [film](tipo) [italiani](paese)
+    - Quali [serie TV](tipo) [americane](paese) sono disponibili?
+    - Cerca [film](tipo) prodotti in [Francia](paese)
+    - Ho voglia di vedere un po' di cinema [giapponese](paese)
+    - Quali produzioni [britanniche](paese) posso guardare?
+    - Trova i migliori [film](tipo) [spagnoli](paese)
+    - Quali sono le ultime uscite in [film](tipo) [canadesi](paese)?
+    - Cerca dei [film](tipo) [coreani](paese)
+    - Esplora i [titoli](tipo) [tedeschi](paese)
+    - Dimmi qualche [serie](tipo) [australiana](paese) da guardare
+    - Mi piacerebbe vedere un [film](tipo) [cinese](paese)
+    - C'è qualche novità in [film](tipo) [messicani](paese)?
+    - Consigliami qualche [docuserie](genere) [brasiliana](paese)
+    - Vorrei qualcosa sul [reality](genere) [russo](paese)
+    - Quali [serie TV](tipo) [indiane](paese) hai?
+    - Dammi opzioni di [film](tipo) [svedesi](paese)
+    - Mostrami i migliori [film](tipo) [olandesi](paese)
+    - Mi interessano i [film](tipo) [argentinini](paese)
+    - Quali [reality TV](genere) posso guardare [spagnoli](paese)?
+    - Cerca dei [film](tipo) [thailandesi](paese)
+    - Quali [serie](tipo) drammatiche](genere) [francesi](paese) mi consigli?
+    - Vorrei guardare qualche [commedia leggera](genere) [canadese](paese)
+    - Consigliami dei [[documentari](genere) scientifici](genere) [tedeschi](paese)
+    - Sono in cerca di [serie](tipo) per [adolescenti](categoria) [coreane](paese)
+    - Quali sono le ultime [serie](tipo) [anime](genere) [giapponesi](paese) aggiunte?
+    - Dimmi alcuni titoli di [film](tipo) d'[azione](genere) [americani](paese)
+    - Stasera voglio vedere un [film](tipo) [romantico](genere) classico [francese](paese)
+    - Mostrami [serie](tipo) [investigative](genere) avvincenti [spagnole](paese)
+
+- intent: consigli_di_visione
+  examples: |
+    - Dammi dei consigli su cosa guardare stasera
+    - Che [film](tipo) mi consigli?
+    - Consigliami una [serie TV](tipo) avvincente
+    - Ho bisogno di un buon [film](tipo) da vedere
+    - Suggestioni per una visione leggera
+    - Quali sono le ultime uscite da guardare?
+    - Cosa mi consigli di guardare?
+    - Quali sono i migliori [film](tipo)da vedere?
+    - Consigliami una [serie TV](tipo) interessante
+    - Quali sono i [film](tipo) più popolari?
+    - Dammi dei suggerimenti su cosa guardare
+    - Che [serie TV](tipo) mi consigli?
+    - Consigliami un [film](tipo) da vedere
+
+
+- intent: specifica_preferenze
+  examples: |
+    - Mi piace [The Matrix](titolo)
+    - Adoro i film di [azione](genere)
+    - Ultimamente ho guardato [commedie](genere)
+    - Il mio film preferito è [Inception](titolo)
+    - Sono un fan di [Breaking Bad](titolo)
+    - Mi piacciono le [serie TV](tipo) [drammatiche](genere)
+    - Preferisco i [film](tipo) [fantascienza](genere)
+    - Sono un appassionato di [film](tipo) [thriller](genere)
+    - Mi piace guardare [film](tipo) [indipendenti](genere)
+    - Adoro le [serie TV](tipo) [crime](genere)
+    - Ultimamente ho guardato [film](tipo) [romantici](genere)
+    - Il mio film preferito è [The Dark Knight](titolo)
+    - Sono un fan di [Stranger Things](titolo)
+    - Mi piacciono le [serie TV](tipo) [fantasy](genere)
+    - Preferisco i [film](tipo) [storici](genere)
+    - Sono un appassionato di [film](tipo) [horror](genere)
+    - Mi piace guardare [serie TV](tipo) [investigative](genere)
+    - Adoro i [film](tipo) [musicali](genere)
+    - Ultimamente ho guardato [film](tipo) [di guerra](genere)
+    - Il mio film preferito è [The Shaw](titolo)
+    - Sono un fan di [The Witcher](titolo)
+    - Mi piacciono le [serie TV](tipo) [misteriose](genere)
+    - Preferisco i [film](tipo) [romantici](genere)
+    - Sono un appassionato di [film](tipo) [biografici](genere)
+    - Mi piace guardare [serie TV](tipo) [sci-fi](genere)
+    - Adoro i [film](tipo) [thriller](genere)
+    - Ultimamente ho guardato [film](tipo) [d'azione](genere)
+    - Il mio film preferito è [The Godfather](titolo)
+
+
