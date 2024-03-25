@@ -1,4 +1,4 @@
-version: '3.1'
+version: "3.1"
 
 nlu:
 - intent: saluto
@@ -82,6 +82,9 @@ nlu:
 
 - intent: ricerca_per_genere
   examples: |
+    - Mostrami i [film](tipo) [lgbtq+](genere)
+    - Dammi le [serie](tipo) [lgbtq](genere)
+    - Trova [film](tipo) [lgbtq](genere)
     - Mostrami i [titoli](tipo) di [azione](genere)
     - Quali [film](tipo) di [commedia](genere) sono disponibili?
     - Cerca [serie TV](tipo) di [dramma](genere)
@@ -132,6 +135,26 @@ nlu:
     - Vorrei vedere un bel [documentari ambientali](genere)
     - C'è qualche [film](tipo)sul [viaggio nel tempo](genere)?
     - Che [serie con detective](genere) mi consigli?
+    - Voglio vedere un [classico](genere)
+    - Consigliami un [anime](genere) interessante
+    - Cerca film [horror](genere) da guardare stasera
+    - Quali [misteri](genere) posso risolvere questo fine settimana?
+    - Suggerisci [film per la famiglia](genere) per il pomeriggio
+    - Dammi una lista di [stand-up](genere) comici
+    - Vorrei esplorare qualche documentario su [spiritualità](genere)
+    - Quali [commedie](genere) sono disponibili?
+    - Mostrami serie [drammatiche](genere) appassionanti
+    - Cerca documentari su [scienza e natura](genere)
+    - Quali film [d'azione e avventura](genere) mi consigli?
+    - Ho voglia di guardare qualche serie [coreana](genere)
+    - Sono alla ricerca di serie [romantiche](genere)
+    - Consigliami film [thriller](genere) avvincenti
+    - Quali sono i nuovi film [indipendenti](genere) usciti?
+    - Dammi suggerimenti su [musical](genere) da non perdere
+    - Quali sono le migliori serie [adolescenziali](genere) del momento?
+    - Mi interessano i film [lgbtq](genere)
+    - Cerca [docu-serie](genere) recenti
+    - Quali [film fantascienza e fantasy](genere) posso guardare?
 
 - intent: ricerca_per_anno
   examples: |
@@ -312,38 +335,36 @@ nlu:
 
 - intent: ricerca_per_durata
   examples: |
-    - Trova [film](tipo) che durano meno di [90 minuti](durata)
-    - Quali [film](tipo) durano più di [120 minuti](durata)?
-    - Mostrami [serie tv](tipo) con meno di [2 stagioni](durata)
-    - Cerca [serie tv](tipo) con più di [4 stagioni](durata)
-    - Ho bisogno di un [film](tipo) breve, sotto i [100 minuti](durata)
-    - Sto cercando [serie tv](tipo) brevi, massimo [3 stagioni](durata)
+    - Trova film che durano meno di [90 minuti](durata)
+    - Quali film durano più di [120 minuti](durata)?
+    - Mostrami serie tv con meno di [2 stagioni](durata)
+    - Cerca serie tv con più di [4 stagioni](durata)
+    - Ho bisogno di un film breve, sotto i [100 minuti](durata)
+    - Sto cercando serie tv brevi, massimo [3 stagioni](durata)
     - Voglio qualcosa di veloce, forse [80 minuti](durata) o meno
-    - Mi piacerebbero [serie tv](tipo) più lunghe, oltre [5 stagioni](durata)
-    - Quali [film](tipo) durano tra [100 minuti](durata) e [120 minuti](durata)?
-    - Cerca [serie tv](tipo) con [3 stagioni](durata)
-    - Mostrami [film](tipo) che durano più di [100 minuti](durata)
-    - Quali [serie tv](tipo) durano meno di [1 stagione](durata)?
-    - Cerca [serie tv](tipo) con [2 stagioni](durata)
-    - Voglio vedere [film](tipo) che durano meno di [200 minuti](durata)
-    - Dammi una lista di [serie tv](tipo) con [4 stagioni](durata)
-    - Quali [film](tipo) durano più di [200 minuti](durata)?
-    - Cerca [serie tv](tipo) con meno di [3 stagioni](durata)
-    - Mostrami [film](tipo) che durano più di [90 minuti](durata)
-    - Quali [serie tv](tipo) durano meno di [5 stagioni](durata)?
-    - Cerca [serie tv](tipo) con [5 stagioni](durata)
-    - Voglio vedere [film](tipo) che durano meno di [120 minuti](durata)
-    - Quali [serie tv](tipo) durano più di [2 stagioni](durata)?
-    - Cerca [serie tv](tipo) con meno di [4 stagioni](durata)
-    - Mostrami [film](tipo) che durano più di [100 minuti](durata)
-    - Quali [serie tv](tipo) durano meno di [3 stagioni](durata)?
-    - Cerca [serie tv](tipo) con [3 stagioni](durata)
-    - Voglio vedere [film](tipo) che durano meno di [200 minuti](durata)
-    - Dammi una lista di [serie tv](tipo) con [4 stagioni](durata)
-    - Quali [film](tipo) durano più di [200 minuti](durata)?
-    - Cerca [serie tv](tipo) con meno di [3 stagioni](durata)
-
-
+    - Mi piacerebbero serie tv più lunghe, oltre [5 stagioni](durata)
+    - Quali film durano tra [100 minuti](durata) e [120 minuti](durata)?
+    - Cerca serie tv con [3 stagioni](durata)
+    - Mostrami film che durano più di [100 minuti](durata)
+    - Quali serie tv durano meno di [1 stagione](durata)?
+    - Cerca serie tv con [2 stagioni](durata)
+    - Voglio vedere film che durano meno di [200 minuti](durata)
+    - Dammi una lista di serie tv con [4 stagioni](durata)
+    - Quali film durano più di [200 minuti](durata)?
+    - Cerca serie tv con meno di [3 stagioni](durata)
+    - Mostrami film che durano più di [90 minuti](durata)
+    - Quali serie tv durano meno di [5 stagioni](durata)?
+    - Cerca serie tv con [5 stagioni](durata)
+    - Voglio vedere film che durano meno di [120 minuti](durata)
+    - Quali serie tv durano più di [2 stagioni](durata)?
+    - Cerca serie tv con meno di [4 stagioni](durata)
+    - Mostrami film che durano più di [100 minuti](durata)
+    - Quali serie tv durano meno di [3 stagioni](durata)?
+    - Cerca serie tv con [3 stagioni](durata)
+    - Voglio vedere film che durano meno di [200 minuti](durata)
+    - Dammi una lista di serie tv con [4 stagioni](durata)
+    - Quali film durano più di [200 minuti](durata)?
+    - Cerca serie tv con meno di [3 stagioni](durata)
 
 
 - intent: ricerca_per_categoria
@@ -399,10 +420,9 @@ nlu:
     - Sto cercando [[film](tipo) biografici](genere) per [tutti](categoria) ispiratori
     - Vorrei qualcosa di [storico](genere) per [tutti](categoria)
     - Consigli su [serie TV](tipo) di [fantasia](genere) per [tutti](categoria)
-    - Ho bisogno di ridere, dammi [commedie brillanti](genere) per [tutti](categoria)
+    - Ho bisogno di ridere, dammi [commedie](genere) per [tutti](categoria)
     - Esiste qualcosa di buono in [film](tipo) [sull'arte e artisti](genere) per [tutti](categoria)?
     - Voglio esplorare [serie TV](tipo) [misteriose](genere) per [tutti](categoria) con enigmi
-
 
 - intent: ricerca_per_paese
   examples: |
@@ -433,7 +453,7 @@ nlu:
     - Quali sono le ultime [serie](tipo) [anime](genere) [giapponesi](paese) aggiunte?
     - Dimmi alcuni titoli di [film](tipo) d'[azione](genere) [americani](paese)
     - Stasera voglio vedere un [film](tipo) [romantico](genere) classico [francese](paese)
-    - Mostrami [serie](tipo) [investigative](genere) avvincenti [spagnole](paese)
+    - Mostrami [serie](tipo) [crime](genere) avvincenti [spagnole](paese)
 
 - intent: consigli_di_visione
   examples: |
@@ -450,6 +470,7 @@ nlu:
     - Dammi dei suggerimenti su cosa guardare
     - Che [serie TV](tipo) mi consigli?
     - Consigliami un [film](tipo) da vedere
+    - Quali sono le ultime uscite da non perdere?
 
 
 - intent: specifica_preferenze
@@ -482,5 +503,64 @@ nlu:
     - Adoro i [film](tipo) [thriller](genere)
     - Ultimamente ho guardato [film](tipo) [d'azione](genere)
     - Il mio film preferito è [The Godfather](titolo)
+    - Mi piacciono i film d'azione
+    - Preferisco le serie TV comiche
+    - Mi interessano le serie TV drammatiche
+    - Sono appassionato di film di fantascienza
+    - Preferisco le serie TV gialle
+    - Mi piacciono i film di animazione
+    - Preferisco le serie TV storiche
+    - Mi interessano le serie TV fantasy
+    - Sono appassionato di film horror
+    - Preferisco le serie TV investigative
+    - Mi piacciono i film musicali
 
 
+- intent: menu
+  examples: |
+    - Cosa puoi fare?
+    - Quali sono le tue funzionalità?
+    - Che tipo di domande posso farti?
+    - Cosa sai fare?
+    - Quali sono le tue abilità?
+    - Cosa sei in grado di fare?
+    - Che servizi offri?
+    - Quali sono i tuoi comandi?
+    - Cosa sai fare per me?
+    - Quali sono le tue funzioni?
+    - Cosa posso chiederti?
+    - Menù
+    - Menu
+    - Dammi il menu
+    - Che fai?
+    - Cosa fai?
+    - che sai fare?
+    - che puoi fare?
+    - che comandi conosci?
+
+
+- intent: generi_disponibili
+  examples: |
+    - che generi conosci?
+    - quali generi di film conosci?
+    - quali generi di serie tv conosci?
+    - dammi la lista dei generi
+    - che generi posso scegliere?
+    - che generi posso scrivere?
+    - quali generi posso selezionare?
+    - quali generi posso indicare?
+    - quali generi posso specificare?
+    - quali generi posso menzionare?
+
+- intent: paesi_disponibili
+  examples: |
+    - che paesi conosci?
+    - quali paesi di film conosci?
+    - quali paesi di serie tv conosci?
+    - quali sono i paesi disponibili?
+    - quali paesi posso chiedere?
+    - quali paesi posso selezionare?
+    - quali paesi posso indicare?
+    - quali paesi posso specificare?
+    - quali paesi posso menzionare?
+    - quali paesi posso scrivere?

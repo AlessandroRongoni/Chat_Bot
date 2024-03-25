@@ -447,3 +447,30 @@ stories:
     - action: action_ricerca_per_paese
     - intent: addio
     - action: utter_addio
+
+  - story: dammi_il_menu
+    steps:
+    - intent: saluto
+    - action: utter_saluto
+    - intent: menu
+    - action: utter_menu
+    - intent: addio
+    - action: utter_addio
+
+  - story: dammi_i_generi
+    steps:
+    - intent: saluto
+    - action: utter_saluto
+    - intent: generi_disponibili
+    - action: utter_generi
+    - intent: addio
+    - action: utter_addio
+
+  - story: dammi_i_paesi
+    steps:
+    - intent: saluto
+    - action: utter_saluto
+    - intent: paesi_disponibili
+    - action: utter_paesi
+    - intent: addio
+    - action: utter_addio
