@@ -1,54 +1,13 @@
-version: '3.0'
+version: "3.1"
+
 rules:
-- rule: Saluto iniziale
-  steps:
-  - intent: greeting
-  - action: utter_greeting
 
-- rule: Risposta al ringraziamento
+- rule: Say goodbye anytime the user says goodbye
   steps:
-  - intent: thanks
-  - action: utter_thanks
+  - intent: goodbye
+  - action: utter_goodbye
 
-- rule: Richiesta di aiuto
+- rule: Say 'I am a bot' anytime the user challenges
   steps:
-  - intent: help
-  - action: utter_help
-
-- rule: Offerta di supporto per sentimenti di tristezza
-  steps:
-  - intent: sad
-  - action: utter_sad
-
-- rule: Gestione dell'ansia
-  steps:
-  - intent: anxious
-  - action: utter_advice_on_anxiety
-
-- rule: Promemoria sulla meditazione
-  condition:
-  - slot_was_set:
-    - user_agree: true
-  steps:
-  - intent: user-agree
-  - action: utter_meditation
-
-- rule: Consigli per la salute mentale
-  steps:
-  - intent: learn-mental-health
-  - action: utter_learn-mental-health
-
-- rule: Gestione dello stress lavorativo
-  steps:
-  - intent: work_stress
-  - action: utter_address_work_stress
-
-- rule: Dire buonanotte
-  steps:
-  - intent: night
-  - action: utter_night
-
-- rule: Richiesta di consigli sulle relazioni
-  steps:
-  - intent: relationship_advice
-  - action: utter_relationship_advice
+  - intent: bot_challenge
+  - action: utter_iamabot
