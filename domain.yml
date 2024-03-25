@@ -18,6 +18,7 @@ intents:
   - menu
   - generi_disponibili
   - paesi_disponibili
+  - specifica_tipo
 
 entities:
   - tipo
@@ -128,132 +129,17 @@ responses:
   utter_generi:
     - text: "Ecco alcuni generi disponibili:\n Classic Movies,\n Anime Series,\n TV Horror,\n TV Mysteries,\n Children & Family Movies,\n Stand-Up Comedy,\n Faith & Spirituality,\n TV Comedies\n TV Dramas,\n Science & Nature TV,\n Horror Movies,\n Action & Adventure,\n Movies,\n Sports Movies,\n Crime TV Shows,\n Documentaries,\n Stand-Up Comedy & Talk Shows,\n Korean TV Shows,\n TV Shows,\n Music & Musicals,\n Romantic TV Shows,\n Teen TV Shows,\n Cult Movies,\n International Movies,\n Dramas,\n British TV Shows,\n Thrillers,\n TV Action & Adventure,\n Anime Features,\n LGBTQ Movies,\n Sci-Fi & Fantasy,\n TV Thrillers,\n Classic & Cult TV,\n International TV Shows,\n Kids' TV,\n Spanish-Language TV Shows,\n Comedies,\n Romantic Movies,\n Reality TV,\n Independent Movies,\n Docuseries,\n TV Sci-Fi & Fantasy."
   utter_paesi:
-    - text: |
-        "Ecco l'elenco dei paesi disponibili:\n
-        Afghanistan,\n
-        Albania,\n
-        Algeria,\n
-        Angola,\n
-        Argentina,\n
-        Armenia,\n
-        Australia,\n
-        Austria,\n
-        Azerbaijan,\n
-        Bahamas,\n
-        Bangladesh,\n
-        Belarus,\n
-        Belgium,\n
-        Bermuda,\n
-        Botswana,\n
-        Brazil,\n
-        Bulgaria,\n
-        Burkina Faso,\n
-        Cambodia,\n
-        Cameroon,\n
-        Canada,\n
-        Cayman Islands,\n
-        Chile,\n
-        China,\n
-        Colombia,\n
-        Croatia,\n
-        Cuba,\n
-        Cyprus,\n
-        Czech Republic,\n
-        Denmark,\n
-        Dominican Republic,\n
-        East Germany,\n
-        Ecuador,\n
-        Egypt,\n
-        Ethiopia,\n
-        Finland,\n
-        France,\n
-        Georgia,\n
-        Germany,\n
-        Ghana,\n
-        Greece,\n
-        Guatemala,\n
-        Hong Kong,\n
-        Hungary,\n
-        Iceland,\n
-        India,\n
-        Indonesia,\n
-        Iran,\n
-        Iraq,\n
-        Ireland,\n
-        Israel,\n
-        Italy,\n
-        Jamaica,\n
-        Japan,\n
-        Jordan,\n
-        Kazakhstan,\n
-        Kenya,\n
-        Kuwait,\n
-        Latvia,\n
-        Lebanon,\n
-        Liechtenstein,\n
-        Lithuania,\n
-        Luxembourg,\n
-        Malawi,\n
-        Malaysia,\n
-        Malta,\n
-        Mauritius,\n
-        Mexico,\n
-        Mongolia,\n
-        Montenegro,\n
-        Morocco,\n
-        Mozambique,\n
-        Namibia,\n
-        Nepal,\n
-        Netherlands,\n
-        New Zealand,\n
-        Nicaragua,\n
-        Nigeria,\n
-        Non disponibile,\n
-        Norway,\n
-        Pakistan,\n
-        Palestine,\n
-        Panama,\n
-        Paraguay,\n
-        Peru,\n
-        Philippines,\n
-        Poland,\n
-        Portugal,\n
-        Puerto Rico,\n
-        Qatar,\n
-        Romania,\n
-        Russia,\n
-        Samoa,\n
-        Saudi Arabia,\n
-        Senegal,\n
-        Serbia,\n
-        Singapore,\n
-        Slovakia,\n
-        Slovenia,\n
-        Somalia,\n
-        South Africa,\n
-        South Korea,\n
-        Soviet Union,\n
-        Spain,\n
-        Sri Lanka,\n
-        Sudan,\n
-        Sweden,\n
-        Switzerland,\n
-        Syria,\n
-        Taiwan,\n
-        Thailand,\n
-        Turkey,\n
-        Uganda,\n
-        Ukraine,\n
-        United Arab Emirates,\n
-        United Kingdom,\n
-        United States,\n
-        Uruguay,\n
-        Vatican City,\n
-        Venezuela,\n
-        Vietnam,\n
-        West Germany,\n
-        Zimbabwe."
-#sistemare i paesi come vengono visualizzati e le stories c'è da rifarle, uguale per utter, devo gestire le stringhe dalle azioni
+  - text: "Ecco l'elenco dei paesi disponibili: Afghanistan,\n Albania,\n Algeria,\n Angola,\n Argentina,\n Armenia,\n Australia,\n Austria,\n Azerbaijan,\n Bahamas,\n Bangladesh,\n Belarus,\n Belgium,\n Bermuda,\n Botswana,\n Brazil,\n Bulgaria,\n Burkina Faso,\n Cambodia,\n Cameroon,\n Canada,\n Cayman Islands,\n Chile,\n China,\n Colombia,\n Croatia,\n Cuba,\n Cyprus,\n Czech Republic,\n Denmark,\n Dominican Republic,\n East Germany,\n Ecuador,\n Egypt,\n Ethiopia,\n Finland,\n France,\n Georgia,\n Germany,\n Ghana,\n Greece,\n Guatemala,\n Hong Kong,\n Hungary,\n Iceland,\n India,\n Indonesia,\n Iran,\n Iraq,\n Ireland,\n Israel,\n Italy,\n Jamaica,\n Japan,\n Jordan,\n Kazakhstan,\n Kenya,\n Kuwait,\n Latvia,\n Lebanon,\n Liechtenstein,\n Lithuania,\n Luxembourg,\n Malawi,\n Malaysia,\n Malta,\n Mauritius,\n Mexico,\n Mongolia,\n Montenegro,\n Morocco,\n Mozambique,\n Namibia,\n Nepal,\n Netherlands,\n New Zealand,\n Nicaragua,\n Nigeria,\n Non disponibile,\n Norway,\n Pakistan,\n Palestine,\n Panama,\n Paraguay,\n Peru,\n Philippines,\n Poland,\n Portugal,\n Puerto Rico,\n Qatar,\n Romania,\n Russia,\n Samoa,\n Saudi Arabia,\n Senegal,\n Serbia,\n Singapore,\n Slovakia,\n Slovenia,\n Somalia,\n South Africa,\n South Korea,\n Soviet Union,\n Spain,\n Sri Lanka,\n Sudan,\n Sweden,\n Switzerland,\n Syria,\n Taiwan,\n Thailand,\n Turkey,\n Uganda,\n Ukraine,\n United Arab Emirates,\n United Kingdom,\n United States,\n Uruguay,\n Vatican City,\n Venezuela,\n Vietnam,\n West Germany,\n Zimbabwe."
+  utter_specifica_tipo:
+    - text: "Che tipo di visione preferisci?"
+      buttons:
+      - title: "Film"
+        payload: '/specifica_tipo{"tipo": "film"}'
+      - title: "Serie TV"
+        payload: '/specifica_tipo{"tipo": "serie_tv"}'
+      - title: "Entrambi"
+        payload: '/specifica_tipo{"tipo": "entrambi"}'
+#le stories c'è da rifarle, uguale per utter, devo gestire le stringhe dalle azioni
 
 
 
