@@ -699,6 +699,16 @@ nlu:
     - Qualche proposta per una serata cinema a casa?
     - Quali sono i titoli imperdibili di quest'anno?
     - Che genere di contenuti sono trend ora?
+    - Quali sono i film più visti del momento?
+    - Dammi dei consigli su cosa guardare stasera
+    - Che film mi consigli?
+    - Consigliami una serie TV avvincente
+    - Ho bisogno di un buon film da vedere
+    - Suggestioni per una visione leggera
+    - Quali sono le ultime uscite da guardare?
+    - Cosa mi consigli di guardare?
+    - Quali sono i migliori film da vedere?
+    - Consigliami una serie TV interessante
 
 
 - intent: specifica_preferenze
