@@ -196,6 +196,40 @@ nlu:
     - Quali di animazione sono stati rilasciati nel [1986](anno)?
     - Quali romantici posso guardare del [1985](anno)?
     - Quali di cult sono usciti nel [1984](anno)?
+    - Quali di thriller posso guardare del [1983](anno)?
+    - Quali fantasy sono stati rilasciati nel [1982](anno)?
+    - Quali horror posso guardare del [1981](anno)?
+    - Quali di fantascienza sono usciti nel [1980](anno)?
+    - Quali di animazione posso trovare del [1979](anno)?
+    - Quali romantici sono stati rilasciati nel [1978](anno)?
+    - Quali di cult posso guardare del [1977](anno)?
+    - Quali di thriller sono usciti nel [1976](anno)?
+    - Quali fantasy posso guardare del [1975](anno)?
+    - Quali horror sono stati rilasciati nel [1974](anno)?
+    - Quali di fantascienza posso trovare del [1973](anno)?
+    - Quali di animazione sono stati rilasciati nel [1972](anno)?
+    - Quali romantici posso guardare del [1971](anno)?
+    - Quali di cult sono usciti nel [1970](anno)?
+    - Quali di thriller posso guardare del [1969](anno)?
+    - Quali fantasy sono stati rilasciati nel [1968](anno)?
+    - Quali horror posso guardare del [1967](anno)?
+    - Quali di fantascienza sono usciti nel [1966](anno)?
+    - Quali di animazione posso trovare del [1965](anno)?
+    - Quali romantici sono stati rilasciati nel [1964](anno)?
+    - Quali di cult posso guardare del [1963](anno)?
+    - Quali di thriller sono usciti nel [1962](anno)?
+    - Quali fantasy posso guardare del [1961](anno)?
+    - Quali horror sono stati rilasciati nel [1960](anno)?
+    - Quali di fantascienza posso trovare del [1959](anno)?
+    - Quali di animazione sono stati rilasciati nel [1958](anno)?
+    - Quali romantici posso guardare del [1957](anno)?
+    - Quali di cult sono usciti nel [1956](anno)?
+    - Quali di thriller posso guardare del [1955](anno)?
+    - Quali fantasy sono stati rilasciati nel [1954](anno)?
+    - Quali horror posso guardare del [1953](anno)?
+    - Quali di fantascienza sono usciti nel [1952](anno)?
+    - Quali di animazione posso trovare del [1951](anno)?
+    - Quali romantici sono stati rilasciati nel [1950](anno)?
 
 
 - intent: ricerca_per_titolo
@@ -228,6 +262,8 @@ nlu:
     - Cosa mi dici di [The Haunting of Hill House](titolo)?
     - Vorrei sapere di più su [The Good Place](titolo)
     - Parlami di [Dark](titolo)
+    - Info [Better Call Saul](titolo)
+
 
 
 
@@ -258,6 +294,138 @@ nlu:
     - Sto cercando titoli con [Morgan Freeman](attore)
     - Film con [Anne Hathaway](attore) disponibili
     - Serie che vedono la partecipazione di [Hugh Jackman](attore)
+    - Quali sono i migliori titoli con [Robert Downey Jr.](attore)?
+    - Cerca per [Angelina Jolie](attore)
+    - Quali film di [Will Smith](attore) posso guardare?
+    - Dammi le serie con [Tom Cruise](attore)
+    - Trova opere con [Natalie Portman](attore)
+    - Mostra film che hanno [Dwayne Johnson](attore)
+    - Sto cercando titoli con [Cameron Diaz](attore)
+    - Film con [George Clooney](attore) disponibili
+    - Serie che vedono la partecipazione di [Julianne Moore](attore)
+    - Quali sono i migliori titoli con [Samuel L. Jackson](attore)?
+    - Cerca per [Halle Berry](attore)
+    - Quali film di [Eddie Murphy](attore) posso guardare?
+    - Dammi le serie con [Kate Winslet](attore)
+    - Trova opere con [Daniel Craig](attore)
+    - Mostra film che hanno [Jessica Chastain](attore)
+    - Sto cercando titoli con [Mark Wahlberg](attore)
+    - Film con [Viola Davis](attore) disponibili
+    - Serie che vedono la partecipazione di [Ben Affleck](attore)
+    - Quali sono i migliori titoli con [Emily Blunt](attore)?
+    - Cerca per [Chris Hemsworth](attore)
+    - Quali film di [Saoirse Ronan](attore) posso guardare?
+    - Dammi le serie con [Jake Gyllenhaal](attore)
+    - Trova opere con [Jessica Alba](attore)
+    - Mostra film che hanno [Ryan Reynolds](attore)
+    - Sto cercando titoli con [Rachel McAdams](attore)
+    - Film con [Chris Evans](attore) disponibili
+    - Serie che vedono la partecipazione di [Zoe Saldana](attore)
+    - Quali sono i migliori titoli con [Chris Pratt](attore)?
+    - Cerca per [Brie Larson](attore)
+    - Quali film di [Michael Fassbender](attore) posso guardare?
+    - Dammi le serie con [Tom Hardy](attore)
+    - Trova opere con [Jessica Biel](attore)
+    - Mostra film che hanno [Chris Pine](attore)
+    - Sto cercando titoli con [Zac Efron](attore)
+    - Film con [Mila Kunis](attore) disponibili
+    - Serie che vedono la partecipazione di [Channing Tatum](attore)
+    - Quali sono i migliori titoli con [Emma Watson](attore)?
+    - Cerca per [Dakota Johnson](attore)
+    - Quali film di [Shailene Woodley](attore) posso guardare?
+    - Dammi le serie con [Liam Hemsworth](attore)
+    - Trova opere con [Kristen Stewart](attore)
+    - Mostra film che hanno [Robert Pattinson](attore)
+    - Sto cercando titoli con [Taylor Lautner](attore)
+    - Film con [Dakota Fanning](attore) disponibili
+    - Serie che vedono la partecipazione di [Chloë Grace Moretz](attore)
+    - Quali sono i migliori titoli con [Asa Butterfield](attore)?
+    - Cerca per [Elle Fanning](attore)
+    - Quali film di [Hailee Steinfeld](attore) posso guardare?
+    - Dammi le serie con [Ansel Elgort](attore)
+    - Trova opere con [Lily Collins](attore)
+    - Mostra film che hanno [Timothée Chalamet](attore)
+    - Sto cercando titoli con [Zendaya](attore)
+    - Film con [Millie Bobby Brown](attore) disponibili
+    - Serie che vedono la partecipazione di [Noah Schnapp](attore)
+    - Quali sono i migliori titoli con [Finn Wolfhard](attore)?
+    - Cerca per [Gaten Matarazzo](attore)
+    - Quali film di [Caleb McLaughlin](attore) posso guardare?
+    - Dammi le serie con [Natalia Dyer](attore)
+    - Trova opere con [Charlie Heaton](attore)
+    - Mostra film che hanno [Joe Keery](attore)
+    - Sto cercando titoli con [Maya Hawke](attore)
+    - Film con [Sadie Sink](attore) disponibili
+    - Serie che vedono la partecipazione di [Cara Buono](attore)
+    - Quali sono i migliori titoli con [Matthew Modine](attore)?
+    - Cerca per [David Harbour](attore)
+    - Quali film di [Winona Ryder](attore) posso guardare?
+    - Dammi le serie con [Sean Astin](attore)
+    - Trova opere con [Paul Reiser](attore)
+    - Mostra film che hanno [Maya Thurman-Hawke](attore)
+    - Sto cercando titoli con [Priah Ferguson](attore)
+    - Film con [Cary Elwes](attore) disponibili
+    - Serie che vedono la partecipazione di [Brett Gelman](attore)
+    - Quali sono i migliori titoli con [Jamie Campbell Bower](attore)?
+    - Cerca per [Eduardo Franco](attore)
+    - Quali film di [Joseph Quinn](attore) posso guardare?
+    - Dammi le serie con [Sherman Augustus](attore)
+    - Trova opere con [Dylan Arnold](attore)
+    - Mostra film che hanno [Gabrielle Maiden](attore)
+    - Sto cercando titoli con [Olivia Welch](attore)
+    - Film con [Chiara Aurelia](attore) disponibili
+    - Serie che vedono la partecipazione di [Harley Quinn Smith](attore)
+    - Quali sono i migliori titoli con [Allius Barnes](attore)?
+    - Cerca per [Benjamin Flores Jr.](attore)
+    - Quali film di [Ashley Zukerman](attore) posso guardare?
+    - Dammi le serie con [Cynthia Kaye McWilliams](attore)
+    - Trova opere con [Mira Sorvino](attore)
+    - Mostra film che hanno [Jenna Ortega](attore)
+    - Sto cercando titoli con [Isabella Gomez](attore)
+    - Film con [Mason Gooding](attore) disponibili
+    - Serie che vedono la partecipazione di [Drew Starkey](attore)
+    - Quali sono i migliori titoli con [Rachael Leigh Cook](attore)?
+    - Cerca per [Matt Lauria](attore)
+    - Quali film di [Kiele Sanchez](attore) posso guardare?
+    - Dammi le serie con [Natalie Martinez](attore)
+    - Trova opere con [Kate Bosworth](attore)
+    - Mostra film che hanno [Ron Perlman](attore)
+    - Sto cercando titoli con [Dorian Missick](attore)
+    - Film con [Sylvia Grace Crim](attore) disponibili
+    - Serie che vedono la partecipazione di [Erin Moriarty](attore)
+    - Quali sono i migliori titoli con [Antony Starr](attore)?
+    - Cerca per [Dominique McElligott](attore)
+    - Quali film di [Jessie T. Usher](attore) posso guardare?
+    - Dammi le serie con [Chace Crawford](attore)
+    - Trova opere con [Laz Alonso](attore)
+    - Mostra film che hanno [Tomer Capon](attore)
+    - Sto cercando titoli con [Karen Fukuhara](attore)
+    - Film con [Elisabeth Shue](attore) disponibili
+    - Serie che vedono la partecipazione di [Colby Minifie](attore)
+    - Quali sono i migliori titoli con [Aya Cash](attore)?
+    - Cerca per [Shantel VanSanten](attore)
+    - Quali film di [Jennifer Esposito](attore) posso guardare?
+    - Dammi le serie con [Simon Pegg](attore)
+    - Trova opere con [Karl Urban](attore)
+    - Mostra film che hanno [Jack Quaid](attore)
+    - Sto cercando titoli con [Antony Starr](attore)
+    - Film con [Erin Moriarty](attore) disponibili
+    - Serie che vedono la partecipazione di [Dominique McElligott](attore)
+    - Quali sono i migliori titoli con [Jessie T. Usher](attore)?
+    - Cerca per [Chace Crawford](attore)
+    - Quali film di [Laz Alonso](attore) posso guardare?
+    - Dammi le serie con [Tomer Capon](attore)
+    - Trova opere con [Karen Fukuhara](attore)
+    - Mostra film che hanno [Elisabeth Shue](attore)
+    - Sto cercando titoli con [Colby Minifie](attore)
+    - Film con [Aya Cash](attore) disponibili
+    - Serie che vedono la partecipazione di [Shantel VanSanten](attore)
+    - Quali sono i migliori titoli con [Jennifer Esposito](attore)?
+    - Cerca per [Simon Pegg](attore)
+    - Quali film di [Karl Urban](attore) posso guardare?
+    - Dammi le serie con [Jack Quaid](attore)
+    - Trova opere con [Antony Starr](attore)
+    - Mostra film che hanno [Erin Moriarty](attore)
 
 
 

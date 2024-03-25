@@ -115,7 +115,7 @@ stories:
     - action: action_ricerca_per_paese
     - intent: addio
     - action: utter_addio
-
+# ridare il menu
   - story: dammi_il_menu
     steps:
     - intent: saluto
@@ -124,7 +124,7 @@ stories:
     - action: utter_menu
     - intent: addio
     - action: utter_addio
-
+# ridare i generi
   - story: dammi_i_generi
     steps:
     - intent: saluto
@@ -133,7 +133,7 @@ stories:
     - action: utter_generi
     - intent: addio
     - action: utter_addio
-
+# da fare azioni per ridare le cose
   - story: dammi_i_paesi
     steps:
     - intent: saluto

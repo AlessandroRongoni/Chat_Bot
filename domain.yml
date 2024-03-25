@@ -125,7 +125,7 @@ responses:
     - text: "Scusa, non ho capito. Puoi provare a esprimerti in modo diverso?"
     - text: "Mi dispiace, non sono sicuro di come aiutarti con questo. Puoi chiedermi qualcosa d'altro?"
   utter_menu:
-    - text: "Ecco le opzioni disponibili:\n ricerca per attore,\n ricerca per regista,\n ricerca per genere,\n ricerca per anno,\n ricerca per categoria,\n ricerca per titolo,\n ricerca per durata,\n ricerca per tipologia di visione (film o serie TV),\n generazione di playlist,\n consigli di visione,\n ricerca per paese."
+    - text: "Ecco le opzioni disponibili:\n - Ricerca per attore,\n - Ricerca per regista,\n - Ricerca per genere,\n - Ricerca per anno,\n -Ricerca per categoria,\n - Ottenere informazioni du un film/serie TV,\n - Ricerca per durata,\n - Ricerca per tipologia di visione (film o serie TV),\n - Ricerca per paese,\n - Consigli di visione in base alle preferenze."
   utter_generi:
     - text: "Ecco alcuni generi disponibili:\n Classic Movies,\n Anime Series,\n TV Horror,\n TV Mysteries,\n Children & Family Movies,\n Stand-Up Comedy,\n Faith & Spirituality,\n TV Comedies\n TV Dramas,\n Science & Nature TV,\n Horror Movies,\n Action & Adventure,\n Movies,\n Sports Movies,\n Crime TV Shows,\n Documentaries,\n Stand-Up Comedy & Talk Shows,\n Korean TV Shows,\n TV Shows,\n Music & Musicals,\n Romantic TV Shows,\n Teen TV Shows,\n Cult Movies,\n International Movies,\n Dramas,\n British TV Shows,\n Thrillers,\n TV Action & Adventure,\n Anime Features,\n LGBTQ Movies,\n Sci-Fi & Fantasy,\n TV Thrillers,\n Classic & Cult TV,\n International TV Shows,\n Kids' TV,\n Spanish-Language TV Shows,\n Comedies,\n Romantic Movies,\n Reality TV,\n Independent Movies,\n Docuseries,\n TV Sci-Fi & Fantasy."
   utter_paesi:
