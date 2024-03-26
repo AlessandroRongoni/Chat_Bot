@@ -1,8 +1,7 @@
 version: "3.1"
 
 rules:
-
-- rule: Saluta all'avvio
+- rule: Saluto all'inizio della conversazione
   steps:
   - intent: saluto
   - action: utter_saluto
@@ -16,3 +15,19 @@ rules:
   steps:
   - intent: nlu_fallback
   - action: utter_default
+
+- rule: Reset Slots
+  steps:
+  - intent: reset_slots
+  - action: utter_reset_slots
+  - action: action_reset_slots
+
+- rule: Ringraziamenti
+  steps:
+  - intent: ringraziamenti
+  - action: utter_ringraziamenti
+
+- rule: Ridai Menu
+  steps:
+  - intent: menu
+  - action: utter_menu

@@ -82,7 +82,7 @@ nlu:
 
 - intent: ricerca_per_genere
   examples: |
-    - Mostrami titoli [lgbtq+](genere)
+    - Mostrami titoli [lgbtq](genere)
     - Dammi le opzioni [lgbtq](genere)
     - Trova opzioni [lgbtq](genere)
     - Voglio vedere qualcosa di [azione](genere)
@@ -153,6 +153,38 @@ nlu:
     - Mi interessano i titoli [lgbtq](genere)
     - Cerca [docuserie](genere) recenti
     - Quali titoli [fantascienza](genere) e [fantasy](genere) posso guardare?
+    - [azione](genere)
+    - [commedia](genere)
+    - [dramma](genere)
+    - [horror](genere)
+    - [fantascienza](genere)
+    - [indie](genere)
+    - [documentari scientifici](genere)
+    - [romantico](genere)
+    - [anime](genere)
+    - [bambini e famiglia](genere)
+    - [thriller](genere)
+    - [crime](genere)
+    - [musical](genere)
+    - [commedie TV](genere)
+    - [cult](genere)
+    - [docuserie](genere)
+    - [reality](genere)
+    - [internazionali](genere)
+    - [sportivi](genere)
+    - [indipendenti](genere)
+    - [fantascienza](genere) e [fantasy](genere)
+    - [reality TV](genere)
+    - [thriller](genere)
+    - [drammatiche](genere)
+    - [documentari](genere)
+    - [action](genere)
+    - [d'azione](genere)
+    - [d'avventura](genere)
+    - [biografici](genere)
+    - [di azione](genere)
+    - [actions](genere)
+
 
 
 - intent: ricerca_per_anno
@@ -230,6 +262,39 @@ nlu:
     - Quali di fantascienza sono usciti nel [1952](anno)?
     - Quali di animazione posso trovare del [1951](anno)?
     - Quali romantici sono stati rilasciati nel [1950](anno)?
+    - [2020](anno)
+    - [2019](anno)
+    - [2018](anno)
+    - [2017](anno)
+    - [2016](anno)
+    - [2015](anno)
+    - [2014](anno)
+    - [2013](anno)
+    - [2012](anno)
+    - [2011](anno)
+    - [2010](anno)
+    - [2009](anno)
+    - [2008](anno)
+    - [2007](anno)
+    - del [2006](anno)
+    - del [2005](anno)
+    - del [2004](anno)
+    - del [2003](anno)
+    - del [2002](anno)
+    - del [2001](anno)
+    - del [2000](anno)
+    - del [1999](anno)
+    - del [1998](anno)
+    - nel [1997](anno)
+    - nel [1996](anno)
+    - nel [1995](anno)
+    - nel [1994](anno)
+    - nel [1993](anno)
+    - nel [1992](anno)
+    - nel [1991](anno)
+    - nel [1990](anno)
+    - nel [1989](anno)
+    - nel [1988](anno)
 
 
 - intent: ricerca_per_titolo
@@ -263,6 +328,26 @@ nlu:
     - Vorrei sapere di più su [The Good Place](titolo)
     - Parlami di [Dark](titolo)
     - Info [Better Call Saul](titolo)
+    - [The Witcher](titolo) è una serie tv?
+    - [The Crown](titolo) è una serie tv?
+    - [The Mandalorian](titolo) è una serie tv?
+    - [The Office](titolo)
+    - [The Witcher](titolo)
+    - [The Crown](titolo)
+    - [The Mandalorian](titolo)
+    - [Breaking Bad](titolo)
+    - [Cobra Kai](titolo)
+    - [Avatar: The Last Airbender](titolo)
+    - [The Umbrella Academy](titolo)
+    - [Ozark](titolo)
+    - [The Queen's Gambit](titolo)
+    - [Rick and Morty](titolo)
+    - [The Haunting of Hill House](titolo)
+    - [The Good Place](titolo)
+    - [Dark](titolo)
+    - [Better Call Saul](titolo)
+    - [Arrested Development](titolo)
+
 
 
 
@@ -294,7 +379,7 @@ nlu:
     - Sto cercando titoli con [Morgan Freeman](attore)
     - Film con [Anne Hathaway](attore) disponibili
     - Serie che vedono la partecipazione di [Hugh Jackman](attore)
-    - Quali sono i migliori titoli con [Robert Downey Jr.](attore)?
+    - Quali sono i migliori titoli con [Robert Downey Jr](attore)?
     - Cerca per [Angelina Jolie](attore)
     - Quali film di [Will Smith](attore) posso guardare?
     - Dammi le serie con [Tom Cruise](attore)
@@ -376,7 +461,7 @@ nlu:
     - Film con [Chiara Aurelia](attore) disponibili
     - Serie che vedono la partecipazione di [Harley Quinn Smith](attore)
     - Quali sono i migliori titoli con [Allius Barnes](attore)?
-    - Cerca per [Benjamin Flores Jr.](attore)
+    - Cerca per [Benjamin Flores Jr](attore)
     - Quali film di [Ashley Zukerman](attore) posso guardare?
     - Dammi le serie con [Cynthia Kaye McWilliams](attore)
     - Trova opere con [Mira Sorvino](attore)
@@ -426,6 +511,22 @@ nlu:
     - Dammi le serie con [Jack Quaid](attore)
     - Trova opere con [Antony Starr](attore)
     - Mostra film che hanno [Erin Moriarty](attore)
+    - [Dominique McElligott](attore)
+    - [Jessie T. Usher](attore)
+    - [Chace Crawford](attore)
+    - [Laz Alonso](attore)
+    - [Tomer Capon](attore)
+    - [Karen Fukuhara](attore)
+    - [Elisabeth Shue](attore)
+    - [Colby Minifie](attore)
+    - [Aya Cash](attore)
+    - [Shantel VanSanten](attore)
+    - [Jennifer Esposito](attore)
+    - [Simon Pegg](attore)
+    - [Karl Urban](attore)
+    - [Jack Quaid](attore)
+    - [Antony Starr](attore)
+    - [Erin Moriarty](attore)
 
 
 
@@ -463,7 +564,36 @@ nlu:
     - Mostrami i titoli diretti da [Danny Boyle](regista)
     - Cerca i film di [David O. Russell](regista)
     - Dammi i film di [Quentin Tarantino](regista)
-
+    - [Martin Scorsese](regista)
+    - [Christopher Nolan](regista)
+    - [Sofia Coppola](regista)
+    - [Stanley Kubrick](regista)
+    - [Steven Spielberg](regista)
+    - [Alfred Hitchcock](regista)
+    - [David Fincher](regista)
+    - [Francis Ford Coppola](regista)
+    - [Tim Burton](regista)
+    - [David Lynch](regista)
+    - [Hayao Miyazaki](regista)
+    - [Woody Allen](regista)
+    - [James Cameron](regista)
+    - [Clint Eastwood](regista)
+    - [Ridley Scott](regista)
+    - [Roman Polanski](regista)
+    - [Pedro Almodóvar](regista)
+    - [Wes Anderson](regista)
+    - [Darren Aronofsky](regista)
+    - [Michael Bay](regista)
+    - [Peter Jackson](regista)
+    - [Oliver Stone](regista)
+    - [Joel Coen](regista)
+    - [Ethan Coen](regista)
+    - [Guillermo del Toro](regista)
+    - [Denis Villeneuve](regista)
+    - [Paul Thomas Anderson](regista)
+    - [Sam Mendes](regista)
+    - [Danny Boyle](regista)
+    - [David O Russell](regista)
 
 
 
@@ -519,6 +649,24 @@ nlu:
     - Cerca solo [serie](tipo) romantiche
     - Quali [serie](tipo) sci-fi hai?
     - Cerca solo [serie](tipo) thriller
+    - [film](tipo)
+    - [serie TV](tipo)
+    - [film](tipo) d'azione
+    - [film](tipo) documentari
+    - [miniserie](tipo)
+    - [film](tipo) indipendenti
+    - [film](tipo) d'animazione
+    - [film](tipo) biografico
+    - [serie TV](tipo) drammatica
+    - [film](tipo) comici
+    - [serie TV](tipo) fantasy
+    - [serie](tipo) investigativa
+    - [serie](tipo) misteriose
+    - [film](tipo) musicali
+    - [film](tipo) horror
+    - [serie](tipo) drammatiche
+    - [serie](tipo) fantasy
+    - [serie](tipo)
 
 
 - intent: ricerca_per_durata
@@ -553,6 +701,18 @@ nlu:
     - Dammi una lista di serie tv con [4 stagioni](durata)
     - Quali film durano più di [200 minuti](durata)?
     - Cerca serie tv con meno di [3 stagioni](durata)
+    - [90 minuti](durata)
+    - [120 minuti](durata)
+    - [2 stagioni](durata)
+    - [4 stagioni](durata)
+    - [100 minuti](durata)
+    - [3 stagioni](durata)
+    - [80 minuti](durata)
+    - [5 stagioni](durata)
+    - [100 minuti](durata)
+    - [120 minuti](durata)
+    - [1 stagione](durata)
+    - [200 minuti](durata)
 
 
 - intent: ricerca_per_categoria
@@ -611,6 +771,14 @@ nlu:
     - Ho bisogno di ridere, dammi commedie per [tutti](categoria)
     - Esiste qualcosa di buono in film sull'arte e artisti per [tutti](categoria)?
     - Voglio esplorare serie TV misteriose per [tutti](categoria) con enigmi
+    - per [tutti](categoria)
+    - [tutti](categoria)
+    - per [ragazzi](categoria)
+    - per [bambini](categoria)
+    - per [adulti](categoria)
+    - [adulti](categoria)
+    - [bambini](categoria)
+    - [ragazzi](categoria)
 
 
 - intent: ricerca_per_paese
@@ -676,6 +844,21 @@ nlu:
     - Sono alla ricerca di serie romantiche prodotte in [Italia](paese)
     - Consigliami titoli thriller avvincenti prodotti in [Argentina](paese)
     - Quali sono i nuovi titoli indipendenti usciti prodotti in [Argentina](paese)
+    - [Italia](paese)
+    - [America](paese)
+    - [Francia](paese)
+    - [Giappone](paese)
+    - [Regno Unito](paese)
+    - [Spagna](paese)
+    - [Canada](paese)
+    - [Corea del Sud](paese)
+    - [Germania](paese)
+    - [Australia](paese)
+    - [Cina](paese)
+    - [Messico](paese)
+    - [Brasile](paese)
+    - [Russia](paese)
+    - [India](paese)
 
 - intent: consigli_di_visione
   examples: |
@@ -713,65 +896,31 @@ nlu:
 
 - intent: specifica_preferenze
   examples: |
-    - Mi piace [The Matrix](titolo)
-    - Adoro i film di [azione](genere)
-    - Ultimamente ho guardato [commedie](genere)
-    - Il mio film preferito è [Inception](titolo)
-    - Sono un fan di [Breaking Bad](titolo)
-    - Mi piacciono le serie TV [drammatiche](genere)
-    - Preferisco i film di [fantascienza](genere)
-    - Sono un appassionato di film [thriller](genere)
-    - Mi piace guardare film [indipendenti](genere)
-    - Adoro le serie [crime](genere)
-    - Ultimamente ho guardato film [romantici](genere)
-    - Il mio film preferito è [The Dark Knight](titolo)
-    - Sono un fan di [Stranger Things](titolo)
-    - Mi piacciono le serie TV [fantasy](genere)
-    - Preferisco i film [storici](genere)
-    - Sono un appassionato di film [horror](genere)
-    - Mi piace guardare serie TV [investigative](genere)
-    - Adoro i film [musicali](genere)
-    - Ultimamente ho guardato film di [guerra](genere)
-    - Il mio film preferito è [The Shaw](titolo)
-    - Sono un fan di [The Witcher](titolo)
-    - Mi piacciono le serie TV [misteriose](genere)
-    - Preferisco i film [romantici](genere)
-    - Sono un appassionato di film [biografici](genere)
-    - Mi piace guardare serie TV [sci-fi](genere)
-    - Adoro i film [thriller](genere)
-    - Ultimamente ho guardato film d'[azione](genere)
-    - Il mio film preferito è [The Godfather](titolo)
-    - Mi piacciono i film d'[azione](genere) e [avventura](genere)
-    - Preferisco le serie TV [comiche](genere)
-    - Mi interessano le serie TV [drammatiche](genere)
-    - Sono appassionato di film di [fantascienza](genere)
-    - Preferisco le serie TV [crime](genere)
-    - Mi piacciono i film di [animazione](genere)
-    - Preferisco le serie TV [storiche](genere)
-    - Mi interessano le serie TV [fantasy](genere)
-    - Sono appassionato di film [horror](genere)
-    - Preferisco le serie TV [investigative](genere)
-    - Mi piacciono i film [musical](genere)
-    - Sono un grande fan di [Leonardo DiCaprio](attore)
-    - Adoro i film diretti da [Quentin Tarantino](regista)
-    - Adoro i film con [Meryl Streep](attore)
-    - [Christopher Nolan](regista) è il mio regista preferito
-    - Mi piacciono tutte le serie con [Bryan Cranston](attore)
-    - [Sofia Coppola](regista) ha uno stile unico che adoro
-    - [Tom Hanks](attore) non delude mai
-    - Seguo tutto quello che fa [Nicole Kidman](attore)
-    - I film di [Martin Scorsese](regista) sono capolavori
-    - [Charlize Theron](attore) è incredibile in ogni suo ruolo
-    - Preferisco le pellicole dirette da [Steven Spielberg](regista)
-    - [Johnny Depp](attore) ha una versatilità incredibile
-    - Adoro la profondità che [Cate Blanchett](attore) porta ai suoi personaggi
-    - [Wes Anderson](regista) ha un'estetica visiva che amo
-    - Non posso fare a meno dei film con [Scarlett Johansson](attore)
-    - [Pedro Almodóvar](regista) cattura sempre la mia attenzione
-    - [Denzel Washington](attore) è un vero maestro della recitazione
-    - I film di [Greta Gerwig](regista) parlano al mio cuore
-    - [Margot Robbie](attore) sceglie sempre progetti interessanti
-    - [Guillermo del Toro](regista) crea mondi in cui amo perdersi
+    - Adoro
+    - Mi piacciono
+    - Mi piace
+    - Preferisco
+    - Sono un fan di
+    - Ultimamente ho guardato
+    - Il mio film preferito è
+    - Sono appassionato di
+    - Mi interessano
+    - Seguo
+    - Non posso fare a meno
+    - Cattura sempre la mia attenzione
+    - Parla al mio cuore
+    - Sceglie sempre progetti interessanti
+    - Crea mondi in cui amo perdersi
+    - Amo
+    - Amo molto
+    - Impazzisco per
+    - Sono pazzo per
+    - Sono pazzo di
+    - Le opere sue le adoro
+    - Le opere sue le amo
+    - Mi piacciono entrambi
+
+
 
 
 
@@ -791,6 +940,8 @@ nlu:
     - Menù
     - Menu
     - Dammi il menu
+    - dammi il menu
+    - esci il menu
     - Che fai?
     - Cosa fai?
     - che sai fare?
@@ -810,6 +961,15 @@ nlu:
     - quali generi posso indicare?
     - quali generi posso specificare?
     - quali generi posso menzionare?
+    - quali sono i generi disponibili?
+    - quali generi posso chiedere?
+    - quali sono i generi di film?
+    - quali sono i generi di serie tv?
+    - dammi i generi disponibili
+    - generi?
+    - generi
+
+
 
 - intent: paesi_disponibili
   examples: |
@@ -823,4 +983,68 @@ nlu:
     - quali paesi posso specificare?
     - quali paesi posso menzionare?
     - quali paesi posso scrivere?
+    - paesi?
+    - paesi
+    - dammi la lista dei paesi
+    - che paesi posso scegliere?
+    - che paesi posso scrivere?
+    - quali paesi posso selezionare?
+    - quali paesi posso indicare?
+    - quali paesi posso specificare?
+    - quali paesi ci sono?
+    - che peasi hai disponobili?
+    - paesi disponibili
+    
 
+
+
+- intent: ringraziamenti
+  examples: |
+    - Grazie
+    - grazie mille
+    - grazie per l'aiuto
+    - grazie per la tua assistenza
+    - grazie per le informazioni
+    - grazie per il supporto
+    - grazie per la tua disponibilità
+    - grazie per la tua gentilezza
+    - grazie per la tua pazienza
+    - grazie per la tua cortesia
+    - grazie per il tuo aiuto
+    - grazie!
+    - grazie
+    - Grazie mille
+    - wow
+    - grazie per l'assistenza
+    - WOOOOOW
+    - WoW
+
+- intent: reset_slots
+  examples: |
+    - resetta gli slots
+    - cancella slot
+    - elimina gli slots
+    - togli gli slot
+    - resetta i dati
+    - cancella i dati
+    - elimina i dati
+    - togli i dati
+    - resetta le informazioni
+    - cancella le informazioni
+    - elimina le informazioni
+    - togli le informazioni
+    - resetta tutto
+
+
+- intent: skip_preference
+  examples: |
+    - Non ho preferenze
+    - Non ho preferenze particolari
+    - Non ho preferenze specifiche
+    - Skip
+    - Salta
+    - Passa
+    - Vai avanti
+    - skip
+    - salta
+    - passa

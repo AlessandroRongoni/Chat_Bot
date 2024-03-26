@@ -11,7 +11,6 @@ intents:
   - ricerca_per_titolo
   - ricerca_per_durata
   - ricerca_per_tipo
-  - playlist
   - specifica_preferenze
   - consigli_di_visione
   - ricerca_per_paese
@@ -19,6 +18,9 @@ intents:
   - generi_disponibili
   - paesi_disponibili
   - specifica_tipo
+  - reset_slots
+  - ringraziamenti
+  - skip_preference
 
 entities:
   - tipo
@@ -94,65 +96,28 @@ responses:
     - text: "Buongiorno! In cosa posso esserti utile?"
   utter_addio:
     - text: "Arrivederci e a presto!"
-  utter_ricerca_per_attore:
-    - text: "Ecco i film o serie TV con {attore}."
-  utter_ricerca_per_regista:
-    - text: "Ecco le opere dirette da {regista}."
-  utter_ricerca_per_genere:
-    - text: "Ecco alcuni titoli di genere {genere}."
-  utter_ricerca_per_anno:
-    - text: "Ecco i titoli usciti nel {anno}."
-  utter_ricerca_per_categoria:
-    - text: "Ecco i titoli nella categoria {categoria}."
-  utter_ricerca_per_titolo:
-    - text: "Ecco le informazioni su {titolo}."
-  utter_ricerca_per_durata:
-    - text: "Ecco i titoli che corrispondono alla tua richiesta di durata."
-  utter_ricerca_per_tipo:
-    - text: "Ecco i {tipo} che potrebbero interessarti."
-  utter_playlist:
-    - text: "Sto creando una playlist basata sulle tue preferenze."
-  utter_consigli_di_visione:
-    - text: "Basandomi sulle tue preferenze, ti consiglio di guardare {titolo}."
-    - text: "Per te potrebbe essere interessante {titolo}."
-  utter_specifica_preferenze:
-    - text: "Grazie per condividere le tue preferenze! Lavorerò per trovarti qualcosa di adatto."
-    - text: "Interessante, tengo presente che ti piace {genere/titolo}. Vediamo cosa posso trovare per te."
-  utter_ricerca_per_paese:
-    - text: "Ecco i titoli provenienti da {paese}."
-    - text: "Ti mostro i titoli provenienti da {paese}."
+    - text: "A presto!"
   utter_default:
     - text: "Scusa, non ho capito. Puoi provare a esprimerti in modo diverso?"
     - text: "Mi dispiace, non sono sicuro di come aiutarti con questo. Puoi chiedermi qualcosa d'altro?"
+  utter_reset_slots:
+    - text: "Va bene, ho resettato i parametri di ricerca."
+  utter_ringraziamenti:
+    - text: "Grazie a te per aver usato il nostro servizio!"
+    - text: "Grazie a te per avermi consultato!"
+    - text: "Prego! Dimmi se hai bisogno di altro."
+  utter_skip_preference:
+    - text: "Va bene, salto questa preferenza."
+  utter_consigli_di_visione:
+    - text: "Ok! Dammi le tue preferenze e ti dirò cosa guardare."
+    - text: "Certo! Dimmi cosa ti piace e ti consiglierò qualcosa."
   utter_menu:
-    - text: "Ecco le opzioni disponibili:\n - Ricerca per attore,\n - Ricerca per regista,\n - Ricerca per genere,\n - Ricerca per anno,\n -Ricerca per categoria,\n - Ottenere informazioni du un film/serie TV,\n - Ricerca per durata,\n - Ricerca per tipologia di visione (film o serie TV),\n - Ricerca per paese,\n - Consigli di visione in base alle preferenze."
-  utter_generi:
-    - text: "Ecco alcuni generi disponibili:\n Classic Movies,\n Anime Series,\n TV Horror,\n TV Mysteries,\n Children & Family Movies,\n Stand-Up Comedy,\n Faith & Spirituality,\n TV Comedies\n TV Dramas,\n Science & Nature TV,\n Horror Movies,\n Action & Adventure,\n Movies,\n Sports Movies,\n Crime TV Shows,\n Documentaries,\n Stand-Up Comedy & Talk Shows,\n Korean TV Shows,\n TV Shows,\n Music & Musicals,\n Romantic TV Shows,\n Teen TV Shows,\n Cult Movies,\n International Movies,\n Dramas,\n British TV Shows,\n Thrillers,\n TV Action & Adventure,\n Anime Features,\n LGBTQ Movies,\n Sci-Fi & Fantasy,\n TV Thrillers,\n Classic & Cult TV,\n International TV Shows,\n Kids' TV,\n Spanish-Language TV Shows,\n Comedies,\n Romantic Movies,\n Reality TV,\n Independent Movies,\n Docuseries,\n TV Sci-Fi & Fantasy."
-  utter_paesi:
-  - text: "Ecco l'elenco dei paesi disponibili: Afghanistan,\n Albania,\n Algeria,\n Angola,\n Argentina,\n Armenia,\n Australia,\n Austria,\n Azerbaijan,\n Bahamas,\n Bangladesh,\n Belarus,\n Belgium,\n Bermuda,\n Botswana,\n Brazil,\n Bulgaria,\n Burkina Faso,\n Cambodia,\n Cameroon,\n Canada,\n Cayman Islands,\n Chile,\n China,\n Colombia,\n Croatia,\n Cuba,\n Cyprus,\n Czech Republic,\n Denmark,\n Dominican Republic,\n East Germany,\n Ecuador,\n Egypt,\n Ethiopia,\n Finland,\n France,\n Georgia,\n Germany,\n Ghana,\n Greece,\n Guatemala,\n Hong Kong,\n Hungary,\n Iceland,\n India,\n Indonesia,\n Iran,\n Iraq,\n Ireland,\n Israel,\n Italy,\n Jamaica,\n Japan,\n Jordan,\n Kazakhstan,\n Kenya,\n Kuwait,\n Latvia,\n Lebanon,\n Liechtenstein,\n Lithuania,\n Luxembourg,\n Malawi,\n Malaysia,\n Malta,\n Mauritius,\n Mexico,\n Mongolia,\n Montenegro,\n Morocco,\n Mozambique,\n Namibia,\n Nepal,\n Netherlands,\n New Zealand,\n Nicaragua,\n Nigeria,\n Non disponibile,\n Norway,\n Pakistan,\n Palestine,\n Panama,\n Paraguay,\n Peru,\n Philippines,\n Poland,\n Portugal,\n Puerto Rico,\n Qatar,\n Romania,\n Russia,\n Samoa,\n Saudi Arabia,\n Senegal,\n Serbia,\n Singapore,\n Slovakia,\n Slovenia,\n Somalia,\n South Africa,\n South Korea,\n Soviet Union,\n Spain,\n Sri Lanka,\n Sudan,\n Sweden,\n Switzerland,\n Syria,\n Taiwan,\n Thailand,\n Turkey,\n Uganda,\n Ukraine,\n United Arab Emirates,\n United Kingdom,\n United States,\n Uruguay,\n Vatican City,\n Venezuela,\n Vietnam,\n West Germany,\n Zimbabwe."
-  utter_specifica_tipo:
-    - text: "Che tipo di visione preferisci?"
-      buttons:
-      - title: "Film"
-        payload: '/specifica_tipo{"tipo": "film"}'
-      - title: "Serie TV"
-        payload: '/specifica_tipo{"tipo": "serie_tv"}'
-      - title: "Entrambi"
-        payload: '/specifica_tipo{"tipo": "entrambi"}'
-#le stories c'è da rifarle, uguale per utter, devo gestire le stringhe dalle azioni
-
+    - text: "Ecco cosa posso fare per te:\n- Ricerca per attore,\n- Ricerca per regista,\n- Ricerca per genere,\n- Ricerca per anno,\n- Ricerca per categoria,\n- Ricerca informazioni per titolo,\n- Ricerca per durata,\n- Ricerca per tipo di contenuto (film/serie TV),\n- Ricerca per paese,\n- Ottieni consigli di visione in base alle preferenze,\n- Ottieni i generi disponibili,\n- Ottieni i paesi disponibili."
 
 
 actions:
-  - action_ricerca_per_attore
-  - action_ricerca_per_regista
-  - action_ricerca_per_genere
-  - action_ricerca_per_anno
-  - action_ricerca_per_categoria
-  - action_ricerca_per_titolo
-  - action_ricerca_per_durata
-  - action_ricerca_per_tipo
-  - action_genera_playlist
-  - action_consigli_di_visione
-  - action_specifica_preferenze
-  - action_ricerca_per_paese
+  - action_reset_slots # rules
+  - action_get_generi_from_data 
+  - action_get_paesi_from_data
+  - action_get_movies_by_actor
+  - action_get_movies_by_director
