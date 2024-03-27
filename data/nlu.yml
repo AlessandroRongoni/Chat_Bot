@@ -527,6 +527,18 @@ nlu:
     - [Jack Quaid](attore)
     - [Antony Starr](attore)
     - [Erin Moriarty](attore)
+    - Ricerca per attore
+    - Voglio cercare per attore
+    - Cerca per attore
+    - Mostra film con attore
+    - Quali film ha fatto l'attore
+    - Quali serie tv ha fatto l'attore
+    - Quali sono i film con attore
+    - Quali sono le serie tv con attore
+    - Quali sono i titoli con attore
+    - Quali sono le opere con attore
+    - Quali sono i lavori con attore
+
 
 
 
@@ -994,7 +1006,7 @@ nlu:
     - quali paesi ci sono?
     - che peasi hai disponobili?
     - paesi disponibili
-    
+
 
 
 
