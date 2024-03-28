@@ -38,7 +38,6 @@ nlu:
     - Ciao a tutti quanti voi
     - Ciao a tutti quanti voi lì
 
-
 - intent: addio
   examples: |
     - Arrivederci
@@ -79,798 +78,323 @@ nlu:
     - Arrivederci caro amici
     - Arrivederci caro amiche
 
-
-- intent: ricerca_per_genere
+- intent: ricerca_contenuti
   examples: |
-    - Mostrami titoli [lgbtq](genere)
-    - Dammi le opzioni [lgbtq](genere)
-    - Trova opzioni [lgbtq](genere)
-    - Voglio vedere qualcosa di [azione](genere)
-    - Quali opzioni di [commedia](genere) sono disponibili?
-    - Cerca titoli di [dramma](genere)
-    - Voglio vedere qualcosa di [horror](genere)
-    - Dammi una lista di [fantascienza](genere)
-    - Trova i migliori titoli [indie](genere)
-    - Quali sono le ultime uscite in [documentari scientifici](genere)?
-    - Ho voglia di guardare un bel titolo [romantico](genere)
-    - Quali [anime](genere) mi consigli?
-    - Sto cercando titoli per [bambini e famiglia](genere)
-    - Esplora titoli [thriller](genere)
-    - Dimmi qualche titolo [crime](genere) da guardare
-    - Fammi vedere un [musical](genere)
-    - C'è qualche novità in [commedie TV](genere)?
-    - Che titoli di [cult](genere) posso guardare stasera?
-    - Consigliami qualche [docuserie](genere) interessante
-    - Vorrei qualcosa sul [reality](genere)
-    - Quali opzioni [internazionali](genere) hai?
-    - Dammi opzioni di titoli [sportivi](genere)
-    - Mostrami i migliori titoli [indipendenti](genere)
-    - Mi interessano i titoli di [fantascienza](genere) e [fantasy](genere)
-    - Quali [reality TV](genere) posso guardare?
-    - Cerca dei titoli [thriller](genere)
-    - Quali opzioni [drammatiche](genere) mi consigli?
-    - Vorrei guardare qualche [commedia](genere)
-    - Consigliami dei [documentari](genere)
-    - Quali sono le ultime [serie animate](genere) aggiunte?
-    - Dimmi alcuni titoli d'[azione](genere) [americano](paese)
-    - Stasera voglio vedere un titolo [romantico](genere) classico
-    - Mostrami serie [crime](genere) avvincenti
-    - Che titoli d'[avventura](genere) posso guardare con i bambini?
-    - Sto cercando titoli [biografici](genere) ispiratori
-    - Vorrei qualcosa di [storico](genere)
-    - Consigli su serie TV di [fantasia](genere)
-    - Ho bisogno di ridere, dammi [commedie](genere)
-    - Esiste qualcosa di buono su [arte e artisti](genere)?
-    - Voglio esplorare [serie TV crime](genere) con enigmi
-    - Cosa hai di nuovo nel genere [horror](genere)?
-    - Dammi un'occhiata ai titoli [musicali](genere) disponibili
-    - Sto cercando qualcosa di [guerra](genere)
-    - Hai qualche serie di [azione](genere) da consigliarmi?
-    - Quali serie TV di [cucina](genere) posso guardare?
-    - Dimmi i migliori titoli sulla [natura](genere)
-    - Quali titoli di [fantascienza](genere) hai che valgono la pena?
-    - Mostrami le serie [stand-up](genere)
-    - Vorrei vedere un bel [documentario](genere)
-    - C'è qualche titolo [romantico](genere) da guardare stasera?
-    - Che serie di [mistero](genere) mi consigli?
-    - Voglio vedere un [classico](genere)
-    - Consigliami un [anime](genere) interessante
-    - Cerca titoli [horror](genere) da guardare stasera
-    - Quali titoli [mistero](genere) posso vedere?
-    - Suggerisci titoli per la [famiglia](genere) per il pomeriggio
-    - Dammi una lista di [stand-up](genere) [comici](genere)
-    - Vorrei esplorare qualche documentario su [spiritualità](genere)
-    - Quali [commedie](genere) sono disponibili?
-    - Mostrami serie [drammatiche](genere) appassionanti
-    - Cerca [documentari](genere) su scienza e natura
-    - Quali titoli d'[azione](genere) e [avventura](genere) mi consigli?
-    - Ho voglia di guardare qualche [serie coreana](genere)
-    - Sono alla ricerca di serie [romantiche](genere)
-    - Consigliami titoli [thriller](genere) avvincenti
-    - Quali sono i nuovi titoli [indipendenti](genere) usciti?
-    - Dammi suggerimenti su [musical](genere) da non perdere
-    - Quali sono le migliori serie [adolescenziali](genere) del momento?
-    - Mi interessano i titoli [lgbtq](genere)
-    - Cerca [docuserie](genere) recenti
-    - Quali titoli [fantascienza](genere) e [fantasy](genere) posso guardare?
-    - [azione](genere)
+    - Cerca un [film](tipo) con [Tom Hanks](attore)
+    - Dammi i [film](tipo) con [Tom Hanks](attore)
+    - Quali [film](tipo) con [Tom Hanks](attore) hai?
+    - Dammi [serie](tipo) [horror](genere) dirette da [Steven Spielberg](regista)
+    - Quali [film](tipo) [commedia](genere) hai?
+    - Cerca [film](tipo) [commedia](genere) del [2020](anno)
+    - Dammi [serie tv](tipo) del genere [drammatico](genere)
+    - Quali [film](tipo) [commedia](genere) hai?
+    - Dammi [serie tv](tipo) diretti da [Steven Spielberg](regista)
+    - [film](tipo) [commedia](genere) del [1990](anno) diretto da [Woody Allen](regista)
+    - [serie tv](tipo) [drammatico](genere) dalla durata di [120 minuti](durata)
+    - [horror](genere) del [2012](anno) con [Tom Hanks](attore)
+    - Vorrei vedere una [serie](tipo) [thriller](genere) recente
+    - Cerca [film](tipo) [d'azione](genere) del [2019](anno)
+    - Quali [serie](tipo) [italiane](paese) posso guardare?
+    - Dammi i [film](tipo) di [Quentin Tarantino](regista)
+    - Quali [serie](tipo) con [Meryl Streep](attore) sono disponibili?
+    - Esplora [film](tipo) [commedia](genere) americani del [2000](anno)
+    - Cerca [film](tipo) della [categoria](categoria) [per adulti](categoria)
+    - Quali [serie tv](tipo) [fantascienza](genere) hai del [2018](anno)?
+    - Dammi [film](tipo) con una durata inferiore ai [90 minuti](durata)
+    - Trova [serie](tipo) [storiche](genere) prodotte in [Germania](paese)
+    - [film](tipo) [drammatici](genere) con [Leonardo DiCaprio](attore)
+    - Ho bisogno di [serie](tipo) [comiche](genere) da guardare con la famiglia
+    - Elenco di [film](tipo) [biografici](genere) sul [titolo](titolo) [The Social Network](titolo)
+    - Dammi [serie](tipo) ambientate negli anni [80](anno)
+    - Cerca [film](tipo) sul tema della [guerra](categoria) del [2021](anno)
+    - Mostrami [serie](tipo) con episodi di [30 minuti](durata)
+    - Trova [film](tipo) [horror](genere) da [Spagna](paese)
+    - Dammi [film](tipo) che trattano di [viaggi nel tempo](categoria)
+    - Quali [serie tv](tipo) [fantasy](genere) di [120 minuti](durata) consigli?
+    - Mostra [film](tipo) [avventura](genere) con [Tom Cruise](attore)
+    - Cerca [serie](tipo) [poliziesche](genere) disponibili da [Regno Unito](paese)
+    - [film](tipo) che hanno vinto l'Oscar nel [2015](anno)
+    - Quali [serie](tipo) [di cucina](categoria) posso guardare questo weekend?
+    - Dammi [film](tipo) [d'animazione](genere) adatti a [bambini piccoli](categoria)
+    - Quali [film](tipo) [drammatici](genere) hanno come protagonista [Morgan Freeman](attore)?
+    - Trova [film](tipo) [documentari](genere) sulla [natura](categoria)
+    - Quali [serie tv](tipo) [gialle](genere) mi consigli di [Francia](paese)?
+    - [serie](tipo) che esplorano la [psicologia](categoria)
+    - Elenco di [film](tipo) [romantici](genere) per [adulti](categoria)
+    - [film](tipo) [commedia](genere) per ridere in compagnia
+    - Quali [serie](tipo) [drammatiche](genere) raccomandi per gli amanti del genere?
+    - Dammi [film](tipo) [thriller](genere) da vedere in solitudine
+    - Quali [serie tv](tipo) [fantascienza](genere) mi consigli per un binge-watching?
+    - [film](tipo) [d'azione](genere) per una serata di adrenalina per [tutti](categoria)
+    - [serie](tipo) [storiche](genere) per [bambini piccoli](categoria)
+    - [serie](tipo) di [2 stagioni](durata) da guardare in un weekend
+    - [film](tipo) [commedia](genere) [italiana](paese) per una serata in allegria
+    - [film](tipo) [drammatici](genere) [spagnoli](paese) per una serata romantica
+    - [serie](tipo) [thriller](genere) [francesi](paese) per una serata di tensione
+    - [film](tipo) [horror](genere) [americani](paese) per una serata di paura
+    - [thriller](genere)
     - [commedia](genere)
-    - [dramma](genere)
-    - [horror](genere)
+    - [drammatico](genere)
     - [fantascienza](genere)
-    - [indie](genere)
-    - [documentari scientifici](genere)
-    - [romantico](genere)
-    - [anime](genere)
-    - [bambini e famiglia](genere)
-    - [thriller](genere)
+    - [azione](genere)
+    - [avventura](genere)
+    - [fantasy](genere)
     - [crime](genere)
-    - [musical](genere)
-    - [commedie TV](genere)
-    - [cult](genere)
-    - [docuserie](genere)
-    - [reality](genere)
-    - [internazionali](genere)
-    - [sportivi](genere)
-    - [indipendenti](genere)
-    - [fantascienza](genere) e [fantasy](genere)
-    - [reality TV](genere)
-    - [thriller](genere)
-    - [drammatiche](genere)
-    - [documentari](genere)
-    - [action](genere)
-    - [d'azione](genere)
-    - [d'avventura](genere)
-    - [biografici](genere)
-    - [di azione](genere)
-    - [actions](genere)
-
-
-
-- intent: ricerca_per_anno
-  examples: |
-    - Quali titoli sono usciti nel [2020](anno)?
-    - Mostrami le novità del [2018](anno)
-    - Cerca i rilasci nel [2019](anno)
-    - Che cosa c'era di nuovo nel [2021](anno)?
-    - Quali sono le ultime uscite del [2022](anno)?
-    - Dammi un elenco di novità dal [2017](anno)
-    - Quali titoli sono stati introdotti nel [2016](anno)?
-    - Voglio vedere i migliori titoli del [2015](anno)
-    - Quali interessanti sono stati pubblicati nel [2014](anno)?
-    - Stasera mi va di guardare qualcosa dal [2013](anno)
-    - Quali erano i titoli popolari nel [2012](anno)?
-    - Ho bisogno di consigli sui titoli del [2011](anno)
-    - Dimmi qualche titolo interessante del [2010](anno)
-    - Quali d'azione sono usciti nel [2009](anno)?
-    - Cerca romantici rilasciati nel [2008](anno)
-    - Quali commedie posso guardare del [2007](anno)?
-    - Mi interessano i thriller psicologici del [2006](anno)
-    - Esplora i indipendenti del [2005](anno)
-    - C'è qualche fantasy degna di nota del [2004](anno)?
-    - Mostrami cosa c'era di buono nel [2003](anno) in horror
-    - Quali anime sono stati rilasciati nel [2002](anno)?
-    - Voglio sapere di più sui storici del [2001](anno)
-    - Quali di fantascienza posso trovare del [2000](anno)?
-    - Dammi un'idea dei documentari ambientali del [1999](anno)
-    - Che tipo di animate erano disponibili nel [1998](anno)?
-    - Sto cercando qualcosa di cult del [1997](anno)
-    - Mostrami titoli iconici del [1996](anno)
-    - Quali capolavori sono stati rilasciati nel [1995](anno)?
-    - Quali di guerra posso guardare del [1994](anno)?
-    - Cerca biografici rilasciati nel [1993](anno)
-    - Quali di avventura sono usciti nel [1992](anno)?
-    - Quali drammatici posso guardare del [1991](anno)?
-    - Quali di azione sono stati rilasciati nel [1990](anno)
-    - Quali di commedia posso guardare del [1989](anno)?
-    - Quali horror sono usciti nel [1988](anno)?
-    - Quali di fantascienza posso trovare del [1987](anno)?
-    - Quali di animazione sono stati rilasciati nel [1986](anno)?
-    - Quali romantici posso guardare del [1985](anno)?
-    - Quali di cult sono usciti nel [1984](anno)?
-    - Quali di thriller posso guardare del [1983](anno)?
-    - Quali fantasy sono stati rilasciati nel [1982](anno)?
-    - Quali horror posso guardare del [1981](anno)?
-    - Quali di fantascienza sono usciti nel [1980](anno)?
-    - Quali di animazione posso trovare del [1979](anno)?
-    - Quali romantici sono stati rilasciati nel [1978](anno)?
-    - Quali di cult posso guardare del [1977](anno)?
-    - Quali di thriller sono usciti nel [1976](anno)?
-    - Quali fantasy posso guardare del [1975](anno)?
-    - Quali horror sono stati rilasciati nel [1974](anno)?
-    - Quali di fantascienza posso trovare del [1973](anno)?
-    - Quali di animazione sono stati rilasciati nel [1972](anno)?
-    - Quali romantici posso guardare del [1971](anno)?
-    - Quali di cult sono usciti nel [1970](anno)?
-    - Quali di thriller posso guardare del [1969](anno)?
-    - Quali fantasy sono stati rilasciati nel [1968](anno)?
-    - Quali horror posso guardare del [1967](anno)?
-    - Quali di fantascienza sono usciti nel [1966](anno)?
-    - Quali di animazione posso trovare del [1965](anno)?
-    - Quali romantici sono stati rilasciati nel [1964](anno)?
-    - Quali di cult posso guardare del [1963](anno)?
-    - Quali di thriller sono usciti nel [1962](anno)?
-    - Quali fantasy posso guardare del [1961](anno)?
-    - Quali horror sono stati rilasciati nel [1960](anno)?
-    - Quali di fantascienza posso trovare del [1959](anno)?
-    - Quali di animazione sono stati rilasciati nel [1958](anno)?
-    - Quali romantici posso guardare del [1957](anno)?
-    - Quali di cult sono usciti nel [1956](anno)?
-    - Quali di thriller posso guardare del [1955](anno)?
-    - Quali fantasy sono stati rilasciati nel [1954](anno)?
-    - Quali horror posso guardare del [1953](anno)?
-    - Quali di fantascienza sono usciti nel [1952](anno)?
-    - Quali di animazione posso trovare del [1951](anno)?
-    - Quali romantici sono stati rilasciati nel [1950](anno)?
-    - [2020](anno)
-    - [2019](anno)
-    - [2018](anno)
-    - [2017](anno)
-    - [2016](anno)
-    - [2015](anno)
-    - [2014](anno)
-    - [2013](anno)
-    - [2012](anno)
-    - [2011](anno)
-    - [2010](anno)
-    - [2009](anno)
-    - [2008](anno)
-    - [2007](anno)
-    - del [2006](anno)
-    - del [2005](anno)
-    - del [2004](anno)
-    - del [2003](anno)
-    - del [2002](anno)
-    - del [2001](anno)
-    - del [2000](anno)
-    - del [1999](anno)
-    - del [1998](anno)
-    - nel [1997](anno)
-    - nel [1996](anno)
-    - nel [1995](anno)
-    - nel [1994](anno)
-    - nel [1993](anno)
-    - nel [1992](anno)
-    - nel [1991](anno)
-    - nel [1990](anno)
-    - nel [1989](anno)
-    - nel [1988](anno)
-
-
-- intent: ricerca_per_titolo
-  examples: |
-    - Dimmi di più su [Stranger Things](titolo)
-    - Ho bisogno di informazioni su [Breaking Bad](titolo)
-    - Cosa puoi dirmi di [The Crown](titolo)?
-    - Informazioni su [Black Mirror](titolo)
-    - Raccontami qualcosa su [Game of Thrones](titolo)
-    - Che tipo di [serie tv](tipo) è [Money Heist](titolo)?
-    - Voglio saperne di più su [The Witcher](titolo)
-    - Parlami di [BoJack Horseman](titolo)
-    - Dettagli su [Friends](titolo), per favore
-    - Puoi dirmi di [The Office](titolo)?
-    - Descrivimi [Sherlock](titolo)
-    - Che show è [Narcos](titolo)?
-    - C'è qualche informazione su [Peaky Blinders](titolo)?
-    - Mi dai dettagli su [Rick and Morty](titolo)?
-    - Cosa mi dici di [The Mandalorian](titolo)?
-    - Vorrei conoscere [Avatar: The Last Airbender](titolo)
-    - Parlami di più su [The Umbrella Academy](titolo)
-    - Mi interessa [Ozark](titolo)
-    - Cerco informazioni su [The Queen's Gambit](titolo)
-    - Quali sono i dettagli di [Cobra Kai](titolo)?
-    - Descrivimi [Vikings](titolo)
-    - Vorrei dettagli su [Stranger Things](titolo) stagione 3
-    - Che genere di [serie tv](tipo) è [Lucifer](titolo)?
-    - Puoi dirmi qualcosa su [Better Call Saul](titolo)?
-    - Sto cercando informazioni su [Arrested Development](titolo)
-    - Cosa mi dici di [The Haunting of Hill House](titolo)?
-    - Vorrei sapere di più su [The Good Place](titolo)
-    - Parlami di [Dark](titolo)
-    - Info [Better Call Saul](titolo)
-    - [The Witcher](titolo) è una serie tv?
-    - [The Crown](titolo) è una serie tv?
-    - [The Mandalorian](titolo) è una serie tv?
-    - [The Office](titolo)
-    - [The Witcher](titolo)
-    - [The Crown](titolo)
-    - [The Mandalorian](titolo)
-    - [Breaking Bad](titolo)
-    - [Cobra Kai](titolo)
-    - [Avatar: The Last Airbender](titolo)
-    - [The Umbrella Academy](titolo)
-    - [Ozark](titolo)
-    - [The Queen's Gambit](titolo)
-    - [Rick and Morty](titolo)
-    - [The Haunting of Hill House](titolo)
-    - [The Good Place](titolo)
-    - [Dark](titolo)
-    - [Better Call Saul](titolo)
-    - [Arrested Development](titolo)
-
-
-
-
-
-- intent: ricerca_per_attore
-  examples: |
-    - Mostrami i titoli con [Leonardo DiCaprio](attore)
-    - Quali film hanno [Meryl Streep](attore)?
-    - Cerca serie tv con [Bryan Cranston](attore)
-    - In quali produzioni posso trovare [Emma Stone](attore)?
-    - Dammi un elenco di film con [Tom Hanks](attore)
-    - Quali sono le migliori serie con [Jennifer Aniston](attore)?
-    - Film che presentano [Brad Pitt](attore)
-    - Cerco contenuti con [Scarlett Johansson](attore)
-    - Voglio sapere di più sui lavori con [Denzel Washington](attore)
-    - Quali serie tv includono [Nicole Kidman](attore)?
-    - Film e serie con [Margot Robbie](attore)
-    - Ricerca titoli con [Idris Elba](attore)
-    - Mostrami tutto con [Sandra Bullock](attore)
-    - Che cosa ha fatto [Keanu Reeves](attore) su Netflix?
-    - Posso vedere qualcosa con [Natalie Portman](attore)?
-    - Elenco di produzioni con [Christian Bale](attore)
-    - Titoli recenti con [Charlize Theron](attore)
-    - Cerca per [Johnny Depp](attore)
-    - Quali film di [Julia Roberts](attore) posso guardare?
-    - Dammi le serie con [Anthony Hopkins](attore)
-    - Trova opere con [Cate Blanchett](attore)
-    - Mostra film che hanno [Matt Damon](attore)
-    - Sto cercando titoli con [Morgan Freeman](attore)
-    - Film con [Anne Hathaway](attore) disponibili
-    - Serie che vedono la partecipazione di [Hugh Jackman](attore)
-    - Quali sono i migliori titoli con [Robert Downey Jr](attore)?
-    - Cerca per [Angelina Jolie](attore)
-    - Quali film di [Will Smith](attore) posso guardare?
-    - Dammi le serie con [Tom Cruise](attore)
-    - Trova opere con [Natalie Portman](attore)
-    - Mostra film che hanno [Dwayne Johnson](attore)
-    - Sto cercando titoli con [Cameron Diaz](attore)
-    - Film con [George Clooney](attore) disponibili
-    - Serie che vedono la partecipazione di [Julianne Moore](attore)
-    - Quali sono i migliori titoli con [Samuel L. Jackson](attore)?
-    - Cerca per [Halle Berry](attore)
-    - Quali film di [Eddie Murphy](attore) posso guardare?
-    - Dammi le serie con [Kate Winslet](attore)
-    - Trova opere con [Daniel Craig](attore)
-    - Mostra film che hanno [Jessica Chastain](attore)
-    - Sto cercando titoli con [Mark Wahlberg](attore)
-    - Film con [Viola Davis](attore) disponibili
-    - Serie che vedono la partecipazione di [Ben Affleck](attore)
-    - Quali sono i migliori titoli con [Emily Blunt](attore)?
-    - Cerca per [Chris Hemsworth](attore)
-    - Quali film di [Saoirse Ronan](attore) posso guardare?
-    - Dammi le serie con [Jake Gyllenhaal](attore)
-    - Trova opere con [Jessica Alba](attore)
-    - Mostra film che hanno [Ryan Reynolds](attore)
-    - Sto cercando titoli con [Rachel McAdams](attore)
-    - Film con [Chris Evans](attore) disponibili
-    - Serie che vedono la partecipazione di [Zoe Saldana](attore)
-    - Quali sono i migliori titoli con [Chris Pratt](attore)?
-    - Cerca per [Brie Larson](attore)
-    - Quali film di [Michael Fassbender](attore) posso guardare?
-    - Dammi le serie con [Tom Hardy](attore)
-    - Trova opere con [Jessica Biel](attore)
-    - Mostra film che hanno [Chris Pine](attore)
-    - Sto cercando titoli con [Zac Efron](attore)
-    - Film con [Mila Kunis](attore) disponibili
-    - Serie che vedono la partecipazione di [Channing Tatum](attore)
-    - Quali sono i migliori titoli con [Emma Watson](attore)?
-    - Cerca per [Dakota Johnson](attore)
-    - Quali film di [Shailene Woodley](attore) posso guardare?
-    - Dammi le serie con [Liam Hemsworth](attore)
-    - Trova opere con [Kristen Stewart](attore)
-    - Mostra film che hanno [Robert Pattinson](attore)
-    - Sto cercando titoli con [Taylor Lautner](attore)
-    - Film con [Dakota Fanning](attore) disponibili
-    - Serie che vedono la partecipazione di [Chloë Grace Moretz](attore)
-    - Quali sono i migliori titoli con [Asa Butterfield](attore)?
-    - Cerca per [Elle Fanning](attore)
-    - Quali film di [Hailee Steinfeld](attore) posso guardare?
-    - Dammi le serie con [Ansel Elgort](attore)
-    - Trova opere con [Lily Collins](attore)
-    - Mostra film che hanno [Timothée Chalamet](attore)
-    - Sto cercando titoli con [Zendaya](attore)
-    - Film con [Millie Bobby Brown](attore) disponibili
-    - Serie che vedono la partecipazione di [Noah Schnapp](attore)
-    - Quali sono i migliori titoli con [Finn Wolfhard](attore)?
-    - Cerca per [Gaten Matarazzo](attore)
-    - Quali film di [Caleb McLaughlin](attore) posso guardare?
-    - Dammi le serie con [Natalia Dyer](attore)
-    - Trova opere con [Charlie Heaton](attore)
-    - Mostra film che hanno [Joe Keery](attore)
-    - Sto cercando titoli con [Maya Hawke](attore)
-    - Film con [Sadie Sink](attore) disponibili
-    - Serie che vedono la partecipazione di [Cara Buono](attore)
-    - Quali sono i migliori titoli con [Matthew Modine](attore)?
-    - Cerca per [David Harbour](attore)
-    - Quali film di [Winona Ryder](attore) posso guardare?
-    - Dammi le serie con [Sean Astin](attore)
-    - Trova opere con [Paul Reiser](attore)
-    - Mostra film che hanno [Maya Thurman-Hawke](attore)
-    - Sto cercando titoli con [Priah Ferguson](attore)
-    - Film con [Cary Elwes](attore) disponibili
-    - Serie che vedono la partecipazione di [Brett Gelman](attore)
-    - Quali sono i migliori titoli con [Jamie Campbell Bower](attore)?
-    - Cerca per [Eduardo Franco](attore)
-    - Quali film di [Joseph Quinn](attore) posso guardare?
-    - Dammi le serie con [Sherman Augustus](attore)
-    - Trova opere con [Dylan Arnold](attore)
-    - Mostra film che hanno [Gabrielle Maiden](attore)
-    - Sto cercando titoli con [Olivia Welch](attore)
-    - Film con [Chiara Aurelia](attore) disponibili
-    - Serie che vedono la partecipazione di [Harley Quinn Smith](attore)
-    - Quali sono i migliori titoli con [Allius Barnes](attore)?
-    - Cerca per [Benjamin Flores Jr](attore)
-    - Quali film di [Ashley Zukerman](attore) posso guardare?
-    - Dammi le serie con [Cynthia Kaye McWilliams](attore)
-    - Trova opere con [Mira Sorvino](attore)
-    - Mostra film che hanno [Jenna Ortega](attore)
-    - Sto cercando titoli con [Isabella Gomez](attore)
-    - Film con [Mason Gooding](attore) disponibili
-    - Serie che vedono la partecipazione di [Drew Starkey](attore)
-    - Quali sono i migliori titoli con [Rachael Leigh Cook](attore)?
-    - Cerca per [Matt Lauria](attore)
-    - Quali film di [Kiele Sanchez](attore) posso guardare?
-    - Dammi le serie con [Natalie Martinez](attore)
-    - Trova opere con [Kate Bosworth](attore)
-    - Mostra film che hanno [Ron Perlman](attore)
-    - Sto cercando titoli con [Dorian Missick](attore)
-    - Film con [Sylvia Grace Crim](attore) disponibili
-    - Serie che vedono la partecipazione di [Erin Moriarty](attore)
-    - Quali sono i migliori titoli con [Antony Starr](attore)?
-    - Cerca per [Dominique McElligott](attore)
-    - Quali film di [Jessie T. Usher](attore) posso guardare?
-    - Dammi le serie con [Chace Crawford](attore)
-    - Trova opere con [Laz Alonso](attore)
-    - Mostra film che hanno [Tomer Capon](attore)
-    - Sto cercando titoli con [Karen Fukuhara](attore)
-    - Film con [Elisabeth Shue](attore) disponibili
-    - Serie che vedono la partecipazione di [Colby Minifie](attore)
-    - Quali sono i migliori titoli con [Aya Cash](attore)?
-    - Cerca per [Shantel VanSanten](attore)
-    - Quali film di [Jennifer Esposito](attore) posso guardare?
-    - Dammi le serie con [Simon Pegg](attore)
-    - Trova opere con [Karl Urban](attore)
-    - Mostra film che hanno [Jack Quaid](attore)
-    - Sto cercando titoli con [Antony Starr](attore)
-    - Film con [Erin Moriarty](attore) disponibili
-    - Serie che vedono la partecipazione di [Dominique McElligott](attore)
-    - Quali sono i migliori titoli con [Jessie T. Usher](attore)?
-    - Cerca per [Chace Crawford](attore)
-    - Quali film di [Laz Alonso](attore) posso guardare?
-    - Dammi le serie con [Tomer Capon](attore)
-    - Trova opere con [Karen Fukuhara](attore)
-    - Mostra film che hanno [Elisabeth Shue](attore)
-    - Sto cercando titoli con [Colby Minifie](attore)
-    - Film con [Aya Cash](attore) disponibili
-    - Serie che vedono la partecipazione di [Shantel VanSanten](attore)
-    - Quali sono i migliori titoli con [Jennifer Esposito](attore)?
-    - Cerca per [Simon Pegg](attore)
-    - Quali film di [Karl Urban](attore) posso guardare?
-    - Dammi le serie con [Jack Quaid](attore)
-    - Trova opere con [Antony Starr](attore)
-    - Mostra film che hanno [Erin Moriarty](attore)
-    - [Dominique McElligott](attore)
-    - [Jessie T. Usher](attore)
-    - [Chace Crawford](attore)
-    - [Laz Alonso](attore)
-    - [Tomer Capon](attore)
-    - [Karen Fukuhara](attore)
-    - [Elisabeth Shue](attore)
-    - [Colby Minifie](attore)
-    - [Aya Cash](attore)
-    - [Shantel VanSanten](attore)
-    - [Jennifer Esposito](attore)
-    - [Simon Pegg](attore)
-    - [Karl Urban](attore)
-    - [Jack Quaid](attore)
-    - [Antony Starr](attore)
-    - [Erin Moriarty](attore)
-    - Ricerca per attore
-    - Voglio cercare per attore
-    - Cerca per attore
-    - Mostra film con attore
-    - Quali film ha fatto l'attore
-    - Quali serie tv ha fatto l'attore
-    - Quali sono i film con attore
-    - Quali sono le serie tv con attore
-    - Quali sono i titoli con attore
-    - Quali sono le opere con attore
-    - Quali sono i lavori con attore
-
-
-
-
-- intent: ricerca_per_regista
-  examples: |
-    - Dammi i film diretti da [Martin Scorsese](regista)
-    - Quali titoli sono stati diretti da [Christopher Nolan](regista)?
-    - Mostrami le opere di [Quentin Tarantino](regista)
-    - Cerca i titoli diretti da [Sofia Coppola](regista)
-    - Dammi i film di [Stanley Kubrick](regista)
-    - Quali sono i film diretti da [Steven Spielberg](regista)?
-    - Elenco dei film di [Alfred Hitchcock](regista)
-    - Cosa ha diretto [David Fincher](regista)?
-    - Film di [Francis Ford Coppola](regista)
-    - Quali sono le opere di [Tim Burton](regista)?
-    - Elenco dei film diretti da [David Lynch](regista)
-    - Mostrami i titoli diretti da [Hayao Miyazaki](regista)
-    - Cerca i film di [Woody Allen](regista)
-    - Dammi i film di [James Cameron](regista)
-    - Quali sono i film diretti da [Clint Eastwood](regista)?
-    - Elenco dei film di [Ridley Scott](regista)
-    - Cosa ha diretto [Roman Polanski](regista)?
-    - Film di [Pedro Almodóvar](regista)
-    - Quali sono le opere di [Wes Anderson](regista)?
-    - Elenco dei film diretti da [Darren Aronofsky](regista)
-    - Mostrami i titoli diretti da [Michael Bay](regista)
-    - Cerca i film di [Peter Jackson](regista)
-    - Dammi i film di [Oliver Stone](regista)
-    - Quali sono i film diretti da [Joel Coen](regista)?
-    - Elenco dei film di [Ethan Coen](regista)
-    - Cosa ha diretto [Guillermo del Toro](regista)?
-    - Film di [Denis Villeneuve](regista)
-    - Quali sono le opere di [Paul Thomas Anderson](regista)?
-    - Elenco dei film diretti da [Sam Mendes](regista)
-    - Mostrami i titoli diretti da [Danny Boyle](regista)
-    - Cerca i film di [David O. Russell](regista)
-    - Dammi i film di [Quentin Tarantino](regista)
-    - [Martin Scorsese](regista)
-    - [Christopher Nolan](regista)
-    - [Sofia Coppola](regista)
-    - [Stanley Kubrick](regista)
-    - [Steven Spielberg](regista)
-    - [Alfred Hitchcock](regista)
-    - [David Fincher](regista)
-    - [Francis Ford Coppola](regista)
-    - [Tim Burton](regista)
-    - [David Lynch](regista)
-    - [Hayao Miyazaki](regista)
-    - [Woody Allen](regista)
-    - [James Cameron](regista)
-    - [Clint Eastwood](regista)
-    - [Ridley Scott](regista)
-    - [Roman Polanski](regista)
-    - [Pedro Almodóvar](regista)
-    - [Wes Anderson](regista)
-    - [Darren Aronofsky](regista)
-    - [Michael Bay](regista)
-    - [Peter Jackson](regista)
-    - [Oliver Stone](regista)
-    - [Joel Coen](regista)
-    - [Ethan Coen](regista)
-    - [Guillermo del Toro](regista)
-    - [Denis Villeneuve](regista)
-    - [Paul Thomas Anderson](regista)
-    - [Sam Mendes](regista)
-    - [Danny Boyle](regista)
-    - [David O Russell](regista)
-
-
-
-- intent: ricerca_per_tipo
-  examples: |
-    - Voglio vedere un [film](tipo)
-    - Mostrami le [serie TV](tipo) disponibili
-    - Cerca solo [film](tipo) per stasera
-    - Quali [serie TV](tipo) mi consigli?
-    - Cerca solo [film](tipo) d'azione
-    - Mostrami un [film](tipo) documentari interessante
-    - Vorrei guardare una [miniserie](tipo)
-    - Cerca solo [film](tipo) indipendenti
-    - Quali [serie TV](tipo) sono popolari?
-    - Cerca solo [film](tipo) d'animazione
-    - Mostrami un [film](tipo) biografico
-    - Voglio vedere una [serie TV](tipo) drammatica
-    - Cerca solo [film](tipo) comici
-    - Quali [serie TV](tipo) fantasy mi consigli?
-    - Cerca solo [film](tipo) storici
-    - Mostrami un [film](tipo) horror
-    - Vorrei guardare una [serie TV](tipo) investigativa
-    - Cerca solo [film](tipo) musicali
-    - Quali [serie TV](tipo) misteriose hai?
-    - Cerca solo [film](tipo) romantici
-    - Mostrami un [film](tipo) di guerra
-    - Voglio vedere una [serie TV](tipo) sci-fi
-    - Cerca solo [film](tipo) thriller
-    - Quali [serie TV](tipo) western mi consigli?
-    - Cerca solo [film](tipo) d'azione
-    - Mostrami un [film](tipo) avventura
-    - Vorrei guardare una [serie TV](tipo) commedia
-    - Cerca solo [film](tipo) criminali
-    - Quali [serie TV](tipo) fantascientifiche hai?
-    - Cerca solo [film](tipo) fantasy
-    - Mostrami un [film](tipo) drammatico
-    - Voglio vedere una [serie TV](tipo) horror
-    - Cerca solo [film](tipo) misteriosi
-    - Quali [serie](tipo) romantiche mi consigli?
-    - Cerca solo [serie](tipo) sci-fi
-    - Mostrami una [serie](tipo) thriller
-    - Vorrei guardare una [serie](tipo) western
-    - Cerca solo [serie](tipo) d'azione
-    - Quali [serie](tipo) avventura hai?
-    - Cerca solo [serie](tipo) comiche
-    - Mostrami una [serie](tipo) criminale
-    - Voglio vedere una [serie](tipo) fantasy
-    - Cerca solo [serie](tipo) fantascientifiche
-    - Quali [serie](tipo) fantasy mi consigli?
-    - Cerca solo [serie](tipo) drammatiche
-    - Mostrami una [serie](tipo) horror
-    - Vorrei guardare una [serie](tipo) misteriosa
-    - Cerca solo [serie](tipo) romantiche
-    - Quali [serie](tipo) sci-fi hai?
-    - Cerca solo [serie](tipo) thriller
-    - [film](tipo)
-    - [serie TV](tipo)
-    - [film](tipo) d'azione
-    - [film](tipo) documentari
-    - [miniserie](tipo)
-    - [film](tipo) indipendenti
-    - [film](tipo) d'animazione
-    - [film](tipo) biografico
-    - [serie TV](tipo) drammatica
-    - [film](tipo) comici
-    - [serie TV](tipo) fantasy
-    - [serie](tipo) investigativa
-    - [serie](tipo) misteriose
-    - [film](tipo) musicali
-    - [film](tipo) horror
-    - [serie](tipo) drammatiche
-    - [serie](tipo) fantasy
-    - [serie](tipo)
-
-
-- intent: ricerca_per_durata
-  examples: |
-    - Trova film che durano meno di [90 minuti](durata)
-    - Quali film durano più di [120 minuti](durata)?
-    - Mostrami serie tv con meno di [2 stagioni](durata)
-    - Cerca serie tv con più di [4 stagioni](durata)
-    - Ho bisogno di un film breve, sotto i [100 minuti](durata)
-    - Sto cercando serie tv brevi, massimo [3 stagioni](durata)
-    - Voglio qualcosa di veloce, forse [80 minuti](durata) o meno
-    - Mi piacerebbero serie tv più lunghe, oltre [5 stagioni](durata)
-    - Quali film durano tra [100 minuti](durata) e [120 minuti](durata)?
-    - Cerca serie tv con [3 stagioni](durata)
-    - Mostrami film che durano più di [100 minuti](durata)
-    - Quali serie tv durano meno di [1 stagione](durata)?
-    - Cerca serie tv con [2 stagioni](durata)
-    - Voglio vedere film che durano meno di [200 minuti](durata)
-    - Dammi una lista di serie tv con [4 stagioni](durata)
-    - Quali film durano più di [200 minuti](durata)?
-    - Cerca serie tv con meno di [3 stagioni](durata)
-    - Mostrami film che durano più di [90 minuti](durata)
-    - Quali serie tv durano meno di [5 stagioni](durata)?
-    - Cerca serie tv con [5 stagioni](durata)
-    - Voglio vedere film che durano meno di [120 minuti](durata)
-    - Quali serie tv durano più di [2 stagioni](durata)?
-    - Cerca serie tv con meno di [4 stagioni](durata)
-    - Mostrami film che durano più di [100 minuti](durata)
-    - Quali serie tv durano meno di [3 stagioni](durata)?
-    - Cerca serie tv con [3 stagioni](durata)
-    - Voglio vedere film che durano meno di [200 minuti](durata)
-    - Dammi una lista di serie tv con [4 stagioni](durata)
-    - Quali film durano più di [200 minuti](durata)?
-    - Cerca serie tv con meno di [3 stagioni](durata)
-    - [90 minuti](durata)
-    - [120 minuti](durata)
-    - [2 stagioni](durata)
-    - [4 stagioni](durata)
-    - [100 minuti](durata)
     - [3 stagioni](durata)
-    - [80 minuti](durata)
-    - [5 stagioni](durata)
-    - [100 minuti](durata)
-    - [120 minuti](durata)
+    - [2 stagioni](durata)
     - [1 stagione](durata)
-    - [200 minuti](durata)
-
-
-- intent: ricerca_per_categoria
-  examples: |
-    - Mostrami i film per [adulti](categoria)
-    - Quali serie TV per [bambini](categoria) hai?
-    - Cerca film per [famiglie](categoria)
-    - Voglio vedere serie TV per [ragazzi](categoria)
-    - Dammi una lista di film per [ragazzi](categoria)
-    - Trova i migliori film per [tutti](categoria)
-    - Quali sono le ultime uscite in film per [bambini](categoria)?
-    - Ho voglia di guardare un bel film per [ragazzi](categoria)
-    - Quali serie TV per [bambini e famiglie](categoria) mi consigli?
-    - Sto cercando film per [bambini e famiglie](categoria)
-    - Esplora i titoli per [bambini e famiglie](categoria)
-    - Dimmi qualche serie per [bambini e famiglie](categoria) da guardare
-    - Mi piacerebbe vedere un film per [bambini e famiglie](categoria)
-    - C'è qualche novità in film per [bambini e famiglie](categoria)?
-    - Che film per [ragazzi](categoria) posso guardare stasera?
-    - Consigliami qualche film per [ragazzi](categoria) interessante
-    - Vorrei qualcosa sul film per [ragazzi](categoria)
-    - Quali serie TV per [ragazzi](categoria) hai?
-    - Dammi opzioni di film per [ragazzi](categoria)
-    - Mostrami i migliori film per [ragazzi](categoria)
-    - Mi interessano i film per [adulti](categoria)
-    - Quali film per [adulti](categoria) hai che valgono la pena?
-    - Quali serie per [adulti](categoria) mi consigli?
-    - Vorrei guardare qualche film per [adulti](categoria)
-    - Consigli su serie TV per [adulti](categoria)
-    - Ho bisogno di ridere, dammi commedie per [adulti](categoria)
-    - Esiste qualcosa di buono in film per [adulti](categoria)?
-    - Voglio esplorare serie TV per [tutti](categoria) con enigmi
-    - Cosa hai di nuovo nel genere film per [tutti](categoria)?
-    - Dammi un'occhiata ai film per [tutti](categoria) disponibili
-    - Sto cercando qualcosa in film per [tutti](categoria)
-    - Hai qualche serie per [tutti](categoria) da consigliarmi?
-    - Quali serie TV per [tutti](categoria) posso guardare?
-    - Dimmi i migliori film per [tutti](categoria)
-    - Cerco film per [tutti](categoria) ispiratori
-    - Quali film per [tutti](categoria) hai che valgono la pena?
-    - Fammi vedere film per [tutti](categoria) di fantascienza e fantasy
-    - Quali film per [tutti](categoria) posso guardare?
-    - Cerca dei film per [tutti](categoria) thriller psicologici
-    - Quali serie per [tutti](categoria) drammatiche mi consigli?
-    - Vorrei guardare qualche commedia leggera per [tutti](categoria)
-    - Consigliami dei documentari scientifici per [tutti](categoria)
-    - Sono in cerca di serie per [tutti](categoria)
-    - Quali sono le ultime serie animate per [tutti](categoria) aggiunte?
-    - Dimmi alcuni titoli di film d'azione americani per [tutti](categoria)
-    - Stasera voglio vedere un film romantico classico per [tutti](categoria)
-    - Mostrami serie investigative per [adulti](categoria) avvincenti
-    - Che film d'avventura per [bambini](categoria) posso guardare con i bambini?
-    - Sto cercando film biografici per [tutti](categoria) ispiratori
-    - Vorrei qualcosa di storico per [tutti](categoria)
-    - Consigli su serie TV di fantasia per [tutti](categoria)
-    - Ho bisogno di ridere, dammi commedie per [tutti](categoria)
-    - Esiste qualcosa di buono in film sull'arte e artisti per [tutti](categoria)?
-    - Voglio esplorare serie TV misteriose per [tutti](categoria) con enigmi
-    - per [tutti](categoria)
-    - [tutti](categoria)
-    - per [ragazzi](categoria)
-    - per [bambini](categoria)
-    - per [adulti](categoria)
-    - [adulti](categoria)
-    - [bambini](categoria)
-    - [ragazzi](categoria)
-
-
-- intent: ricerca_per_paese
-  examples: |
-    - Mostrami film [italiani](paese)
-    - Quali serie TV [americane](paese) sono disponibili?
-    - Cerca film prodotti in [Francia](paese)
-    - Ho voglia di vedere un po' di cinema [giapponese](paese)
-    - Quali produzioni  [britanniche](paese) posso guardare?
-    - Trova i migliori film  [spagnoli](paese)
-    - Quali sono le ultime uscite in film  [canadesi](paese)?
-    - Cerca dei film  [coreani](paese)
-    - Esplora i titoli  [tedeschi](paese)
-    - Dimmi qualche serie  [australiana](paese) da guardare
-    - Mi piacerebbe vedere un film  [cinese](paese)
-    - C'è qualche novità in film  [messicani](paese)?
-    - Consigliami qualche docuserie  [brasiliana](paese)
-    - Vorrei qualcosa sul reality  [russo](paese)
-    - Quali serie TV  [indiane](paese) hai?
-    - Dammi opzioni di film  [svedesi](paese)
-    - Mostrami i migliori film  [olandesi](paese)
-    - Mi interessano i film  [argentinini](paese)
-    - Quali reality TV posso guardare  [spagnoli](paese)?
-    - Cerca dei film  [thailandesi](paese)
-    - Quali serie drammatiche  [francesi](paese) mi consigli?
-    - Vorrei guardare qualche commedia leggera  [canadese](paese)
-    - Consigliami dei documentari scientifici [tedeschi](paese)
-    - Sono in cerca di serie per adolescenti  [coreane](paese)
-    - Quali sono le ultime serie anime  [giapponesi](paese) aggiunte?
-    - Dimmi alcuni titoli di film d'azione  [americani](paese)
-    - Stasera voglio vedere un film romantico classico  [francese](paese)
-    - Mostrami serie crime avvincenti  [spagnole](paese)
-    - Che film d'avventura posso guardare con i bambini  [australiani](paese)?
-    - Sto cercando film biografici ispiratori  [britannici](paese)
-    - Vorrei qualcosa di storico prodotto in [Italia](paese)
-    - Consigli su serie TV di fantasia prodotto in [America](paese)
-    - Ho bisogno di ridere, dammi commedie registrate in [India](paese)
-    - Esiste qualcosa di buono in film sull'arte e artisti prodotto in [Francia](paese)?
-    - Voglio esplorare serie TV misteriose con enigmi prodotte in [Spagna](paese)
-    - Cosa hai di nuovo nel genere horror prodotto in [Messico](paese)?
-    - Dammi un'occhiata ai film musicali disponibili prodotti in [Argentina](paese)
-    - Sto cercando qualcosa di guerra prodotto in [Russia](paese)
-    - Hai qualche serie di azione da consigliarmi prodotta in [Svezia](paese)?
-    - Quali serie TV di cucina posso guardare prodotte in [Olanda](paese)?
-    - Dimmi i migliori titoli sulla natura prodotti in [Argentina](paese)
-    - Quali titoli di fantascienza hai che valgono la pena prodotti in [Thailandia](paese)?
-    - Mostrami le serie stand-up prodotte in [Spagna](paese)
-    - Vorrei vedere un bel documentario prodotto in [Brasile](paese)
-    - C'è qualche titolo romantico da guardare stasera prodotto in [Italia](paese)?
-    - Che serie di mistero mi consigli prodotta in [Argentina](paese)?
-    - Voglio vedere un classico prodotto in [Francia](paese)
-    - Consigliami un anime interessante prodotto in [Giappone](paese)
-    - Cerca titoli horror da guardare stasera prodotti in [Messico](paese)
-    - Quali titoli mistero posso vedere prodotti in [Thailandia](paese)?
-    - Suggerisci titoli per la famiglia per il pomeriggio prodotti in [Argentina](paese)
-    - Dammi una lista di stand-up comici prodotti in [Spagna](paese)
-    - Vorrei esplorare qualche documentario su spiritualità prodotto in [Brasile](paese)
-    - Quali commedie sono disponibili prodotte in [Argentina](paese)
-    - Mostrami serie drammatiche appassionanti prodotte in [Italia](paese)
-    - Cerca documentari su scienza e natura prodotti in [Argentina](paese)
-    - Quali titoli d'azione e avventura mi consigli prodotti in [Thailandia](paese)
-    - Ho voglia di guardare qualche serie coreana prodotta in [Corea del Sud](paese)
-    - Sono alla ricerca di serie romantiche prodotte in [Italia](paese)
-    - Consigliami titoli thriller avvincenti prodotti in [Argentina](paese)
-    - Quali sono i nuovi titoli indipendenti usciti prodotti in [Argentina](paese)
+    - [4 stagioni](durata)
+    - [5 stagioni](durata)
+    - [120 minuti](durata)
+    - [90 minuti](durata)
+    - [60 minuti](durata)
+    - [30 minuti](durata)
+    - [2010](anno)
+    - [2011](anno)
+    - [2012](anno)
+    - [2013](anno)
+    - [2014](anno)
+    - [2015](anno)
+    - [2016](anno)
+    - [2017](anno)
+    - [2018](anno)
+    - [2019](anno)
+    - [2020](anno)
+    - [2021](anno)
+    - [film](tipo)
+    - [serie tv](tipo)
+    - [movie](tipo)
+    - [tv show](tipo)
+    - [serie](tipo)
     - [Italia](paese)
-    - [America](paese)
     - [Francia](paese)
-    - [Giappone](paese)
-    - [Regno Unito](paese)
     - [Spagna](paese)
-    - [Canada](paese)
-    - [Corea del Sud](paese)
     - [Germania](paese)
+    - [Regno Unito](paese)
+    - [Stati Uniti](paese)
+    - [Canada](paese)
     - [Australia](paese)
-    - [Cina](paese)
-    - [Messico](paese)
-    - [Brasile](paese)
-    - [Russia](paese)
-    - [India](paese)
+    - [Giappone](paese)
+    - per [tutti](categoria)
+    - per [bambini piccoli](categoria)
+    - per [ragazzi](categoria)
+    - per [adulti](categoria)
+    - per [anziani](categoria)
+    - per [famiglie](categoria)
+    - per [coppie](categoria)
+    - per [amici](categoria)
+    - per [soli](categoria)
+    - per [tutte le età](categoria)
+    - per [adolescenti](categoria)
+    - per [ragazzi maggiorenni](categoria)
+    - [horror](genere) per [adulti](categoria)
+    - [commedia](genere) per [bambini piccoli](categoria)
+    - [drammatico](genere) per [ragazzi](categoria)
+    - [fantascienza](genere) per [adulti](categoria)
+    - [serie tv](tipo) [storiche](genere) per [anziani](categoria)
+    - [film](tipo) [biografici](genere) per [famiglie](categoria)
+    - [serie](tipo) [di cucina](categoria) per [coppie](categoria)
+    - [film](tipo) [d'animazione](genere) per [amici](categoria)
+    - [drammatici](genere) con [Leonardo DiCaprio](attore) per [soli](categoria)
+    - [documentari](genere) sulla [natura](categoria) per [tutte le età](categoria)
+    - [gialle](genere) di [Francia](paese) per [adolescenti](categoria)
+    - [serie](tipo) che esplorano la [fede](genere) per [ragazzi maggiorenni](categoria)
+    - [romantici](genere) per [adulti](categoria) per [coppie](categoria)
+    - Dammi le serie tv [storiche](genere) per [anziani](categoria)
+    - Quali [film](tipo) [biografici](genere) per [famiglie](categoria) mi consigli?
+    - [serie](tipo) [di cucina](categoria) per [coppie](categoria) da guardare insieme
+    - Dammi le [serie](tipo) dirette da [Alfred Hitchcock](regista) per [amici](categoria)
+    - Quali [film](tipo) [d'animazione](genere) per [bambini piccoli](categoria) mi consigli?
+    - [drammatici](genere) con [Leonardo DiCaprio](attore) diretti da [Martin Scorsese](regista)
+    - [documentari](genere) sulla [natura](categoria) per [tutte le età](categoria) da guardare in famiglia
+    - [Alfred Hitchcock](regista) per [ragazzi maggiorenni](categoria)
+    - con attore [Tom Hanks](attore)
+    - con regista [Steven Spielberg](regista)
+    - con attore [Meryl Streep](attore)
+    - con attore [Morgan Freeman](attore)
+    - con attore [Leonardo DiCaprio](attore)
+    - con regista [Woody Allen](regista)
+    - con regista [Quentin Tarantino](regista)
+    - con regista [Alfred Hitchcock](regista)
+    - con regista [Martin Scorsese](regista)
+    - con regista [Steven Spielberg](regista)
+    - diretto da [Woody Allen](regista)
+    - diretto da [Quentin Tarantino](regista)
+    - diretto da [Alfred Hitchcock](regista)
+    - diretto da [Martin Scorsese](regista)
+    - diretto da [Steven Spielberg](regista)
+    - con [Tom Cruise](attore)
+    - con [Tom Hanks](attore)
+    - con [Meryl Streep](attore)
+    - con [Morgan Freeman](attore)
+    - con [Leonardo DiCaprio](attore)
+    - con [Leonardo DiCaprio](attore)
+    - con [Angelina Jolie](attore)
+    - con [Brad Pitt](attore)
+    - con [Johnny Depp](attore)
+    - con [Will Smith](attore)
+    - con [Denzel Washington](attore)
+    - con [Robert De Niro](attore)
+    - con [Scarlett Johansson](attore)
+    - con [Natalie Portman](attore)
+    - con [Emma Stone](attore)
+    - con [Jennifer Lawrence](attore)
+    - con [Meryl Streep](attore)
+    - con [Nicole Kidman](attore)
+    - con [Julia Roberts](attore)
+    - con [Cate Blanchett](attore)
+    - con [Charlize Theron](attore)
+    - con [Kate Winslet](attore)
+    - con [Helen Mirren](attore)
+    - con [Judi Dench](attore)
+    - con [Maggie Smith](attore)
+    - con [Glenn Close](attore)
+    - con [Viola Davis](attore)
+    - con [Sandra Bullock](attore)
+    - con [Julianne Moore](attore)
+    - Mostrami [serie tv](tipo) con [Angelina Jolie](attore) nel cast
+    - Vorrei un elenco di [film](tipo) [drammatici](genere) dal [2015](anno)
+    - Quali [film](tipo) [romantici](genere) [italiani](paese) mi consigli?
+    - Trova [serie](tipo) [comiche](genere) recenti
+    - Cosa c'è diretto da [Quentin Tarantino](regista) disponibile?
+    - Cerca [serie](tipo) che parlano di [viaggi nel tempo](categoria)
+    - Dammi [film](tipo) che hanno vinto premi nel [2018](anno)
+    - Quali [film](tipo) [d'azione](genere) sono stati rilasciati negli [Stati Uniti](paese)?
+    - Vorrei guardare [film](tipo) con una durata superiore ai [120 minuti](durata)
+    - Esplora [serie tv](tipo) con meno di [3 stagioni](durata)
+    - Mostrami [film](tipo) ambientati in [Spagna](paese)
+    - Quali [serie](tipo) con [Morgan Freeman](attore) sono disponibili?
+    - Cerca [film](tipo) diretti da [Martin Scorsese](regista)
+    - [film](tipo) [italiani](paese) del genere [commedia](genere) recenti
+    - Quali [serie tv](tipo) [poliziesche](genere) [britanniche](paese) consigli?
+    - Trova [film](tipo) [drammatici](genere) con una durata di [90 minuti](durata)
+    - Mostrami [serie](tipo) ambientate negli anni [90](anno)
+    - Esplora [film](tipo) con tematica [LGBTQ](genere)
+    - Cosa posso guardare con [Jennifer Lawrence](attore) in [film](tipo) [commedia](genere)?
+    - [serie](tipo) [fantascienza](genere) con [Will Smith](attore)
+    - [film](tipo) [avventura](genere) per [tutti](categoria)
+    - Dammi [serie](tipo) [thriller](genere) del [2019](anno) dirette da [Alfred Hitchcock](regista)
+    - Quali [film](tipo) [documentari](genere) sulla [natura](genere) consigli?
+    - [serie tv](tipo) [storiche](genere) con più di [4 stagioni](durata)
+    - Cerca [film](tipo) [biografici](genere) su [Nelson Mandela](titolo)
+    - Quali [film](tipo) [romantici](genere) posso guardare in [Francia](paese)?
+    - [film](tipo) [horror](genere) diretti da [Steven Spielberg](regista)
+    - [serie](tipo) [d'azione](genere) con [Scarlett Johansson](attore)
+    - Quali [film](tipo) sul [viaggio nel tempo](genere) [americani](paese) consigli?
+    - Mostrami le [serie tv](tipo) [comiche](genere) con episodi di [30 minuti](durata)
+    - Cerca [serie](tipo) [drammatiche](genere) da [Giappone](paese) con episodi di meno di [30 minuti](durata)
+    - Dammi un elenco di [film](tipo) [storici](genere) prodotti in [Regno Unito](paese)
+    - Mostrami [film](tipo) [commedia](genere) [italiani](paese) più recenti con una durata inferiore ai [100 minuti](durata)
+    - Vorrei vedere [serie](tipo) [fantasy](genere) francesi con almeno [3 stagioni](durata)
+    - Trova [film](tipo) [avventura](genere) girati in [Australia](paese) più lunghi di [120 minuti](durata)
+    - Quali [serie tv](tipo) [comiche](genere) [americane](paese) posso guardare?
+    - Cerca [film](tipo) [d'azione](genere) ambientati in [Spagna](paese) con una durata di [90 minuti](durata)
+    - Dammi [serie](tipo) [poliziesche](genere) prodotte in [Germania](paese) con più di [5 stagioni](durata)
+    - Quali [film](tipo) [romantici](genere) [italiani](paese) consigli di [120 minuti](durata)?
+    - Mostrami [film](tipo) [horror](genere) girati in [Canada](paese) con una durata di almeno [100 minuti](durata)
+    - Quali [serie](tipo) [di cucina](genere) [francesi](paese) posso guardare con episodi sotto i [45 minuti](durata)?
+    - Trova [film](tipo) con tema [avventura](genere) prodotti in [Brasile](paese)
+    - Quali [serie tv](tipo) [drammatiche](genere) [britanniche](paese) hanno meno di [4 stagioni](durata)?
+    - Dammi [film](tipo) [thriller](genere) recenti dal [Giappone](paese) di [150 minuti](durata)
+    - Cerca [serie](tipo) [documentari](genere) sulla [natura](genere) realizzati in [Nuova Zelanda](paese)
+    - Vorrei vedere [film](tipo) [comici](genere) [indiani](paese) di [110 minuti](durata)
+    - Trova [serie](tipo) [storiche](genere) ambientate in [Russia](paese) con una durata di [3 stagioni](durata)
+    - Mostrami i [film](tipo) [d'azione](genere) più lunghi di [140 minuti](durata) prodotti negli [Stati Uniti](paese)
+    - Quali [film](tipo) [drammatici](genere) [svedesi](paese) consigli di [100 minuti](durata)?
+    - Dammi le migliori [serie tv](tipo) [poliziesche](genere) [olandesi](paese) con una durata di [2 stagioni](durata)
+    - Cerca [film](tipo) [biografici](genere) su personaggi famosi di [Argentina](paese) di [130 minuti](durata)
+    - Quali [serie](tipo) consigli [per tutti](categoria)?
+    - Cerca [film](tipo) adatti [per ragazzi](categoria)
+    - Dammi una lista di [film](tipo) [per adolescenti](categoria)
+    - Mostrami [serie](tipo) adatte [per bambini piccoli](categoria)
+    - Quali [serie tv](tipo) sono adatte [per adulti](categoria)?
+    - Trova [film](tipo) [commedia](genere) [per tutti](categoria)
+    - Cerca [serie](tipo) [fantasy](genere) adatte [per ragazzi](categoria)
+    - Dammi [film](tipo) [d'azione](genere) consigliati [per adolescenti](categoria)
+    - Quali [serie](tipo) [educative](categoria) hai [per bambini piccoli](categoria)?
+    - Mostrami [film](tipo) [thriller](genere) adatti [per adulti](categoria)
+    - Esplora [serie](tipo) [storiche](genere) adatte [per tutti](categoria)
+    - Cerca [film](tipo) [avventura](genere) [per ragazzi](categoria) con [Leonardo DiCaprio](attore)
+    - Dammi una lista di [serie](tipo) [comiche](genere) [per adolescenti](categoria) con episodi brevi
+    - Mostrami [film](tipo) [d'animazione](genere) perfetti [per bambini piccoli](categoria)
+    - Quali [film](tipo) [drammatici](genere) consigli [per adulti](categoria)?
+    - Trova [serie](tipo) [avventura](genere) da guardare [per tutti](categoria) questo weekend
+    - Cerca [film](tipo) [d'azione](genere) con [Tom Cruise](attore) adatti [per ragazzi](categoria)
+    - Dammi [serie](tipo) [fantasy](genere) [per adolescenti](categoria) con [Morgan Freeman](attore)
+    - Mostrami [film](tipo) [commedia](genere) [per bambini piccoli](categoria) con [Adam Sandler](attore)
+    - Quali [serie](tipo) [thriller](genere) sono intriganti [per adulti](categoria)?
+    - Quali [film](tipo) sono usciti nel [2020](anno)?
+    - Mostrami le [serie](tipo) del [2019](anno)
+    - Dammi una lista di [film](tipo) rilasciati nel [2018](anno)
+    - Cerca [serie tv](tipo) popolari nel [2017](anno)
+    - Quali [film](tipo) [commedia](genere) posso guardare del [2016](anno)?
+    - Trova [serie](tipo) [drammatiche](genere) del [2015](anno)
+    - Dammi [film](tipo) [d'azione](genere) del [2014](anno) con [Tom Cruise](attore)
+    - Mostrami [serie](tipo) [avventura](genere) rilasciate nel [2013](anno)
+    - Quali [film](tipo) [romantici](genere) consigli dal [2012](anno)?
+    - Esplora [serie](tipo) [storiche](genere) del [2011](anno)
+    - Cerca [film](tipo) [thriller](genere) rilasciati nel [2010](anno)
+    - Dammi una lista di [serie](tipo) [fantasy](genere) del [2009](anno)
+    - Quali [film](tipo) [horror](genere) posso guardare del [2008](anno)?
+    - Mostrami le [serie](tipo) [comiche](genere) più divertenti del [2007](anno)
+    - Cerca [film](tipo) [documentari](genere) sul tema [natura](categoria) del [2006](anno)
+    - Quali [serie](tipo) [per adulti](categoria) sono state rilasciate nel [2005](anno)?
+    - Dammi [film](tipo) [biografici](genere) sul personaggio di [Steve Jobs](titolo) dal [2004](anno)
+    - Mostrami [serie](tipo) [di cucina](categoria) introdotte nel [2003](anno)
+    - Quali [film](tipo) [d'azione](genere) [per ragazzi](categoria) raccomandi dal [2002](anno)?
+    - Cerca [serie](tipo) [per bambini piccoli](categoria) disponibili dal [2001](anno)
+
+
+- intent: informazioni_contenuto
+  examples: |
+    - Dammi informazioni su [The Social Network](titolo)
+    - Quali sono le informazioni su [The Social Network](titolo)?
+    - Informazioni su [The Social Network](titolo)
+    - Che mi dici su [The Social Network](titolo)?
+    - Informazioni su [The Social Network](titolo)
+    - Quali sono i dettagli su [Breking Bad](titolo)?
+    - Dammi informazioni su [Breking Bad](titolo)
+    - Informazioni su [Breking Bad](titolo)
+    - Che mi dici su [Breking Bad](titolo)?
+    - Quali sono le informazioni su [Stranger Things](titolo)?
+    - Dammi informazioni su [Stranger Things](titolo)
+    - Informazioni su [Stranger Things](titolo)
+    - Che mi dici su [Stranger Things](titolo)?
+    - Quali sono i dettagli su [The Crown](titolo)?
+    - Dammi informazioni su [The Crown](titolo)
+    - Dimmi di più su [Game of Thrones](titolo)
+    - Cosa sai di [Black Mirror](titolo)?
+    - Voglio sapere di più su [Narcos](titolo)
+    - Dati su [La casa de papel](titolo)
+    - Raccontami di [Sherlock](titolo)
+    - Dettagli su [Friends](titolo) per favore
+    - Ho bisogno di informazioni su [The Office](titolo)
+    - Cosa puoi dirmi su [Rick and Morty](titolo)?
+    - Vorrei dettagli su [Peaky Blinders](titolo)
+    - Cosa c'è da sapere su [The Mandalorian](titolo)?
+    - Dammi il background di [Ozark](titolo)
+    - Sfondo su [The Witcher](titolo)
+    - Mi dai informazioni su [The Queen's Gambit](titolo)?
+    - Cosa mi dici di [BoJack Horseman](titolo)?
+    - Sono curioso di [Westworld](titolo)
+    - Cerco informazioni su [The Handmaid's Tale](titolo)
+    - Raccontami qualcosa su [Better Call Saul](titolo)
+    - Quali dettagli hai su [The Umbrella Academy](titolo)?
+    - Informazioni su [Brooklyn Nine-Nine](titolo)
+    - Che mi dici su [Vikings](titolo)?
+    - Quali sono le informazioni su [Cobra Kai](titolo)?
+    - Dammi informazioni su [Fargo](titolo)
+    - Che sai di [Mindhunter](titolo)?
+    - Ho bisogno di dettagli su [Stranger Things](titolo) stagione 3
+    - Dimmi tutto su [Arrested Development](titolo)
+    - Voglio sapere tutto su [Daredevil](titolo)
+    - Che informazioni hai su [The Good Place](titolo)?
+    - Dammi i dettagli su [Avatar: The Last Airbender](titolo)
+    - Cosa puoi dirmi riguardo a [Twin Peaks](titolo)?
+    - Mi interessano informazioni su [Lost](titolo)
+    - Ho sentito di [Breaking Bad](titolo), dammi più dettagli
+    - Informazioni dettagliate su [Mad Men](titolo), per favore
+
 
 - intent: consigli_di_visione
   examples: |
@@ -904,37 +428,6 @@ nlu:
     - Cosa mi consigli di guardare?
     - Quali sono i migliori film da vedere?
     - Consigliami una serie TV interessante
-
-
-- intent: specifica_preferenze
-  examples: |
-    - Adoro
-    - Mi piacciono
-    - Mi piace
-    - Preferisco
-    - Sono un fan di
-    - Ultimamente ho guardato
-    - Il mio film preferito è
-    - Sono appassionato di
-    - Mi interessano
-    - Seguo
-    - Non posso fare a meno
-    - Cattura sempre la mia attenzione
-    - Parla al mio cuore
-    - Sceglie sempre progetti interessanti
-    - Crea mondi in cui amo perdersi
-    - Amo
-    - Amo molto
-    - Impazzisco per
-    - Sono pazzo per
-    - Sono pazzo di
-    - Le opere sue le adoro
-    - Le opere sue le amo
-    - Mi piacciono entrambi
-
-
-
-
 
 - intent: menu
   examples: |
@@ -982,7 +475,6 @@ nlu:
     - generi
 
 
-
 - intent: paesi_disponibili
   examples: |
     - che paesi conosci?
@@ -1006,7 +498,6 @@ nlu:
     - quali paesi ci sono?
     - che peasi hai disponobili?
     - paesi disponibili
-
 
 
 
@@ -1060,3 +551,19 @@ nlu:
     - skip
     - salta
     - passa
+
+
+- intent: categorie_disponibili
+  examples: |
+    - che categorie conosci?
+    - quali categorie conosci?
+    - che categorie hai?
+    - che vuol dire categorie?
+    - quali categorie posso chiedere?
+    - quali categorie posso selezionare?
+    - quali categorie posso indicare?
+    - quali categorie posso specificare?
+    - quali categorie posso menzionare?
+    - quali categorie posso scrivere?
+    - categorie?
+

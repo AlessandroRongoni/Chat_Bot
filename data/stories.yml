@@ -2,27 +2,17 @@ version: "3.1"
 
 stories:
 
-- story: lista_dei_generi
+- story: Ricerca contentuti in base alla frease dell'utente
   steps:
-  - intent: generi_disponibili
-  - action: action_get_generi_from_data
-
-- story: lista_dei_paesi
-  steps:
-  - intent: paesi_disponibili
-  - action: action_get_paesi_from_data
-
-- story: ricerca_per_attore
-  steps:
-  - intent: ricerca_per_attore
+  - intent: ricerca_contenuti
     entities:
-    - attore: "Tom Hanks"
-  - action: action_get_movies_by_actor
+      - tipo: "film"
+      - genere: "d'azione"
+      - paese: "italiano"
+      - anno: "2020"
+      - durata: "3 stagioni"
+      - regista: "Steven Spielberg"
+      - attore: "Leonardo Di Caprio"
+      - categoria: "per tutti"
+  - action: action_ricerca_contenuti
 
-
-- story: ricerca_per_regista
-  steps:
-  - intent: ricerca_per_regista
-    entities:
-    - regista: "Steven Spielberg"
-  - action: action_get_movies_by_director

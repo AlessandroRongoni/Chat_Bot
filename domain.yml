@@ -3,21 +3,11 @@ version: "3.1"
 intents:
   - saluto
   - addio
-  - ricerca_per_attore
-  - ricerca_per_regista
-  - ricerca_per_genere
-  - ricerca_per_anno
-  - ricerca_per_categoria
-  - ricerca_per_titolo
-  - ricerca_per_durata
-  - ricerca_per_tipo
-  - specifica_preferenze
-  - consigli_di_visione
-  - ricerca_per_paese
+  - ricerca_contenuti
+  - informazioni_contenuto
   - menu
   - generi_disponibili
   - paesi_disponibili
-  - specifica_tipo
   - reset_slots
   - ringraziamenti
   - skip_preference
@@ -25,8 +15,8 @@ intents:
 entities:
   - tipo
   - genere
-  - attore
   - regista
+  - attore
   - anno
   - categoria
   - titolo
@@ -51,13 +41,13 @@ slots:
     influence_conversation: true
     mappings:
     - type: from_entity
-      entity: attore
+      entity: genere
   regista:
     type: text
     influence_conversation: true
     mappings:
     - type: from_entity
-      entity: regista
+      entity: genere
   anno:
     type: text
     influence_conversation: true
@@ -112,12 +102,11 @@ responses:
     - text: "Ok! Dammi le tue preferenze e ti dirò cosa guardare."
     - text: "Certo! Dimmi cosa ti piace e ti consiglierò qualcosa."
   utter_menu:
-    - text: "Ecco cosa posso fare per te:\n- Ricerca per attore,\n- Ricerca per regista,\n- Ricerca per genere,\n- Ricerca per anno,\n- Ricerca per categoria,\n- Ricerca informazioni per titolo,\n- Ricerca per durata,\n- Ricerca per tipo di contenuto (film/serie TV),\n- Ricerca per paese,\n- Ottieni consigli di visione in base alle preferenze,\n- Ottieni i generi disponibili,\n- Ottieni i paesi disponibili."
+    - text: "Ecco cosa posso fare per te:\n- Ricerca per attore,\n- Ricerca per regista,\n- Ricerca per genere,\n- Ricerca per anno,\n- Ricerca per categoria,\n- Dare informazioni in base al titolo,\n- Ricerca per durata,\n- Ricerca per tipo di contenuto (film/serie TV),\n- Ricerca per paese,\n- Ottieni consigli di visione in base alle preferenze,\n- Ottieni i generi disponibili,\n- Ottieni i paesi disponibili, \n- Ottieni categorie disponibili."
 
 
 actions:
   - action_reset_slots # rules
-  - action_get_generi_from_data 
-  - action_get_paesi_from_data
-  - action_get_movies_by_actor
-  - action_get_movies_by_director
+  - action_get_generi_from_data # rules
+  - action_get_paesi_from_data # rules
+  - action_ricerca_contenuti # stories

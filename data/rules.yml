@@ -31,3 +31,13 @@ rules:
   steps:
   - intent: menu
   - action: utter_menu
+
+- rule: Generi Disponibili
+  steps:
+  - intent: generi_disponibili
+  - action: action_get_generi_from_data
+
+- rule: Paesi Disponibili
+  steps:
+  - intent: paesi_disponibili
+  - action: action_get_paesi_from_data

@@ -8,7 +8,7 @@ assistant_id: 20240325-153308-mild-point
 
 # Configuration for Rasa NLU.
 # https://rasa.com/docs/rasa/nlu/components/
-language: en
+language: en,it
 
 pipeline:
   - name: WhitespaceTokenizer
