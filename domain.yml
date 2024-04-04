@@ -1,84 +1,58 @@
 version: "3.1"
 
 intents:
-  - saluto
   - addio
-  - ricerca_contenuti
+  - categorie_disponibili
+  - consiglia_contenuto:
+      use_entities: []
+  - generi_disponibili
   - informazioni_contenuto
   - menu
-  - generi_disponibili
   - paesi_disponibili
   - reset_slots
+  - ricerca_contenuti
   - ringraziamenti
-  - skip_preference
+  - saluto
+  - stop_intent
 
 entities:
+  - titolo
   - tipo
+  - persona:
+      roles:
+        - regista
+        - attore
   - genere
-  - regista
-  - attore
   - anno
   - categoria
-  - titolo
   - durata
   - paese
 
 slots:
   tipo:
     type: text
-    influence_conversation: true
+    influence_conversation: false
     mappings:
-    - type: from_entity
-      entity: tipo
-  genere:
-    type: text
-    influence_conversation: true
-    mappings:
-    - type: from_entity
-      entity: genere
-  attore:
-    type: text
-    influence_conversation: true
-    mappings:
-    - type: from_entity
-      entity: genere
-  regista:
-    type: text
-    influence_conversation: true
-    mappings:
-    - type: from_entity
-      entity: genere
-  anno:
-    type: text
-    influence_conversation: true
-    mappings:
-    - type: from_entity
-      entity: anno
-  categoria:
-    type: text
-    influence_conversation: true
-    mappings:
-    - type: from_entity
-      entity: categoria
+      - type: from_entity
+        entity: tipo
+        conditions:
+          - active_loop: consigliare_contenuto_form
+            requested_slot: tipo
   titolo:
     type: text
     influence_conversation: true
     mappings:
-    - type: from_entity
-      entity: titolo
-  durata:
-    type: text
-    influence_conversation: true
-    mappings:
-    - type: from_entity
-      entity: durata
-  paese:
-    type: text
-    influence_conversation: true
-    mappings:
-    - type: from_entity
-      entity: paese
+      - type: from_entity
+        entity: titolo
+        conditions:
+          - active_loop: consigliare_contenuto_form
+            requested_slot: titolo
 
+forms:
+  consigliare_contenuto_form:
+    required_slots:
+      - tipo
+      - titolo
 
 responses:
   utter_saluto:
@@ -96,17 +70,45 @@ responses:
     - text: "Grazie a te per aver usato il nostro servizio!"
     - text: "Grazie a te per avermi consultato!"
     - text: "Prego! Dimmi se hai bisogno di altro."
-  utter_skip_preference:
-    - text: "Va bene, salto questa preferenza."
   utter_consigli_di_visione:
     - text: "Ok! Dammi le tue preferenze e ti dirò cosa guardare."
     - text: "Certo! Dimmi cosa ti piace e ti consiglierò qualcosa."
   utter_menu:
-    - text: "Ecco cosa posso fare per te:\n- Ricerca per attore,\n- Ricerca per regista,\n- Ricerca per genere,\n- Ricerca per anno,\n- Ricerca per categoria,\n- Dare informazioni in base al titolo,\n- Ricerca per durata,\n- Ricerca per tipo di contenuto (film/serie TV),\n- Ricerca per paese,\n- Ottieni consigli di visione in base alle preferenze,\n- Ottieni i generi disponibili,\n- Ottieni i paesi disponibili, \n- Ottieni categorie disponibili."
-
+    - text: "Ecco cosa posso fare per te:\n - Ricerca per attore,\n - Ricerca per regista,\n - Ricerca per genere,\n - Ricerca per anno,\n - Ricerca per categoria,\n - Dare informazioni in base al titolo,\n - Ricerca per durata,\n - Ricerca per tipo di contenuto (film/serie TV),\n - Ricerca per paese,\n - Ottieni consigli di visione in base alle preferenze,\n - Ottieni i generi disponibili,\n - Ottieni i paesi disponibili,\n - Ottieni categorie disponibili."
+  utter_ask_tipo:
+    - text: "Dimmi se stai cercando un film o una serie TV."
+  utter_ask_titolo:
+    - text: "Dimmi un titolo a cui fare riferimento, lo userò direttamente come base per consigliarti altri contenuti simili."
+  utter_remember:
+    - text: "Ho preso nota delle tue preferenze."
+  utter_slots_values:
+    - text: "Ecco i valori dei tuoi slot: {tipo}, {titolo}."
+  utter_submit:
+    - text: "Grazie per avermi fornito le tue preferenze. Sto cercando i contenuti che potrebbero interessarti."
+  utter_ask_continue:
+    - text: "Vuoi continuare con la ricerca?"
 
 actions:
-  - action_reset_slots # rules
-  - action_get_generi_from_data # rules
-  - action_get_paesi_from_data # rules
-  - action_ricerca_contenuti # stories
+  - utter_reset_slots
+  - utter_addio
+  - action_informazioni_contenuto
+  - action_reset_slots
+  - action_ricerca_contenuti
+  - action_submit_consigliare_contenuto_form
+  - utter_saluto
+  - action_get_generi_from_data
+  - action_get_paesi_from_data
+  - action_get_categorie_from_map
+  - validate_consigliare_contenuto_form
+  - stop_consigliare_contenuto_form
+  - utter_ask_tipo
+  - utter_ask_titolo
+  - utter_submit
+  - utter_remember
+  - utter_slots_values
+  - utter_consigli_di_visione
+  - utter_ask_continue
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
