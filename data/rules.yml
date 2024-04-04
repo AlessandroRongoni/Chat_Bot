@@ -69,25 +69,25 @@ rules:
   - action: action_submit_consigliare_contenuto_form
   - action: action_reset_slots
 
-- rule: Ignora informazioni contenuto durante consigliare_contenuto_form
-  condition:
-    # Questa condizione verifica che la form sia attualmente attiva.
-    - active_loop: consigliare_contenuto_form
-  steps:
-    # Qualsiasi intento riconosciuto che non è specificamente gestito altrove o elencato in `ignored_intents`
-    - intent: informazioni_contenuto
-    - action: consigliare_contenuto_form
-    - active_loop: consigliare_contenuto_form
+# - rule: Ignora informazioni contenuto durante consigliare_contenuto_form
+#   condition:
+#     # Questa condizione verifica che la form sia attualmente attiva.
+#     - active_loop: consigliare_contenuto_form
+#   steps:
+#     # Qualsiasi intento riconosciuto che non è specificamente gestito altrove o elencato in `ignored_intents`
+#     - intent: informazioni_contenuto
+#     - action: consigliare_contenuto_form
+#     - active_loop: consigliare_contenuto_form
 
-- rule: Ignora ricerca contenuti durante consigliare_contenuto_form
-  condition:
-    # Questa condizione verifica che la form sia attualmente attiva.
-    - active_loop: consigliare_contenuto_form
-  steps:
-    # Qualsiasi intento riconosciuto che non è specificamente gestito altrove o elencato in `ignored_intents`
-    - intent: ricerca_contenuti
-    - action: consigliare_contenuto_form
-    - active_loop: consigliare_contenuto_form
+# - rule: Ignora ricerca contenuti durante consigliare_contenuto_form
+#   condition:
+#     # Questa condizione verifica che la form sia attualmente attiva.
+#     - active_loop: consigliare_contenuto_form
+#   steps:
+#     # Qualsiasi intento riconosciuto che non è specificamente gestito altrove o elencato in `ignored_intents`
+#     - intent: ricerca_contenuti
+#     - action: consigliare_contenuto_form
+#     - active_loop: consigliare_contenuto_form
 
 
 

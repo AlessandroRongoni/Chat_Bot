@@ -508,7 +508,7 @@ class ActionRicercaContenuti(Action):
             return []
 
 
-# Funziona
+
 class GetGeneriFromData(Action):
 
     def name(self) -> Text:
@@ -538,7 +538,7 @@ class GetGeneriFromData(Action):
 
         return []
         
-# Funziona
+
 class ResetSlot(Action):
     def name(self):
         return "action_reset_slots"
@@ -550,7 +550,7 @@ class ResetSlot(Action):
         dispatcher.utter_message(text="Ora puoi chiedermi qualcos'altro!")
         return [AllSlotsReset()]
     
-# Azione per ottenere i paesi dai dati   
+
 class GetPaesiFromData(Action):
 
     def name(self) -> Text:
@@ -715,46 +715,56 @@ class SubmitConsigliareContenutoForm(Action):
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         df = pd.read_csv(PATH_TO_CSV)
-        title = tracker.get_slot('titolo').lower()
-        content_type = tracker.get_slot('tipo').lower()
+        slot_values = tracker.slots
 
-        titles = df['title'].str.lower().tolist()
+        # Estraiamo il titolo dallo slot
+        title = slot_values['titolo']
+        # Estraiamo il tipo dallo slot
+        tipo = slot_values['tipo']
+        
+        titles = df['title'].tolist()
         best_match, score = process.extractOne(title, titles)
+        if score > 90:
+            result = df[df['title'].str.lower() == best_match.lower()]
 
-        if score < 90:
-            dispatcher.utter_message(text="Non ho trovato il titolo che hai inserito, potremmo non averlo in catalogo. Puoi riprovare?")
-            return []
+        if not result.empty:
+            # Estraiamo i dettagli relativi al titolo selezionato
+            cast = result.iloc[0]['cast'].split(", ")
+            director = result.iloc[0]['director']
+            genres = ast.literal_eval(result.iloc[0]['genres_list'])
 
-        result = df[df['title'].str.lower() == best_match]
-        
-        # Estraiamo i dettagli relativi al titolo selezionato
-        cast = result.iloc[0]['cast'].split(", ")
-        director = result.iloc[0]['director']
-        genres = ast.literal_eval(result.iloc[0]['genres_list'])
-        
-        filters = []
-        if cast[0] != "Non disponibile":
-            filters.append(df['cast'].apply(lambda x: any(actor in x for actor in cast)))
-        if director != "Non disponibile":
-            filters.append(df['director'].str.contains(director, case=False, na=False))
-        if genres:
-            filters.append(df['genres_list'].apply(lambda x: any(genre in ast.literal_eval(x) for genre in genres)))
+            # Prepariamo i filtri basati su cast e director
+            cast_filter = df['cast'].apply(lambda x: any(actor in x for actor in cast if x != 'Non disponibile'))
+            director_filter = df['director'].str.contains(director, case=False, na=False)
+            genres_filter = df['genres_list'].apply(lambda x: any(genre in ast.literal_eval(x) for genre in genres if x))
 
-        if not filters:
-            dispatcher.utter_message(text="Non ho trovato informazioni sufficienti per fare raccomandazioni.")
-            return []
+            if tipo == 'Movie':
+                similar_content = df[(df['title'].str.lower() != best_match.lower()) & 
+                                     (df['type'] == 'Movie') & 
+                                     (cast_filter | director_filter | genres_filter)]
+            elif tipo == 'TV Show':
+                similar_content = df[(df['title'].str.lower() != best_match.lower()) & 
+                                     (df['type'] == 'TV Show') & 
+                                     (cast_filter | director_filter | genres_filter)]
 
-        # Applichiamo i filtri basati su cast, director, e genres
-        similar_content = df.loc[df.index[df['type'].str.contains(content_type, case=False, na=False) if content_type else True]]
-        for f in filters:
-            similar_content = similar_content.loc[similar_content.index[f]]
-        
-        if similar_content.empty:
-            dispatcher.utter_message(text=f"Non ho trovato contenuti simili a '{title}'.")
-            return []
-
-        similar_content = similar_content.head(30)  # Limitiamo a 30 risultati per semplicità
-        messages = [f"- {row['title']} ({'Film' if row['type'] == 'Movie' else 'Serie TV'}):\n  Descrizione: {row['description']}\n  Regia: {row['director']}\n  Cast: {row['cast']}\n  Categoria: {row['rating_category']}\n  Genere/i: {', '.join(ast.literal_eval(row['genres_list']))}\n" for index, row in similar_content.iterrows()]
-        dispatcher.utter_message(text="Ecco alcuni contenuti simili a '{}':\n{}".format(title, "\n".join(messages)))
-
+            if not similar_content.empty:
+                shuffled_results = similar_content.sample(frac=1).reset_index(drop=True)
+                results = shuffled_results.head(30) # ridai 30 titoli per semplicita'
+                intro = f"Ecco alcuni contenuti simili a '{title}':\n\n"
+                risposta = intro
+                for index, row in results.iterrows():
+                    titolo = row['title'].title()
+                    tipo = row['type']
+                    descrizione = row['description']
+                    regista = row['director']
+                    cast = row['cast']
+                    categoria = row['rating_category']
+                    generi = ast.literal_eval(row['genres_list']) if pd.notna(row['genres_list']) else ["Non specificato"]
+                    risposta += f"\n- {titolo} ({'Film' if tipo == 'Movie' else 'Serie TV'}):\n   Descrizione: {descrizione}\n   Regia: {regista}\n   Cast: {cast}\n   Categoria di pubblico: {categoria}\n   Genere/i: {', '.join(generi)}\n\n"
+                similar_content.to_csv("actions/risultati_consigliati.csv", index=False)
+                dispatcher.utter_message(text=risposta)
+            else:
+                dispatcher.utter_message(text=f"Non ho trovato contenuti simili a '{title}'.")
+        else:
+            dispatcher.utter_message(text=f"Non ho trovato informazioni per il titolo '{title}'.")
         return []
