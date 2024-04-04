@@ -107,7 +107,6 @@ actions:
   - utter_remember
   - utter_slots_values
   - utter_consigli_di_visione
-  - utter_ask_continue
 
 session_config:
   session_expiration_time: 60

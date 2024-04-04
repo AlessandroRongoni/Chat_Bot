@@ -550,7 +550,7 @@ class ResetSlot(Action):
         dispatcher.utter_message(text="Ora puoi chiedermi qualcos'altro!")
         return [AllSlotsReset()]
     
-
+# Azione per ottenere i paesi dai dati   
 class GetPaesiFromData(Action):
 
     def name(self) -> Text:

@@ -164,6 +164,7 @@ stories:
 - story: stop for tipo
   steps:
     - intent: consiglia_contenuto
+    - action: utter_consigli_di_visione
     - action: consigliare_contenuto_form
     - active_loop: consigliare_contenuto_form
     - slot_was_set:
