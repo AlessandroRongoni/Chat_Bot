@@ -53,6 +53,8 @@ forms:
     required_slots:
       - tipo
       - titolo
+    ignored_intents:
+      - stop_intent
 
 responses:
   utter_saluto:

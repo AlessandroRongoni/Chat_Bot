@@ -19,10 +19,6 @@ import logging
 import ast
 import pandas as pd
 
-##### COSE DA FARE #####
-# 6. Azione per consigliare in base alle preferenze  (FORM)
-# 8. Migliorare ricerca per categoria
-# 9. All'inizio il chatbot da una sua descrizione
 
 # Definisco il percorso del file CSV come variabile globale
 PATH_TO_CSV = './dataset/cleaned/netflix_titles_cleaned.csv'
@@ -680,9 +676,9 @@ class ValidateConsigliContenutiForm(FormValidationAction):
         tracker: Tracker,
         domain: Dict[Text, Any],
     ) -> Dict[Text, Any]:
-        titolo = tracker.get_slot('titolo').lower()
+        titolo = tracker.get_slot('titolo')
+        print(titolo)
         logger.debug(f"Validating slot 'titolo' with value '{titolo}'")
-
         try:
             df = pd.read_csv(PATH_TO_CSV) # Aggiorna con il percorso corretto
             titles = df['title'].str.lower().tolist()
@@ -721,7 +717,7 @@ class SubmitConsigliareContenutoForm(Action):
         title = slot_values['titolo']
         # Estraiamo il tipo dallo slot
         tipo = slot_values['tipo']
-        
+        print(f"Titolo: {title}, Tipo: {tipo}")
         titles = df['title'].tolist()
         best_match, score = process.extractOne(title, titles)
         if score > 90:

@@ -871,23 +871,23 @@ nlu:
     - quali categorie posso menzionare?
     - quali categorie posso scrivere?
     - categorie?
+
 - intent: stop_intent
   examples: |
     - stop
     - basta
     - smetti
-    - interrompi
+    - Stop
+    - fermo
     - fine
-    - esci
+    - alt
+    - interrompi
     - termina
     - chiudi
-    - exit
-    - sospendi
+    - esci
     - stoppa
-    - pausa
-    - fermati
-    - no
-    - No
+    - ferm
+    - Stop!
 
 - regex: titolo
   examples: |
