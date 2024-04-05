@@ -1,0 +1,1024 @@
+version: "3.1"
+nlu:
+- intent: saluto
+  examples: |
+    - Ciao!
+    - Ehi là
+    - Salve a tutti
+    - Buongiorno
+    - Buonasera
+    - Hey
+    - Buon pomeriggio
+    - Ciao
+    - Saluti
+    - Un saluto
+    - Hello
+    - Buona giornata
+    - Come va?
+    - Che piacere vederti
+    - Felice di vederti
+    - Ciao, come stai?
+    - Ola
+    - Bongiorno
+    - Salve a te
+    - Ciao bella
+    - Bello
+    - Salve
+    - Hi
+    - Pronto
+    - Pronti
+    - Eccoci
+    - Daje
+    - Ciao a tutti
+    - Ciao a te
+    - Ciao a voi
+    - Ciao a voi tutti
+    - Ciao a tutti quanti
+    - Ciao a tutti quanti voi
+    - Ciao a tutti quanti voi lì
+    - ciao
+- intent: addio
+  examples: |
+    - Arrivederci
+    - Ciao ciao
+    - A presto
+    - Addio
+    - Alla prossima
+    - Ci vediamo
+    - Bye Bye
+    - Bye
+    - A mai più
+    - Addios
+    - Addio a tutti
+    - Addio a te
+    - Addio caro
+    - Addio cari
+    - Addio carissimi
+    - Addio carissimo
+    - Addio caro amico
+    - Addio caro amica
+    - Addio caro amici
+    - Addio caro amiche
+    - Addio caro fratello
+    - Addio caro fratelli
+    - Basta
+    - Me ne vado
+    - Stop
+    - Fine
+    - Arrivederla
+    - Arrivederci a tutti
+    - Arrivederci a te
+    - Arrivederci caro
+    - Arrivederci cari
+    - Arrivederci carissimi
+    - Arrivederci carissimo
+    - Arrivederci caro amico
+    - Arrivederci caro amica
+    - Arrivederci caro amici
+    - Arrivederci caro amiche
+    - addio
+- intent: ricerca_contenuti
+  examples: |
+    - Cerca un [film](tipo) con [Tom Hanks]{"entity": "persona", "role": "attore"}
+    - Dammi i [film](tipo) con [Tom Hanks]{"entity": "persona", "role": "attore"}
+    - Quali [film](tipo) con [Tom Hanks]{"entity": "persona", "role": "attore"} hai?
+    - Dammi [serie](tipo) [horror](genere) dirette da [Steven Spielberg]{"entity": "persona", "role": "regista"}
+    - Quali [film](tipo) [commedia](genere) hai?
+    - Cerca [film](tipo) [commedia](genere) del [2020](anno)
+    - Dammi [serie tv](tipo) del genere [drammatico](genere)
+    - Dammi [serie tv](tipo) diretti da [Steven Spielberg]{"entity": "persona", "role": "regista"}
+    - [film](tipo) [commedia](genere) del [1990](anno) diretto da [Woody Allen]{"entity": "persona", "role": "regista"}
+    - [serie tv](tipo) [drammatico](genere) dalla durata di [120 minuti](durata)
+    - [horror](genere) del [2012](anno) con [Tom Hanks]{"entity": "persona", "role": "attore"}
+    - Vorrei vedere una [serie](tipo) [thriller](genere) recente
+    - Cerca [film](tipo) [d'azione](genere) del [2019](anno)
+    - Quali [serie](tipo) [italiane](paese) posso guardare?
+    - Dammi i [film](tipo) di [Quentin Tarantino]{"entity": "persona", "role": "regista"}
+    - Quali [serie](tipo) con [Meryl Streep]{"entity": "persona", "role": "attore"} sono disponibili?
+    - Esplora [film](tipo) [commedia](genere) americani del [2000](anno)
+    - Cerca [film](tipo) della [categoria](categoria) [per adulti](categoria)
+    - Quali [serie tv](tipo) [fantascienza](genere) hai del [2018](anno)?
+    - Dammi [film](tipo) con una durata inferiore ai [90 minuti](durata)
+    - Trova [serie](tipo) [storiche](genere) prodotte in [Germania](paese)
+    - [film](tipo) [drammatici](genere) con [Leonardo DiCaprio]{"entity": "persona", "role": "attore"}
+    - Ho bisogno di [serie](tipo) [comiche](genere) da guardare con la famiglia
+    - Elenco di [film](tipo) [biografici](genere) sul [titolo](titolo) [The Social Network](titolo)
+    - Dammi [serie](tipo) ambientate negli anni [80](anno)
+    - Cerca [film](tipo) sul tema della [guerra](categoria) del [2021](anno)
+    - Mostrami [serie](tipo) con episodi di [30 minuti](durata)
+    - Trova [film](tipo) [horror](genere) da [Spagna](paese)
+    - Dammi [film](tipo) che trattano di [viaggi nel tempo](categoria)
+    - Quali [serie tv](tipo) [fantasy](genere) di [120 minuti](durata) consigli?
+    - Mostra [film](tipo) [avventura](genere) con [Tom Cruise]{"entity": "persona", "role": "attore"}
+    - Cerca [serie](tipo) [poliziesche](genere) disponibili da [Regno Unito](paese)
+    - [film](tipo) che hanno vinto l'Oscar nel [2015](anno)
+    - Quali [serie](tipo) [di cucina](categoria) posso guardare questo weekend?
+    - Dammi [film](tipo) [d'animazione](genere) adatti a [bambini piccoli](categoria)
+    - Quali [film](tipo) [drammatici](genere) hanno come protagonista [Morgan Freeman]{"entity": "persona", "role": "attore"}?
+    - Trova [film](tipo) [documentari](genere) sulla [natura](categoria)
+    - Quali [serie tv](tipo) [gialle](genere) mi consigli di [Francia](paese)?
+    - [serie](tipo) che esplorano la [psicologia](categoria)
+    - Elenco di [film](tipo) [romantici](genere) per [adulti](categoria)
+    - [film](tipo) [commedia](genere) per ridere in compagnia
+    - Quali [serie](tipo) [drammatiche](genere) raccomandi per gli amanti del genere?
+    - Dammi [film](tipo) [thriller](genere) da vedere in solitudine
+    - Quali [serie tv](tipo) [fantascienza](genere) mi consigli per un binge-watching?
+    - [film](tipo) [d'azione](genere) per una serata di adrenalina per [tutti](categoria)
+    - [serie](tipo) [storiche](genere) per [bambini piccoli](categoria)
+    - [serie](tipo) di [2 stagioni](durata) da guardare in un weekend
+    - [film](tipo) [commedia](genere) [italiana](paese) per una serata in allegria
+    - [film](tipo) [drammatici](genere) [spagnoli](paese) per una serata romantica
+    - [serie](tipo) [thriller](genere) [francesi](paese) per una serata di tensione
+    - [film](tipo) [horror](genere) [americani](paese) per una serata di paura
+    - [thriller](genere)
+    - [commedia](genere)
+    - [drammatico](genere)
+    - [fantascienza](genere)
+    - [azione](genere)
+    - [avventura](genere)
+    - [fantasy](genere)
+    - [crime](genere)
+    - [3 stagioni](durata)
+    - [2 stagioni](durata)
+    - [1 stagione](durata)
+    - [4 stagioni](durata)
+    - [5 stagioni](durata)
+    - [120 minuti](durata)
+    - [90 minuti](durata)
+    - [60 minuti](durata)
+    - [30 minuti](durata)
+    - [2010](anno)
+    - [2011](anno)
+    - [2012](anno)
+    - [2013](anno)
+    - [2014](anno)
+    - [2015](anno)
+    - [2016](anno)
+    - [2017](anno)
+    - [2018](anno)
+    - [2019](anno)
+    - [2020](anno)
+    - [2021](anno)
+    - [film](tipo)
+    - [serie tv](tipo)
+    - [movie](tipo)
+    - [tv show](tipo)
+    - [serie](tipo)
+    - [Italia](paese)
+    - [Francia](paese)
+    - [Spagna](paese)
+    - [Germania](paese)
+    - [Regno Unito](paese)
+    - [Stati Uniti](paese)
+    - [Canada](paese)
+    - [Australia](paese)
+    - [Giappone](paese)
+    - per [tutti](categoria)
+    - per [bambini piccoli](categoria)
+    - per [ragazzi](categoria)
+    - per [adulti](categoria)
+    - per [anziani](categoria)
+    - per [famiglie](categoria)
+    - per [coppie](categoria)
+    - per [amici](categoria)
+    - per [soli](categoria)
+    - per [tutte le età](categoria)
+    - per [adolescenti](categoria)
+    - per [ragazzi maggiorenni](categoria)
+    - [horror](genere) per [adulti](categoria)
+    - [commedia](genere) per [bambini piccoli](categoria)
+    - [drammatico](genere) per [ragazzi](categoria)
+    - [fantascienza](genere) per [adulti](categoria)
+    - [serie tv](tipo) [storiche](genere) per [anziani](categoria)
+    - [film](tipo) [biografici](genere) per [famiglie](categoria)
+    - [serie](tipo) [di cucina](categoria) per [coppie](categoria)
+    - [film](tipo) [d'animazione](genere) per [amici](categoria)
+    - [drammatici](genere) con [Leonardo DiCaprio]{"entity": "persona", "role": "attore"} per [soli](categoria)
+    - [documentari](genere) sulla [natura](categoria) per [tutte le età](categoria)
+    - [gialle](genere) di [Francia](paese) per [adolescenti](categoria)
+    - [serie](tipo) che esplorano la [fede](genere) per [ragazzi maggiorenni](categoria)
+    - [romantici](genere) per [adulti](categoria) per [coppie](categoria)
+    - Dammi le serie tv [storiche](genere) per [anziani](categoria)
+    - Quali [film](tipo) [biografici](genere) per [famiglie](categoria) mi consigli?
+    - [serie](tipo) [di cucina](categoria) per [coppie](categoria) da guardare insieme
+    - Dammi le [serie](tipo) dirette da [Alfred Hitchcock]{"entity": "persona", "role": "regista"} per [amici](categoria)
+    - Quali [film](tipo) [d'animazione](genere) per [bambini piccoli](categoria) mi consigli?
+    - [drammatici](genere) con [Leonardo DiCaprio]{"entity": "persona", "role": "attore"} diretti da [Martin Scorsese]{"entity": "persona", "role": "regista"}
+    - [documentari](genere) sulla [natura](categoria) per [tutte le età](categoria) da guardare in famiglia
+    - [Alfred Hitchcock]{"entity": "persona", "role": "regista"} per [ragazzi maggiorenni](categoria)
+    - con attore [Tom Hanks]{"entity": "persona", "role": "attore"}
+    - con regista [Steven Spielberg]{"entity": "persona", "role": "regista"}
+    - con attore [Meryl Streep]{"entity": "persona", "role": "attore"}
+    - con attore [Morgan Freeman]{"entity": "persona", "role": "attore"}
+    - con attore [Leonardo DiCaprio]{"entity": "persona", "role": "attore"}
+    - con regista [Woody Allen]{"entity": "persona", "role": "regista"}
+    - con regista [Quentin Tarantino]{"entity": "persona", "role": "regista"}
+    - con regista [Alfred Hitchcock]{"entity": "persona", "role": "regista"}
+    - con regista [Martin Scorsese]{"entity": "persona", "role": "regista"}
+    - diretto da [Woody Allen]{"entity": "persona", "role": "regista"}
+    - diretto da [Quentin Tarantino]{"entity": "persona", "role": "regista"}
+    - diretto da [Alfred Hitchcock]{"entity": "persona", "role": "regista"}
+    - diretto da [Martin Scorsese]{"entity": "persona", "role": "regista"}
+    - diretto da [Steven Spielberg]{"entity": "persona", "role": "regista"}
+    - con [Tom Cruise]{"entity": "persona", "role": "attore"}
+    - con [Tom Hanks]{"entity": "persona", "role": "attore"}
+    - con [Meryl Streep]{"entity": "persona", "role": "attore"}
+    - con [Morgan Freeman]{"entity": "persona", "role": "attore"}
+    - con [Leonardo DiCaprio]{"entity": "persona", "role": "attore"}
+    - con [Angelina Jolie]{"entity": "persona", "role": "attore"}
+    - con [Brad Pitt]{"entity": "persona", "role": "attore"}
+    - con [Johnny Depp]{"entity": "persona", "role": "attore"}
+    - con [Will Smith]{"entity": "persona", "role": "attore"}
+    - con [Denzel Washington]{"entity": "persona", "role": "attore"}
+    - con [Robert De Niro]{"entity": "persona", "role": "attore"}
+    - con [Scarlett Johansson]{"entity": "persona", "role": "attore"}
+    - con [Natalie Portman]{"entity": "persona", "role": "attore"}
+    - con [Emma Stone]{"entity": "persona", "role": "attore"}
+    - con [Jennifer Lawrence]{"entity": "persona", "role": "attore"}
+    - con [Nicole Kidman]{"entity": "persona", "role": "attore"}
+    - con [Julia Roberts]{"entity": "persona", "role": "attore"}
+    - con [Cate Blanchett]{"entity": "persona", "role": "attore"}
+    - con [Charlize Theron]{"entity": "persona", "role": "attore"}
+    - con [Kate Winslet]{"entity": "persona", "role": "attore"}
+    - con [Helen Mirren]{"entity": "persona", "role": "attore"}
+    - con [Judi Dench]{"entity": "persona", "role": "attore"}
+    - con [Maggie Smith]{"entity": "persona", "role": "attore"}
+    - con [Glenn Close]{"entity": "persona", "role": "attore"}
+    - con [Viola Davis]{"entity": "persona", "role": "attore"}
+    - con [Sandra Bullock]{"entity": "persona", "role": "attore"}
+    - con [Julianne Moore]{"entity": "persona", "role": "attore"}
+    - Mostrami [serie tv](tipo) con [Angelina Jolie]{"entity": "persona", "role": "attore"} nel cast
+    - Vorrei un elenco di [film](tipo) [drammatici](genere) dal [2015](anno)
+    - Quali [film](tipo) [romantici](genere) [italiani](paese) mi consigli?
+    - Trova [serie](tipo) [comiche](genere) recenti
+    - Cosa c'è diretto da [Quentin Tarantino]{"entity": "persona", "role": "regista"} disponibile?
+    - Cerca [serie](tipo) che parlano di [viaggi nel tempo](categoria)
+    - Dammi [film](tipo) che hanno vinto premi nel [2018](anno)
+    - Quali [film](tipo) [d'azione](genere) sono stati rilasciati negli [Stati Uniti](paese)?
+    - Vorrei guardare [film](tipo) con una durata superiore ai [120 minuti](durata)
+    - Esplora [serie tv](tipo) con meno di [3 stagioni](durata)
+    - Mostrami [film](tipo) ambientati in [Spagna](paese)
+    - Quali [serie](tipo) con [Morgan Freeman]{"entity": "persona", "role": "attore"} sono disponibili?
+    - Cerca [film](tipo) diretti da [Martin Scorsese]{"entity": "persona", "role": "regista"}
+    - [film](tipo) [italiani](paese) del genere [commedia](genere) recenti
+    - Quali [serie tv](tipo) [poliziesche](genere) [britanniche](paese) consigli?
+    - Trova [film](tipo) [drammatici](genere) con una durata di [90 minuti](durata)
+    - Mostrami [serie](tipo) ambientate negli anni [90](anno)
+    - Esplora [film](tipo) con tematica [LGBTQ](genere)
+    - Cosa posso guardare con [Jennifer Lawrence]{"entity": "persona", "role": "attore"} in [film](tipo) [commedia](genere)?
+    - [serie](tipo) [fantascienza](genere) con [Will Smith]{"entity": "persona", "role": "attore"}
+    - [film](tipo) [avventura](genere) per [tutti](categoria)
+    - Dammi [serie](tipo) [thriller](genere) del [2019](anno) dirette da [Alfred Hitchcock]{"entity": "persona", "role": "regista"}
+    - Quali [film](tipo) [documentari](genere) sulla [natura](genere) consigli?
+    - [serie tv](tipo) [storiche](genere) con più di [4 stagioni](durata)
+    - Cerca [film](tipo) [biografici](genere) su [Nelson Mandela](titolo)
+    - Quali [film](tipo) [romantici](genere) posso guardare in [Francia](paese)?
+    - [film](tipo) [horror](genere) diretti da [Steven Spielberg]{"entity": "persona", "role": "regista"}
+    - [serie](tipo) [d'azione](genere) con [Scarlett Johansson]{"entity": "persona", "role": "attore"}
+    - Quali [film](tipo) sul [viaggio nel tempo](genere) [americani](paese) consigli?
+    - Mostrami le [serie tv](tipo) [comiche](genere) con episodi di [30 minuti](durata)
+    - Cerca [serie](tipo) [drammatiche](genere) da [Giappone](paese) con episodi di meno di [30 minuti](durata)
+    - Dammi un elenco di [film](tipo) [storici](genere) prodotti in [Regno Unito](paese)
+    - Mostrami [film](tipo) [commedia](genere) [italiani](paese) più recenti con una durata inferiore ai [100 minuti](durata)
+    - Vorrei vedere [serie](tipo) [fantasy](genere) francesi con almeno [3 stagioni](durata)
+    - Trova [film](tipo) [avventura](genere) girati in [Australia](paese) più lunghi di [120 minuti](durata)
+    - Quali [serie tv](tipo) [comiche](genere) [americane](paese) posso guardare?
+    - Cerca [film](tipo) [d'azione](genere) ambientati in [Spagna](paese) con una durata di [90 minuti](durata)
+    - Dammi [serie](tipo) [poliziesche](genere) prodotte in [Germania](paese) con più di [5 stagioni](durata)
+    - Quali [film](tipo) [romantici](genere) [italiani](paese) consigli di [120 minuti](durata)?
+    - Mostrami [film](tipo) [horror](genere) girati in [Canada](paese) con una durata di almeno [100 minuti](durata)
+    - Quali [serie](tipo) [di cucina](genere) [francesi](paese) posso guardare con episodi sotto i [45 minuti](durata)?
+    - Trova [film](tipo) con tema [avventura](genere) prodotti in [Brasile](paese)
+    - Quali [serie tv](tipo) [drammatiche](genere) [britanniche](paese) hanno meno di [4 stagioni](durata)?
+    - Dammi [film](tipo) [thriller](genere) recenti dal [Giappone](paese) di [150 minuti](durata)
+    - Cerca [serie](tipo) [documentari](genere) sulla [natura](genere) realizzati in [Nuova Zelanda](paese)
+    - Vorrei vedere [film](tipo) [comici](genere) [indiani](paese) di [110 minuti](durata)
+    - Trova [serie](tipo) [storiche](genere) ambientate in [Russia](paese) con una durata di [3 stagioni](durata)
+    - Mostrami i [film](tipo) [d'azione](genere) più lunghi di [140 minuti](durata) prodotti negli [Stati Uniti](paese)
+    - Quali [film](tipo) [drammatici](genere) [svedesi](paese) consigli di [100 minuti](durata)?
+    - Dammi le migliori [serie tv](tipo) [poliziesche](genere) [olandesi](paese) con una durata di [2 stagioni](durata)
+    - Cerca [film](tipo) [biografici](genere) su personaggi famosi di [Argentina](paese) di [130 minuti](durata)
+    - Quali [serie](tipo) consigli [per tutti](categoria)?
+    - Cerca [film](tipo) adatti [per ragazzi](categoria)
+    - Dammi una lista di [film](tipo) [per adolescenti](categoria)
+    - Mostrami [serie](tipo) adatte [per bambini piccoli](categoria)
+    - Quali [serie tv](tipo) sono adatte [per adulti](categoria)?
+    - Trova [film](tipo) [commedia](genere) [per tutti](categoria)
+    - Cerca [serie](tipo) [fantasy](genere) adatte [per ragazzi](categoria)
+    - Dammi [film](tipo) [d'azione](genere) consigliati [per adolescenti](categoria)
+    - Quali [serie](tipo) [educative](categoria) hai [per bambini piccoli](categoria)?
+    - Mostrami [film](tipo) [thriller](genere) adatti [per adulti](categoria)
+    - Esplora [serie](tipo) [storiche](genere) adatte [per tutti](categoria)
+    - Cerca [film](tipo) [avventura](genere) [per ragazzi](categoria) con [Leonardo DiCaprio]{"entity": "persona", "role": "attore"}
+    - Dammi una lista di [serie](tipo) [comiche](genere) [per adolescenti](categoria) con episodi brevi
+    - Mostrami [film](tipo) [d'animazione](genere) perfetti [per bambini piccoli](categoria)
+    - Quali [film](tipo) [drammatici](genere) consigli [per adulti](categoria)?
+    - Trova [serie](tipo) [avventura](genere) da guardare [per tutti](categoria) questo weekend
+    - Cerca [film](tipo) [d'azione](genere) con [Tom Cruise]{"entity": "persona", "role": "attore"} adatti [per ragazzi](categoria)
+    - Dammi [serie](tipo) [fantasy](genere) [per adolescenti](categoria) con [Morgan Freeman]{"entity": "persona", "role": "attore"}
+    - Mostrami [film](tipo) [commedia](genere) [per bambini piccoli](categoria) con [Adam Sandler]{"entity": "persona", "role": "attore"}
+    - Quali [serie](tipo) [thriller](genere) sono intriganti [per adulti](categoria)?
+    - Quali [film](tipo) sono usciti nel [2020](anno)?
+    - Mostrami le [serie](tipo) del [2019](anno)
+    - Dammi una lista di [film](tipo) rilasciati nel [2018](anno)
+    - Cerca [serie tv](tipo) popolari nel [2017](anno)
+    - Quali [film](tipo) [commedia](genere) posso guardare del [2016](anno)?
+    - Trova [serie](tipo) [drammatiche](genere) del [2015](anno)
+    - Dammi [film](tipo) [d'azione](genere) del [2014](anno) con [Tom Cruise]{"entity": "persona", "role": "attore"}
+    - Mostrami [serie](tipo) [avventura](genere) rilasciate nel [2013](anno)
+    - Quali [film](tipo) [romantici](genere) consigli dal [2012](anno)?
+    - Esplora [serie](tipo) [storiche](genere) del [2011](anno)
+    - Cerca [film](tipo) [thriller](genere) rilasciati nel [2010](anno)
+    - Dammi una lista di [serie](tipo) [fantasy](genere) del [2009](anno)
+    - Quali [film](tipo) [horror](genere) posso guardare del [2008](anno)?
+    - Mostrami le [serie](tipo) [comiche](genere) più divertenti del [2007](anno)
+    - Cerca [film](tipo) [documentari](genere) sul tema [natura](categoria) del [2006](anno)
+    - Quali [serie](tipo) [per adulti](categoria) sono state rilasciate nel [2005](anno)?
+    - Dammi [film](tipo) [biografici](genere) sul personaggio di [Steve Jobs](titolo) dal [2004](anno)
+    - Mostrami [serie](tipo) [di cucina](categoria) introdotte nel [2003](anno)
+    - Quali [film](tipo) [d'azione](genere) [per ragazzi](categoria) raccomandi dal [2002](anno)?
+    - Cerca [serie](tipo) [per bambini piccoli](categoria) disponibili dal [2001](anno)
+    - con attore [Leonardo DiCaprio]{"entity": "persona", "role": "attore"} [film](tipo) [drammatici](genere) del [2000](anno)
+    - con attore [Tom Cruise]{"entity": "persona", "role": "attore"}
+    - con attore [Angelina Jolie]{"entity": "persona", "role": "attore"}
+    - con attore [Brad Pitt]{"entity": "persona", "role": "attore"}
+    - con attore [Johnny Depp]{"entity": "persona", "role": "attore"}
+    - con attore [Will Smith]{"entity": "persona", "role": "attore"}
+    - con attore [Denzel Washington]{"entity": "persona", "role": "attore"}
+    - con attore [Robert De Niro]{"entity": "persona", "role": "attore"}
+    - con attore [Scarlett Johansson]{"entity": "persona", "role": "attore"}
+    - con attore [Natalie Portman]{"entity": "persona", "role": "attore"}
+    - con attore [Emma Stone]{"entity": "persona", "role": "attore"}
+    - con attore [Jennifer Lawrence]{"entity": "persona", "role": "attore"}
+    - con attore [Nicole Kidman]{"entity": "persona", "role": "attore"}
+    - con attore [Julia Roberts]{"entity": "persona", "role": "attore"}
+    - con attore [Cate Blanchett]{"entity": "persona", "role": "attore"}
+    - con attore [Charlize Theron]{"entity": "persona", "role": "attore"}
+    - con attore [Kate Winslet]{"entity": "persona", "role": "attore"}
+    - con attore [Helen Mirren]{"entity": "persona", "role": "attore"}
+    - con attore [Judi Dench]{"entity": "persona", "role": "attore"}
+    - con attore [Maggie Smith]{"entity": "persona", "role": "attore"}
+    - con attore [Glenn Close]{"entity": "persona", "role": "attore"}
+    - con attore [Viola Davis]{"entity": "persona", "role": "attore"}
+    - con attore [Sandra Bullock]{"entity": "persona", "role": "attore"}
+    - con attore [Julianne Moore]{"entity": "persona", "role": "attore"}
+    - diretto dal regista [Alfred Hitchcock]{"entity": "persona", "role": "regista"}
+    - diretto dal regista [Quentin Tarantino]{"entity": "persona", "role": "regista"}
+    - diretto dal regista [Martin Scorsese]{"entity": "persona", "role": "regista"}
+    - diretto dal regista [Steven Spielberg]{"entity": "persona", "role": "regista"}
+    - diretto dal regista [Woody Allen]{"entity": "persona", "role": "regista"}
+    - [2024](anno)
+    - [2023](anno)
+    - [2022](anno)
+    - [2009](anno)
+    - [2008](anno)
+    - [2007](anno)
+    - [2006](anno)
+    - [2005](anno)
+    - [2004](anno)
+    - [2003](anno)
+    - [2002](anno)
+    - [horror](genere)
+    - [di paura](genere)
+    - [storico](genere)
+    - [biografico](genere)
+    - [documentario](genere)
+    - [giallo](genere)
+    - [di cucina](genere)
+    - [d'animazione](genere)
+    - [educativo](genere)
+    - [per ragazzi](categoria)
+    - serie per [bambini piccoli](categoria)
+    - [tedeschi](paese)
+    - [francesi](paese)
+    - [spagnoli](paese)
+    - [italiani](paese)
+    - [americani](paese)
+    - [canadesi](paese)
+    - [australiani](paese)
+    - [giapponesi](paese)
+    - [brasiliani](paese)
+    - [argentini](paese)
+    - [olandesi](paese)
+    - [svedesi](paese)
+    - [indiani](paese)
+    - [per tutti](categoria)
+    - [per bambini piccoli](categoria)
+    - [per adulti](categoria)
+    - [bambini piccoli](categoria)
+    - [ragazzi](categoria)
+    - [adulti](categoria)
+    - [anziani](categoria)
+    - [famiglie](categoria)
+    - [coppie](categoria)
+    - [anime](genere)
+    - [animazione](genere)
+    - [sport](genere)
+    - [sportivo](genere)
+    - [d'azione](genere)
+    - [docuserie](genere)
+    - [coreani](paese)
+    - [cinesi](paese)
+    - con [Tom Cruise]{"entity": "persona", "role": "attore"} nel cast
+    - con [Tom Hanks]{"entity": "persona", "role": "attore"} nel cast
+    - con [Meryl Streep]{"entity": "persona", "role": "attore"} nel cast
+    - con [Morgan Freeman]{"entity": "persona", "role": "attore"} nel cast
+    - con [Leonardo DiCaprio]{"entity": "persona", "role": "attore"} nel cast
+    - con [Angelina Jolie]{"entity": "persona", "role": "attore"} nel cast
+    - con [Brad Pitt]{"entity": "persona", "role": "attore"} nel cast
+    - con [Johnny Depp]{"entity": "persona", "role": "attore"} nel cast
+    - con [Will Smith]{"entity": "persona", "role": "attore"} nel cast
+    - con [Denzel Washington]{"entity": "persona", "role": "attore"} nel cast
+    - con [Robert De Niro]{"entity": "persona", "role": "attore"} nel cast
+    - con [Scarlett Johansson]{"entity": "persona", "role": "attore"} nel cast
+    - con [Natalie Portman]{"entity": "persona", "role": "attore"} nel cast
+    - con [Emma Stone]{"entity": "persona", "role": "attore"} nel cast
+    - con [Jennifer Lawrence]{"entity": "persona", "role": "attore"} nel cast
+    - con [Nicole Kidman]{"entity": "persona", "role": "attore"} nel cast
+    - con [Julia Roberts]{"entity": "persona", "role": "attore"} nel cast
+    - diretto da [Patty Jenkins]{"entity": "persona", "role": "regista"}
+    - da [Woody Allen]{"entity": "persona", "role": "regista"}
+    - da [Quentin Tarantino]{"entity": "persona", "role": "regista"}
+    - da [Alfred Hitchcock]{"entity": "persona", "role": "regista"}
+    - da [Martin Scorsese]{"entity": "persona", "role": "regista"}
+    - da [Denis Villeneuve]{"entity": "persona", "role": "regista"}
+    - film diretti da [Woody Allen]{"entity": "persona", "role": "regista"} come regista
+    - film diretti da [Quentin Tarantino]{"entity": "persona", "role": "regista"} come regista
+    - [serie] dirette da [Alfred Hitchcock]{"entity": "persona", "role": "regista"} come regista
+    - [film](tipo) diretti da [Martin Scorsese]{"entity": "persona", "role": "regista"} come regista
+    - [film](tipo) diretti da [Bong Joon-ho]{"entity": "persona", "role": "regista"} come regista
+    - film [umorismo](genere)
+    - film [commedia](genere)
+    - serie [umorismo](genere)
+    - serie [commedia](genere)
+    - [talk show](genere)
+    - [reality show](genere)
+    - [reality](genere)
+    - [stand-up](genere)
+    - [anni '90](genere)
+    - [anni '80](genere)
+    - [anni '70](genere)
+    - [anni '60](genere)
+    - [anni '50](genere)
+    - [anni '40](genere)
+    - [anni '30](genere)
+    - [film](tipo) con [Tom Cruise]{"entity": "persona", "role": "attore"} e diretti da [Steven Spielberg]{"entity": "persona", "role": "regista"}
+    - [film](tipo) con [Tom Hanks]{"entity": "persona", "role": "attore"} e diretti da [Steven Spielberg]{"entity": "persona", "role": "regista"}
+    - [serie](tipo) con [Meryl Streep]{"entity": "persona", "role": "attore"} e diretti da [Steven Spielberg]{"entity": "persona", "role": "regista"}
+    - [film](tipo) con [Morgan Freeman]{"entity": "persona", "role": "attore"} e diretti da [Steven Spielberg]{"entity": "persona", "role": "regista"}
+    - [serie](tipo) con [Leonardo DiCaprio]{"entity": "persona", "role": "attore"} e diretti da [Steven Spielberg]{"entity": "persona", "role": "regista"}
+    - [film](tipo) con [Angelina Jolie]{"entity": "persona", "role": "attore"} e diretti da [Tim Burton]{"entity": "persona", "role": "regista"}
+    - [serie](tipo) con [Brad Pitt]{"entity": "persona", "role": "attore"} e diretti da [Tim Burton]{"entity": "persona", "role": "regista"}
+    - [film](tipo) con [Johnny Depp]{"entity": "persona", "role": "attore"} e diretti da [Tim Burton]{"entity": "persona", "role": "regista"}
+    - [serie](tipo) con [Will Smith]{"entity": "persona", "role": "attore"} e diretti da [Tim Burton]{"entity": "persona", "role": "regista"}
+    - [serie](tipo) con [Denzel Washington]{"entity": "persona", "role": "attore"} e diretti da [Tim Burton]{"entity": "persona", "role": "regista"}
+    - [serie](tipo) con [Robert De Niro]{"entity": "persona", "role": "attore"} e diretti da [Tim Burton]{"entity": "persona", "role": "regista"}
+    - [film](tipo) con [Scarlett Johansson]{"entity": "persona", "role": "attore"} e diretti da [Tim Burton]{"entity": "persona", "role": "regista"}
+    - diretti da [Christopher Nolan]{"entity": "persona", "role": "regista"}
+    - diretti da [David Fincher]{"entity": "persona", "role": "regista"}
+    - diretti da [Ridley Scott]{"entity": "persona", "role": "regista"}
+    - diretti da [Stanley Kubrick]{"entity": "persona", "role": "regista"}
+    - diretti da [Guillermo del Toro]{"entity": "persona", "role": "regista"}
+    - [film](tipo) diretti da [Peter Jackson]{"entity": "persona", "role": "regista"}
+    - [film](tipo) diretti da [Sofia Coppola]{"entity": "persona", "role": "regista"}
+    - [film](tipo) diretti da [Akira Kurosawa]{"entity": "persona", "role": "regista"}
+    - [film](tipo) diretti da [Hayao Miyazaki]{"entity": "persona", "role": "regista"}
+    - [film](tipo) diretti da [Francis Ford Coppola]{"entity": "persona", "role": "regista"}
+    - [serie](tipo) diretti da [Greta Gerwig]{"entity": "persona", "role": "regista"}
+    - [serie](tipo) diretto da [Spike Lee]{"entity": "persona", "role": "regista"}
+    - [serie](tipo) diretto da [Ava DuVernay]{"entity": "persona", "role": "regista"}
+    - diretto da [Sofia Coppola]{"entity": "persona", "role": "regista"}
+    - diretto da [David Lynch]{"entity": "persona", "role": "regista"}
+    - diretto da [Wes Anderson]{"entity": "persona", "role": "regista"}
+    - film diretto da [Quentin Tarantino]{"entity": "persona", "role": "regista"} con [Leonardo DiCaprio]{"entity": "persona", "role": "attore"}
+    - film diretto da [Martin Scorsese]{"entity": "persona", "role": "regista"} con [Robert De Niro]{"entity": "persona", "role": "attore"}
+    - film diretto da [Steven Spielberg]{"entity": "persona", "role": "regista"} con [Tom Hanks]{"entity": "persona", "role": "attore"}
+    - film diretto da [Alfred Hitchcock]{"entity": "persona", "role": "regista"} con [Meryl Streep]{"entity": "persona", "role": "attore"}
+    - film diretto da [Woody Allen]{"entity": "persona", "role": "regista"} con [Scarlett Johansson]{"entity": "persona", "role": "attore"}
+    - film diretto da [Quentin Tarantino]{"entity": "persona", "role": "regista"} con [Brad Pitt]{"entity": "persona", "role": "attore"}
+    - film diretto da [Martin Scorsese]{"entity": "persona", "role": "regista"} con [Leonardo DiCaprio]{"entity": "persona", "role": "attore"}
+    - film diretto da [Steven Spielberg]{"entity": "persona", "role": "regista"} con [Tom Cruise]{"entity": "persona", "role": "attore"}
+    - film diretto da [Alfred Hitchcock]{"entity": "persona", "role": "regista"} con [Morgan Freeman]{"entity": "persona", "role": "attore"}
+    - film diretto da [Woody Allen]{"entity": "persona", "role": "regista"} con [Meryl Streep]{"entity": "persona", "role": "attore"}
+    - film diretto da [Quentin Tarantino]{"entity": "persona", "role": "regista"} con [Angelina Jolie]{"entity": "persona", "role": "attore"}
+    - film diretto da [Martin Scorsese]{"entity": "persona", "role": "regista"} con [Johnny Depp]{"entity": "persona", "role": "attore"}
+    - film diretto da [Steven Spielberg]{"entity": "persona", "role": "regista"} con [Will Smith]{"entity": "persona", "role": "attore"}
+    - film diretto da [Alfred Hitchcock]{"entity": "persona", "role": "regista"} con [Denzel Washington]{"entity": "persona", "role": "attore"}
+    - film diretto da [Woody Allen]{"entity": "persona", "role": "regista"} con [Robert De Niro]{"entity": "persona", "role": "attore"}
+    - film diretto da [Quentin Tarantino]{"entity": "persona", "role": "regista"} con [Scarlett Johansson]{"entity": "persona", "role": "attore"}
+    - film diretto da [Martin Scorsese]{"entity": "persona", "role": "regista"} con [Natalie Portman]{"entity": "persona", "role": "attore"}
+    - film diretto da [Steven Spielberg]{"entity": "persona", "role": "regista"} con [Emma Stone]{"entity": "persona", "role": "attore"}
+    - film diretto da [Alfred Hitchcock]{"entity": "persona", "role": "regista"} con [Jennifer Lawrence]{"entity": "persona", "role": "attore"}
+    - voglio sapere quali film sono [solo maggiorenni](categoria)
+    - dimmi se questo è adatto ai [bambini](categoria)
+    - è questo film considerato [per tutti](categoria)?
+    - questo programma è [adatto ai bambini](categoria)?
+    - cerco film [maturi](categoria)
+    - quali serie sono [non classificate](categoria)?
+    - mostra serie [adatto a ragazzi oltre i 13 anni](categoria)
+    - ho bisogno di un film che sia [adatto con guida dei genitori](categoria)
+    - quali contenuti sono [ristretti](categoria)?
+    - suggerisci film che sono [per adulti](categoria)
+    - c'è qualcosa di [generale](categoria) disponibile?
+    - cerco qualcosa [non specificato](categoria) in termini di età
+    - ho voglia di guardare qualcosa di [non valutato](categoria)
+    - esistono film [adatto agli adulti](categoria) qui?
+    - che tipo di spettacoli sono [guida genitoriale suggerita](categoria)?
+    - quali programmi sono [adatti agli anziani](categoria)?
+    - cercasi film [per i più piccoli](categoria)
+    - dimmi quali serie tv sono considerate [per tutti i pubblici](categoria)
+    - quali documentari sono [non adatti ai minori di 17 anni](categoria)?
+    - è questa serie [adatta ai bambini piccoli](categoria)?
+    - mi servono opzioni di film che siano [senza classificazione](categoria)
+    - consigliami qualche serie che sia [guida genitoriale](categoria)
+    - voglio una lista di film [ristretti](categoria), per favore
+    - cerco contenuti che siano [adatti a bambini oltre i 7 anni](categoria)
+    - quali film sono [adatti a ragazzi più grandi con elementi di violenza fantastica](categoria)?
+    - ho bisogno di sapere se questo film è [consigliato la guida dei genitori sotto i 12 anni](categoria)
+    - posso avere una lista di serie [adatte con guida dei genitori](categoria)?
+    - mostrami film che sono [adatti a ragazzi oltre i 14 anni](categoria)
+    - cerco qualcosa che sia [non valutato](categoria) per una visione più matura
+    - mi interessa vedere film che sono [per soli adulti](categoria)
+    - esistono contenuti [per adolescenti](categoria) su questa piattaforma?
+    - voglio opzioni di intrattenimento che siano classificate come [maggiorenni](categoria)
+    - [serie](tipo) [musical](genere) [per tutti](categoria)
+    - [film](tipo) [romantico](genere) [per tutti](categoria)
+    - [film](tipo) [musical](genere)
+    - [musicali](genere)
+    - [musical](genere)
+    - [musica](genere)
+    - [concerti](genere)
+    - con [Lady Gaga]{"entity": "persona", "role": "attore"}
+    - con [Beyoncé]{"entity": "persona", "role": "attore"}
+    - con [Madonna]{"entity": "persona", "role": "attore"}
+    - con [Michael Jackson]{"entity": "persona", "role": "attore"}
+    - con [Elton John]{"entity": "persona", "role": "attore"}
+    - con [Freddie Mercury]{"entity": "persona", "role": "attore"}
+    - con [David Bowie]{"entity": "persona", "role": "attore"}
+    - con [Prince]{"entity": "persona", "role": "attore"}
+    - con [Whitney Houston]{"entity": "persona", "role": "attore"}
+    - con [Adele]{"entity": "persona", "role": "attore"}
+    - con [Ed Sheeran]{"entity": "persona", "role": "attore"}
+    - con [Taylor Swift]{"entity": "persona", "role": "attore"}
+    - con [Rihanna]{"entity": "persona", "role": "attore"}
+    - con [Justin Bieber]{"entity": "persona", "role": "attore"}
+    - con [Ariana Grande]{"entity": "persona", "role": "attore"}
+    - con [Katy Perry]{"entity": "persona", "role": "attore"}
+    - con [Bruno Mars]{"entity": "persona", "role": "attore"}
+    - con [Shakira]{"entity": "persona", "role": "attore"}
+    - con [Jennifer Lopez]{"entity": "persona", "role": "attore"}
+    - con [Britney Spears]{"entity": "persona", "role": "attore"}
+    - con [Christina Aguilera]{"entity": "persona", "role": "attore"}
+    - con [Mariah Carey]{"entity": "persona", "role": "attore"}
+    - con [Celine Dion]{"entity": "persona", "role": "attore"}
+    - con [Cher]{"entity": "persona", "role": "attore"}
+    - con [Barbra Streisand]{"entity": "persona", "role": "attore"}
+    - con [Dolly Parton]{"entity": "persona", "role": "attore"}
+    - con [Tina Turner]{"entity": "persona", "role": "attore"}
+    - con [Janet Jackson]{"entity": "persona", "role": "attore"}
+    - con [Liza Minnelli]{"entity": "persona", "role": "attore"}
+    - [film](tipo) [musical](genere) [per tutti](categoria)
+    - [film](tipo) diretti da [Steven Spielberg]{"entity": "persona", "role": "regista"} con [Tom Hanks]{"entity": "persona", "role": "attore"}
+    - [film](tipo) diretti da [Martin Scotzese]{"entity": "persona", "role": "regista"} con [Meryl Streep]{"entity": "persona", "role": "attore"}
+    - [film](tipo) diretti da [Tim Burton]{"entity": "persona", "role": "regista"} con [Leonardo DiCaprio]{"entity": "persona", "role": "attore"}
+    - [film](tipo) diretti da [Tim Burton]{"entity": "persona", "role": "regista"}
+- intent: informazioni_contenuto
+  examples: |
+    - Informazioni su [The Social Network](titolo)
+    - Dettagli su [The Social Network](titolo)
+    - Info su [The Crown](titolo)
+    - Descrizione su [The Breakfast Club](titolo)
+    - Informazioni su [The Queen's Gambit](titolo)
+    - Dettagli su [The Queen's Gambit](titolo)
+    - Info su [The Queen's Gambit](titolo)
+    - Informazioni su [The Breaking Bad](titolo)
+    - Dettagli su [The Breaking Bad](titolo)
+    - Info su [Strange Things](titolo)
+    - Descrizione su [Strange Things](titolo)
+    - Informazioni su
+    - Dettagli su
+    - Info su
+    - Descrizione su
+    - Info su [Joker](titolo)
+    - Descrizione su [Joker](titolo)
+    - Informazioni su [The Irishman](titolo)
+    - Dettagli su [The Irishman](titolo)
+    - Info su [Jaws](titolo)
+    - Descrizione su [Jaws](titolo)
+    - Informazioni su [The Godfather](titolo)
+    - Informazioni su [Money Heist](titolo)
+    - Dettagli su [Money Heist](titolo)
+    - Info su [Money Heist](titolo)
+    - Descrizione su [Money Heist](titolo)
+    - Informazioni su [Black Mirror](titolo)
+    - Dettagli su [Black Mirror](titolo)
+    - Info su [Black Mirror](titolo)
+    - Descrizione su [Black Mirror](titolo)
+    - Informazioni su [Narcos](titolo)
+    - Dettagli su [Narcos](titolo)
+    - Info su [Narcos](titolo)
+    - Descrizione su [Narcos](titolo)
+    - Informazioni su [Ozark](titolo)
+    - Dettagli su [Ozark](titolo)
+    - Info su [Ozark](titolo)
+    - Descrizione su [Ozark](titolo)
+    - Informazioni su [The Witcher](titolo)
+    - Dettagli su [The Witcher](titolo)
+    - Info su [The Witcher](titolo)
+    - Descrizione su [The Witcher](titolo)
+    - Informazioni su [BoJack Horseman](titolo)
+    - Dettagli su [BoJack Horseman](titolo)
+    - Info su [BoJack Horseman](titolo)
+    - Descrizione su [BoJack Horseman](titolo)
+    - Informazioni su [The Umbrella Academy](titolo)
+    - Dettagli su [The Umbrella Academy](titolo)
+    - Info su [The Umbrella Academy](titolo)
+    - Descrizione su [The Umbrella Academy](titolo)
+    - Informazioni su [The Mandalorian](titolo)
+    - Dettagli su [The Mandalorian](titolo)
+    - Info
+    - Descrizione su [The Mandalorian](titolo)
+    - Informazioni
+    - Informazioni su [The Father Who Moves Mountains](titolo)
+    - Dettagli su [The Father Who Moves Mountains](titolo)
+    - Info su [Intrusion](titolo)
+    - informazioni su [Intrusion](titolo)
+    - Dettagli su [Intrusion](titolo)
+    - info su [My Heroes Were Cowboys](titolo)
+    - Descrizione su [My Heroes Were Cowboys](titolo)
+    - Informazioni su [My Heroes Were Cowboys](titolo)
+    - Dettagli su [My Heroes Were Cowboys](titolo)
+    - Info su [Jurassic Park](titolo)
+    - Informazioni su [Inception](titolo)?
+    - informazioni su [Il Signore degli Anelli: La Compagnia dell'Anello](titolo)
+    - dettagli su [Il Buono, il Brutto, il Cattivo](titolo), cosa sai?
+    - info su [Tarzan 2](titolo)
+    - descrizione su [Il Pianeta del Tesoro](titolo)
+    - info su [Il Pianeta del Tesoro](titolo)
+    - info su [Il Signore degli Anelli: La Compagnia dell'Anello](titolo)
+    - info su [Il Signore degli Anelli: Le Due Torri](titolo)
+    - info su [Il Signore degli Anelli: Il Ritorno del Re](titolo)
+    - info su [Tales of the City (1993)](titolo)
+    - info su [Sword Masters: Two Champions of Shaolin](titolo)
+    - info su [The Last Days of American Crime](titolo)
+    - info su [Sweeney Todd: The Demon Barber of Fleet Street](titolo)
+    - info su [Surviving R. Kelly Part II: The Reckoning](titolo)
+    - info su [The Last Dance](titolo)
+    - info su [Summer of '92](titolo)
+    - info su [kung fu panda](titolo)
+    - info su [the breakfast club](titolo)
+    - info su [the crown](titolo)
+    - info su [the social network](titolo)
+    - info su [the queen's gambit](titolo)
+    - info
+    - dettagli su [the crown](titolo)
+    - dettagli su [the social network](titolo)
+    - dettagli su [the queen's gambit](titolo)
+    - dettagli su [the breakfast club](titolo)
+    - dettagli
+    - dettagli [tarzan 2](titolo)
+    - informazioni su [jaws 3](titolo)
+    - informazioni su [jaws 2](titolo)
+    - informazioni su [jaws](titolo)
+    - informazioni su [jaws 4](titolo)
+    - informazioni su [The Angry Birds Movie 2](titolo)
+    - dettagli su [The Angry Birds Movie 2](titolo)
+    - dettagli su [The Breaking Bad](titolo)
+    - dettagli su [The Crown](titolo)
+    - dettagli su [The Social Network](titolo)
+    - dettagli su [The Queen's Gambit](titolo)
+    - dettagli su [The Breakfast Club](titolo)
+    - dettagli su [The Father Who Moves Mountains](titolo)
+    - dettagli su [Intrusion](titolo)
+    - dettagli su [My Heroes Were Cowboys](titolo)
+    - dettagli su [Jurassic Park](titolo)
+    - dettagli su [Inception](titolo)
+    - dettagli su [Il Signore degli Anelli: La Compagnia dell'Anello](titolo)
+    - dettagli su [the breaking bad](titolo)
+    - dettagli su [the crown](titolo)
+    - dettagli su [the social network](titolo)
+    - dettagli su [the queen's gambit](titolo)
+    - dettagli su [the breakfast club](titolo)
+    - dettagli su [the father who moves mountains](titolo)
+    - dettagli su [intrusion](titolo)
+    - informazioni su [my heroes were cowboys](titolo)
+    - informazioni su [jurassic park](titolo)
+    - informazioni su [inception](titolo)
+    - informazioni su [il signore degli anelli: la compagnia dell'anello](titolo)
+    - informazioni su [tarzan 2](titolo)
+    - informazioni su [the last dance](titolo)
+    - informazioni su [summer of '92](titolo)
+    - informazioni su [sword masters: two champions of shaolin](titolo)
+    - informazioni su [the last days of american crime](titolo)
+    - informazioni su [sweeney todd: the demon barber of fleet street](titolo)
+    - informazioni su [surviving r. kelly part ii: the reckoning](titolo)
+    
+- intent: consiglia_contenuto
+  examples: |
+    - Dammi dei consigli su cosa guardare stasera
+    - Che film mi consigli?
+    - Consigliami una serie TV avvincente
+    - Ho bisogno di un buon film da vedere
+    - Suggestioni per una visione leggera
+    - Quali sono le ultime uscite da guardare?
+    - Cosa mi consigli di guardare?
+    - Quali sono i migliori film da vedere?
+    - Consigliami una serie TV interessante
+    - Quali sono i film più popolari?
+    - Dammi dei suggerimenti su cosa guardare
+    - Che serie TV mi consigli?
+    - Consigliami un film da vedere
+    - Quali sono le ultime uscite da non perdere?
+    - Sto cercando qualcosa di divertente, qualche idea?
+    - Ho voglia di qualcosa di emozionante, suggerimenti?
+    - Cerco ispirazione per il mio prossimo binge-watching, aiuto?
+    - Qualche proposta per una serata cinema a casa?
+    - Quali sono i titoli imperdibili di quest'anno?
+    - Che genere di contenuti sono trend ora?
+    - Quali sono i film più visti del momento?
+    - consigli?
+    - consigli
+    - suggerimenti
+    - suggerimento
+    - suggeriscimi
+    - suggeriscimi qualcosa
+    - suggeriscimi un film
+    - suggeriscimi una serie tv
+    - suggeriscimi un film da vedere
+    - suggeriscimi una serie tv da vedere
+    - suggeriscimi un film da guardare
+    - suggeriscimi una serie tv da guardare
+    - suggeriscimi un film da guardare stasera
+    - suggeriscimi una serie tv da guardare stasera
+    - consigliami
+    - consigliami qualcosa
+    - consigliami un film
+    - consigliami una serie tv
+    - consigliami un film da vedere
+    - consigliami una serie tv da vedere
+    - consigliami un film da guardare
+    - consigliami una serie tv da guardare
+    - consigliami un film da guardare stasera
+    - consigliami una serie tv da guardare stasera
+- intent: menu
+  examples: |
+    - Cosa puoi fare?
+    - Quali sono le tue funzionalità?
+    - Che tipo di domande posso farti?
+    - Cosa sai fare?
+    - Quali sono le tue abilità?
+    - Cosa sei in grado di fare?
+    - Che servizi offri?
+    - Quali sono i tuoi comandi?
+    - Cosa sai fare per me?
+    - Quali sono le tue funzioni?
+    - Cosa posso chiederti?
+    - Menù
+    - Menu
+    - Dammi il menu
+    - dammi il menu
+    - esci il menu
+    - Che fai?
+    - Cosa fai?
+    - che sai fare?
+    - che puoi fare?
+    - che comandi conosci?
+- intent: generi_disponibili
+  examples: |
+    - che generi conosci?
+    - quali generi di film conosci?
+    - quali generi di serie tv conosci?
+    - dammi la lista dei generi
+    - che generi posso scegliere?
+    - che generi posso scrivere?
+    - quali generi posso selezionare?
+    - quali generi posso indicare?
+    - quali generi posso specificare?
+    - quali generi posso menzionare?
+    - quali sono i generi disponibili?
+    - quali generi posso chiedere?
+    - quali sono i generi di film?
+    - quali sono i generi di serie tv?
+    - dammi i generi disponibili
+    - generi?
+    - generi
+- intent: paesi_disponibili
+  examples: |
+    - che paesi conosci?
+    - quali paesi di film conosci?
+    - quali paesi di serie tv conosci?
+    - quali sono i paesi disponibili?
+    - quali paesi posso chiedere?
+    - quali paesi posso selezionare?
+    - quali paesi posso indicare?
+    - quali paesi posso specificare?
+    - quali paesi posso menzionare?
+    - quali paesi posso scrivere?
+    - paesi?
+    - paesi
+    - dammi la lista dei paesi
+    - che paesi posso scegliere?
+    - che paesi posso scrivere?
+    - quali paesi ci sono?
+    - che peasi hai disponobili?
+    - paesi disponibili
+- intent: ringraziamenti
+  examples: |
+    - Grazie
+    - grazie mille
+    - grazie per l'aiuto
+    - grazie per la tua assistenza
+    - grazie per le informazioni
+    - grazie per il supporto
+    - grazie per la tua disponibilità
+    - grazie per la tua gentilezza
+    - grazie per la tua pazienza
+    - grazie per la tua cortesia
+    - grazie per il tuo aiuto
+    - grazie!
+    - grazie
+    - Grazie mille
+    - wow
+    - grazie per l'assistenza
+    - WOOOOOW
+    - WoW
+- intent: reset_slots
+  examples: |
+    - resetta gli slots
+    - cancella slot
+    - elimina gli slots
+    - togli gli slot
+    - resetta i dati
+    - cancella i dati
+    - elimina i dati
+    - togli i dati
+    - resetta le informazioni
+    - cancella le informazioni
+    - elimina le informazioni
+    - togli le informazioni
+    - resetta tutto
+    - reset
+- intent: categorie_disponibili
+  examples: |
+    - che categorie conosci?
+    - quali categorie conosci?
+    - che categorie hai?
+    - che vuol dire categorie?
+    - quali categorie posso chiedere?
+    - quali categorie posso selezionare?
+    - quali categorie posso indicare?
+    - quali categorie posso specificare?
+    - quali categorie posso menzionare?
+    - quali categorie posso scrivere?
+    - categorie?
+
+- intent: stop_intent
+  examples: |
+    - stop
+    - basta
+    - smetti
+    - Stop
+    - fermo
+    - fine
+    - alt
+    - interrompi
+    - termina
+    - chiudi
+    - esci
+    - stoppa
+    - ferm
+    - Stop!
+
+- regex: titolo
+  examples: |
+    - pattern: '(\w+\s?)+'
+    - pattern: '.*\d.*'
+    - pattern: '.+:\s.*$'
+    - pattern: '[A-Z][\w\s,:-]+'
+    - pattern: '[\w\s,-:\d]+'
+    - pattern: '^[Tt]he\s.*$'
+- lookup: genere
+  examples: |
+    - classici
+    - classic
+    - horror
+    - spaventoso
+    - dell'orrore
+    - di paura
+    - pauroso
+    - terrificante
+    - azione e avventura
+    - d'azione
+    - di avventura
+    - action
+    - avventuroso
+    - sportivi
+    - sport
+    - cinema sportivo
+    - documentari
+    - documentario
+    - docufilm
+    - musical
+    - musica
+    - cinema musicale
+    - cult
+    - di culto
+    - internazionali
+    - cinema mondiale
+    - cinema estero
+    - drammatici
+    - drammi
+    - drama
+    - opere drammatiche
+    - thriller
+    - gialli
+    - suspense
+    - anime
+    - animazione giapponese
+    - cartoni giapponesi
+    - lgbtq
+    - tematiche lgbtq
+    - lgbtq+
+    - sci-fi
+    - fantasy
+    - fantascienza
+    - viaggi spazio-temporali
+    - commedia
+    - comiche
+    - commedie
+    - comici
+    - romantic
+    - romantici
+    - romanticismo
+    - cinema romantico
+    - indipendenti
+    - indie
+    - cinema indipendente
+    - biografici
+    - biografie
+    - biopic
+    - storici
+    - storico
+    - storici
+    - western
+    - spaghetti western
+    - polizieschi
+    - poliziesco
+    - sportivi
+    - sportivo
+    - sport
+    - noir
+- lookup: categoria
+  examples: |
+    - Adults Only
+    - solo maggiorenni
+    - non adatto ai minori di 17 anni
+    - maggiorenni
+    - General
+    - generale
+    - adatto a tutti
+    - per tutti
+    - anziani
+    - per tutti i pubblici
+    - tutti
+    - Kids
+    - bambini
+    - adatto ai bambini
+    - per bambini
+    - i più piccoli
+    - per bambini piccoli
+    - Mature
+    - maturi
+    - adatto agli adulti
+    - solo adulti
+    - per adulti
+    - Non Specificato
+    - non specificato
+    - Not Rated
+    - non classificato
+    - senza classificazione
+    - Older Kids
+    - ragazzi più grandi
+    - adatto a bambini oltre i 7 anni
+    - Older Kids
+    - ragazzi più grandi con elementi di violenza fantastica
+    - bambini oltre i 7 anni con violenza fantastica
+    - Parental Guidance
+    - guida genitoriale
+    - consigliato la guida dei genitori sotto i 12 anni
+    - Parental Guidance Suggested
+    - guida genitoriale suggerita
+    - adatto con guida dei genitori
+    - Restricted
+    - ristretto
+    - materiale per adulti
+    - Teens
+    - adolescenti
+    - adatto a ragazzi oltre i 13 anni
+    - Teens
+    - adolescenti oltre i 14 anni
+    - adatto a ragazzi oltre i 14 anni
+    - Unrated
+    - non valutato
+    - versione non censurata
+    - non sottoposta a classificazione

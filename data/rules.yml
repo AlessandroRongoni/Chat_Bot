@@ -1,0 +1,109 @@
+version: "3.1"
+
+rules:
+- rule: Saluto all'inizio della conversazione
+  steps:
+  - intent: saluto
+  - action: utter_saluto
+
+- rule: Addio al termine della conversazione
+  steps:
+  - intent: addio
+  - action: utter_addio
+
+- rule: Risposta al fallback
+  steps:
+  - intent: nlu_fallback
+  - action: utter_default
+
+- rule: Ringraziamenti
+  steps:
+  - intent: ringraziamenti
+  - action: utter_ringraziamenti
+
+- rule: Ridai Menu
+  steps:
+  - intent: menu
+  - action: utter_menu
+
+- rule: Generi Disponibili
+  steps:
+  - intent: generi_disponibili
+  - action: action_get_generi_from_data
+
+- rule: Paesi Disponibili
+  steps:
+  - intent: paesi_disponibili
+  - action: action_get_paesi_from_data
+
+- rule: Categorie Disponibili
+  steps:
+  - intent: categorie_disponibili
+  - action: action_get_categorie_from_map
+
+- rule: Reset Slots
+  steps:
+  - intent: reset_slots
+  - action: utter_reset_slots
+  - action: action_reset_slots
+
+#RULE FORM CONSIGLIA CONTENUTI
+
+#Rules che servono per far partire le form e farle funzionare correttamente
+# - rule: Activate form
+#   steps:
+#   - intent: consiglia_contenuto
+#   - action: consigliare_contenuto_form
+#   - active_loop: consigliare_contenuto_form
+
+# - rule: Submit form
+#   condition:
+#   - active_loop: consigliare_contenuto_form
+#   steps:
+#   - action: consigliare_contenuto_form
+#   - active_loop: null
+#   - slot_was_set:
+#     - requested_slot: null
+#   - action: utter_submit
+#   - action: utter_slots_values
+#   - action: action_submit_consigliare_contenuto_form
+#   - action: action_reset_slots
+
+# - rule: Ignora informazioni contenuto durante consigliare_contenuto_form
+#   condition:
+#     # Questa condizione verifica che la form sia attualmente attiva.
+#     - active_loop: consigliare_contenuto_form
+#   steps:
+#     # Qualsiasi intento riconosciuto che non è specificamente gestito altrove o elencato in `ignored_intents`
+#     - intent: informazioni_contenuto
+#     - action: consigliare_contenuto_form
+#     - active_loop: consigliare_contenuto_form
+
+# - rule: Ignora ricerca contenuti durante consigliare_contenuto_form
+#   condition:
+#     # Questa condizione verifica che la form sia attualmente attiva.
+#     - active_loop: consigliare_contenuto_form
+#   steps:
+#     # Qualsiasi intento riconosciuto che non è specificamente gestito altrove o elencato in `ignored_intents`
+#     - intent: ricerca_contenuti
+#     - action: consigliare_contenuto_form
+#     - active_loop: consigliare_contenuto_form
+
+
+- rule: Activate form consiglia contenuto
+  steps:
+    - intent: consiglia_contenuto
+    - action: utter_consigli_di_visione
+    - action: consigliare_contenuto_form
+    - active_loop: consigliare_contenuto_form
+    - slot_was_set:
+      - requested_slot: tipo
+    - slot_was_set:
+      - requested_slot: titolo
+    - active_loop: null
+    - action: utter_submit
+    - action: action_submit_consigliare_contenuto_form
+    - action: utter_slots_values
+    - action: action_reset_slots
+
+

@@ -1,0 +1,177 @@
+version: "3.1"
+
+stories:
+
+- story: Ricerca contentuti in base alla frase dell'utente
+  steps:
+    - intent: ricerca_contenuti
+      entities:
+        - tipo: "film"
+        - genere: "d'azione"
+        - paese: "italiano"
+        - anno: "2020"
+        - durata: "3 stagioni"
+        - regista: "Steven Spielberg"
+        - attore: "Leonardo Di Caprio"
+        - categoria: "per tutti"
+    - action: action_ricerca_contenuti
+
+
+- story: Ricerca contentuti in base all'anno
+  steps:
+    - intent: ricerca_contenuti
+      entities:
+        - anno: "2020"
+    - action: action_ricerca_contenuti
+
+- story: Ricerca contentuti in base al genere
+  steps:
+    - intent: ricerca_contenuti
+      entities:
+        - genere: "d'azione"
+    - action: action_ricerca_contenuti
+
+- story: Ricerca contentuti in base al paese
+  steps:
+    - intent: ricerca_contenuti
+      entities:
+        - paese: "italiano"
+    - action: action_ricerca_contenuti
+
+- story: Ricerca contentuti in base alla durata
+  steps:
+    - intent: ricerca_contenuti
+      entities:
+        - durata: "3 stagioni"
+    - action: action_ricerca_contenuti
+
+- story: Ricerca contentuti in base al regista
+  steps:
+    - intent: ricerca_contenuti
+      entities:
+        - regista: "Steven Spielberg"
+    - action: action_ricerca_contenuti
+
+- story: Ricerca contentuti in base all'attore
+  steps:
+    - intent: ricerca_contenuti
+      entities:
+        - attore: "Leonardo DiCaprio"
+    - action: action_ricerca_contenuti
+
+- story: Ricerca contentuti in base alla categoria
+  steps:
+    - intent: ricerca_contenuti
+      entities:
+        - categoria: "per tutti"
+    - action: action_ricerca_contenuti
+
+- story: Ricerca contentuti in base al genere e al paese
+  steps:
+    - intent: ricerca_contenuti
+      entities:
+        - genere: "d'azione"
+        - paese: "italiano"
+    - action: action_ricerca_contenuti
+
+- story: Ricerca contentuti in base al genere e all'anno
+  steps:
+    - intent: ricerca_contenuti
+      entities:
+        - genere: "d'azione"
+        - anno: "2020"
+    - action: action_ricerca_contenuti
+
+- story: Ricerca contentuti in base al genere e alla durata
+  steps:
+    - intent: ricerca_contenuti
+      entities:
+        - genere: "d'azione"
+        - durata: "120 minuti"
+    - action: action_ricerca_contenuti
+
+- story: Ricerca contentuti in base al genere e al regista
+  steps:
+    - intent: ricerca_contenuti
+      entities:
+        - genere: "d'azione"
+        - regista: "Steven Spielberg"
+    - action: action_ricerca_contenuti
+
+- story: Ricerca contentuti in base al genere e all'attore
+  steps:
+    - intent: ricerca_contenuti
+      entities:
+        - genere: "d'azione"
+        - attore: "Leonardo DiCaprio"
+    - action: action_ricerca_contenuti
+
+- story: Ricerca contentuti in base al genere e alla categoria
+  steps:
+    - intent: ricerca_contenuti
+      entities:
+        - genere: "d'azione"
+        - categoria: "per tutti"
+    - action: action_ricerca_contenuti
+
+- story: Ricerca contentuti in base al paese e all'anno
+  steps:
+    - intent: ricerca_contenuti
+      entities:
+        - paese: "italiano"
+        - anno: "2020"
+    - action: action_ricerca_contenuti
+
+- story: Ricerca contentuti in base al genere, all'attore e alla durata
+  steps:
+    - intent: ricerca_contenuti
+      entities:
+        - genere: "d'azione"
+        - attore: "Justin Biber"
+        - durata: "106 minuti"
+    - action: action_ricerca_contenuti
+
+- story: Ricerca informazioni su un contenuto
+  steps:
+    - intent: informazioni_contenuto
+      entities:
+        - titolo: "Inception"
+    - action: action_informazioni_contenuto
+
+# STORIES FORM
+# - story: Storia interattiva
+#   steps:
+#   - intent: consiglia_contenuto
+#   - action: consigliare_contenuto_form
+#   - active_loop: consigliare_contenuto_form
+#   - slot_was_set:
+#     - requested_slot: tipo
+#   - slot_was_set:
+#     - tipo: "film"
+#   - slot_was_set:
+#     - requested_slot: titolo
+#   - slot_was_set:
+#     - titolo: "kung fu panda"
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: utter_submit
+#   - action: utter_slots_values
+#   - action: action_submit_consigliare_contenuto_form
+#   - action: action_reset_slots
+
+
+- story: stop for tipo
+  steps:
+    - intent: consiglia_contenuto
+    - action: utter_consigli_di_visione
+    - action: consigliare_contenuto_form
+    - active_loop: consigliare_contenuto_form
+    - slot_was_set:
+      - requested_slot: tipo
+    - intent: stop_intent
+    - action: action_deactivate_loop
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
+    - action: action_reset_slots
