@@ -676,7 +676,8 @@ class ValidateConsigliContenutiForm(FormValidationAction):
         tracker: Tracker,
         domain: Dict[Text, Any],
     ) -> Dict[Text, Any]:
-        titolo = tracker.get_slot('titolo')
+        
+        titolo = slot_value
         print(titolo)
         logger.debug(f"Validating slot 'titolo' with value '{titolo}'")
         try:
@@ -688,7 +689,7 @@ class ValidateConsigliContenutiForm(FormValidationAction):
             dispatcher.utter_message(text="Si è verificato un errore nella validazione del titolo.")
             return {"titolo": None}
 
-        if score > 90:
+        if score > 80:
             return {"titolo": best_match}
         else:
             dispatcher.utter_message(text="Non ho trovato il titolo che hai inserito, potremmo non averlo in catalogo. Puoi riprovare?")
