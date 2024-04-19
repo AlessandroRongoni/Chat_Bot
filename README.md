@@ -17,7 +17,6 @@ Il ChatBot di Netflix è un progetto innovativo realizzato per il corso di Data 
 - [Installazione](#installazione)
 - [Licenza](#licenza)
 - [Autori](#autori)
-- [Contribuire](#contribuire)
 
 ## Funzionalità
 
