@@ -39,7 +39,7 @@ stories:
     - action: action_ricerca_contenuti
 
 
-- story: stop for tipo
+- story: stop form consiglia contenuto
   steps:
     - intent: consiglia_contenuto
     - action: utter_consigli_di_visione

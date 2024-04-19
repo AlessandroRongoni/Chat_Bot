@@ -48,8 +48,6 @@ rules:
   - action: action_reset_slots
 
 #RULE FORM CONSIGLIA CONTENUTI
-
-
 - rule: Activate form consiglia contenuto
   steps:
     - intent: consiglia_contenuto
