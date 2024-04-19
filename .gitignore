@@ -1,4 +1,4 @@
 .rasa
 dataset
 credentials.yml
-venv
+.DS_Store
