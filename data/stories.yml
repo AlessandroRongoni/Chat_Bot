@@ -38,28 +38,6 @@ stories:
         - paese: "italiano"
     - action: action_ricerca_contenuti
 
-# STORIES FORM
-# - story: Storia interattiva
-#   steps:
-#   - intent: consiglia_contenuto
-#   - action: consigliare_contenuto_form
-#   - active_loop: consigliare_contenuto_form
-#   - slot_was_set:
-#     - requested_slot: tipo
-#   - slot_was_set:
-#     - tipo: "film"
-#   - slot_was_set:
-#     - requested_slot: titolo
-#   - slot_was_set:
-#     - titolo: "kung fu panda"
-#   - slot_was_set:
-#     - requested_slot: null
-#   - active_loop: null
-#   - action: utter_submit
-#   - action: utter_slots_values
-#   - action: action_submit_consigliare_contenuto_form
-#   - action: action_reset_slots
-
 
 - story: stop for tipo
   steps:
